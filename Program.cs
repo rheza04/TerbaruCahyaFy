@@ -16,7 +16,7 @@ namespace TerbaruCahyaFy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TbhPjln());
+            Application.Run(new LoginForm());
         }
     }
 }
