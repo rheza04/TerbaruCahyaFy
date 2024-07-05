@@ -144,9 +144,9 @@
             this.tbPmbln.TabIndex = 30;
             this.tbPmbln.Text = "Tambah Pembelian";
             this.tbPmbln.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.tbPmbln.Click += new System.EventHandler(this.tbPmbln_Click);
-            //this.tbPmbln.MouseEnter += new System.EventHandler(this.tbPmbln_MouseEnter);
-            //this.tbPmbln.MouseLeave += new System.EventHandler(this.tbPmbln_MouseLeave);
+            this.tbPmbln.Click += new System.EventHandler(this.tbPmbln_Click);
+            this.tbPmbln.MouseEnter += new System.EventHandler(this.tbPmbln_MouseEnter);
+            this.tbPmbln.MouseLeave += new System.EventHandler(this.tbPmbln_MouseLeave);
             // 
             // inputBg
             // 
@@ -159,9 +159,9 @@
             this.inputBg.TabIndex = 29;
             this.inputBg.Text = "Input Barang";
             this.inputBg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.inputBg.Click += new System.EventHandler(this.inputBg_Click);
-            //this.inputBg.MouseEnter += new System.EventHandler(this.inputBg_MouseEnter);
-            //this.inputBg.MouseLeave += new System.EventHandler(this.inputBg_MouseLeave);
+            this.inputBg.Click += new System.EventHandler(this.inputBg_Click);
+            this.inputBg.MouseEnter += new System.EventHandler(this.inputBg_MouseEnter);
+            this.inputBg.MouseLeave += new System.EventHandler(this.inputBg_MouseLeave);
             // 
             // inputSup
             // 
@@ -173,10 +173,10 @@
             this.inputSup.Size = new System.Drawing.Size(177, 39);
             this.inputSup.TabIndex = 28;
             this.inputSup.Text = "Input Supplier";
-            //this.inputSup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.inputSup.Click += new System.EventHandler(this.inputSup_Click);
-            //this.inputSup.MouseEnter += new System.EventHandler(this.inputSup_MouseEnter);
-            //this.inputSup.MouseLeave += new System.EventHandler(this.inputSup_MouseLeave);
+            this.inputSup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.inputSup.Click += new System.EventHandler(this.inputSup_Click);
+            this.inputSup.MouseEnter += new System.EventHandler(this.inputSup_MouseEnter);
+            this.inputSup.MouseLeave += new System.EventHandler(this.inputSup_MouseLeave);
             // 
             // listPnjln
             // 
@@ -189,9 +189,9 @@
             this.listPnjln.TabIndex = 26;
             this.listPnjln.Text = "List Data Penjualan";
             this.listPnjln.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.listPnjln.Click += new System.EventHandler(this.listPnjln_Click);
-            //this.listPnjln.MouseEnter += new System.EventHandler(this.listPnjln_MouseEnter);
-            //this.listPnjln.MouseLeave += new System.EventHandler(this.listPnjln_MouseLeave);
+            this.listPnjln.Click += new System.EventHandler(this.listPnjln_Click);
+            this.listPnjln.MouseEnter += new System.EventHandler(this.listPnjln_MouseEnter);
+            this.listPnjln.MouseLeave += new System.EventHandler(this.listPnjln_MouseLeave);
             // 
             // label14
             // 
@@ -224,9 +224,9 @@
             this.tbPnjln.TabIndex = 13;
             this.tbPnjln.Text = "Tambah Penjualan";
             this.tbPnjln.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.tbPnjln.Click += new System.EventHandler(this.tbPnjln_Click);
-            //this.tbPnjln.MouseEnter += new System.EventHandler(this.tbPnjln_MouseEnter);
-            //this.tbPnjln.MouseLeave += new System.EventHandler(this.tbPnjln_MouseLeave);
+            this.tbPnjln.Click += new System.EventHandler(this.tbPnjln_Click);
+            this.tbPnjln.MouseEnter += new System.EventHandler(this.tbPnjln_MouseEnter);
+            this.tbPnjln.MouseLeave += new System.EventHandler(this.tbPnjln_MouseLeave);
             // 
             // data_BarangTableAdapter
             // 

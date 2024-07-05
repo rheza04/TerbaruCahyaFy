@@ -1,102 +1,101 @@
 ﻿using System;
-using System.Data.SQLite;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+using TerbaruCahyaFy;
 
 namespace TerbaruCahyaFy
 {
     public partial class LstPjln : Form
     {
-        private SQLiteConnection connection;
-
         public LstPjln()
         {
             InitializeComponent();
-            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data Barang.db");
-            connection = new SQLiteConnection($"Data Source={dbPath};Version=3;");
-
+        }
+        //asddadad
+        //hoverr tambahhh penjuaalaaannn
+        private void tbPnjln_MouseEnter(object sender, EventArgs e)
+        {
+            this.tbPnjln.BackColor = ColorTranslator.FromHtml("RoyalBlue");
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void tbPnjln_MouseLeave(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                labelCheckConnection.Text = "Connection Successful";
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            this.tbPnjln.BackColor = ColorTranslator.FromHtml("Transparent");
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void tbPnjln_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                string query = "SELECT * FROM ListSupplier WHERE Username = @Username AND Password = @Password";
-                SQLiteCommand command = new SQLiteCommand(query, connection);
-                command.Parameters.AddWithValue("@Username", textBoxUsername.Text);
-                command.Parameters.AddWithValue("@Password", textBoxPwd.Text);
-
-                SQLiteDataReader reader = command.ExecuteReader();
-                int count = 0;
-                while (reader.Read())
-                {
-                    count++;
-                }
-
-                if (count == 1)
-                {
-                    MessageBox.Show("IdSupplier dan Password benar");
-                    connection.Close();
-                    this.Hide();
-                    TbhPjln TbhPjln2 = new TbhPjln(textBoxUsername.Text);
-                    TbhPjln2.ShowDialog();
-                }
-                else if (count > 1)
-                {
-                    MessageBox.Show("Duplicate IdSupplier dan Password");
-                }
-                else
-                {
-                    MessageBox.Show("IdSupplier dan Password salah");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+            new TbhPjln().Show(); this.Hide();
         }
 
-        private void textBoxIdsp_KeyDown(object sender, KeyEventArgs e)
+        //hover listt penjualannnn
+        private void listPnjln_MouseEnter(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                textBoxPwd.Focus();
-            }
+            this.listPnjln.BackColor = ColorTranslator.FromHtml("RoyalBlue");
         }
 
-        private void textBoxPwd_KeyDown(object sender, KeyEventArgs e)
+        private void listPnjln_MouseLeave(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                buttonLogin.PerformClick();
-            }
+            this.listPnjln.BackColor = ColorTranslator.FromHtml("RoyalBlue");
         }
 
-        private void textBoxUsername_KeyDown(object sender, KeyEventArgs e)
+        private void listPnjln_Click(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                textBoxPwd.Focus();
-            }
+            this.listPnjln.BackColor = ColorTranslator.FromHtml("RoyalBlue");
+        }
+
+        //hover innnnpuuuuuuuttttt suppppppplliierrrrr
+        private void inputSup_MouseEnter(object sender, EventArgs e)
+        {
+            this.inputSup.BackColor = ColorTranslator.FromHtml("RoyalBlue");
+        }
+
+        private void inputSup_MouseLeave(object sender, EventArgs e)
+        {
+            this.inputSup.BackColor = ColorTranslator.FromHtml("Transparent");
+        }
+
+        private void inputSup_Click(object sender, EventArgs e)
+        {
+            new InputSupplier().Show(); this.Hide();
+        }
+
+        //hoverrrrr input baranggggg
+        private void inputBg_MouseEnter(object sender, EventArgs e)
+        {
+            this.inputBg.BackColor = ColorTranslator.FromHtml("RoyalBlue");
+        }
+
+        private void inputBg_MouseLeave(object sender, EventArgs e)
+        {
+            this.inputBg.BackColor = ColorTranslator.FromHtml("Transparent");
+        }
+
+        private void inputBg_Click(object sender, EventArgs e)
+        {
+            new InputBarang().Show(); this.Hide();
+        }
+
+        //hover tambaahhh pembeliannnnn
+        private void tbPmbln_MouseEnter(object sender, EventArgs e)
+        {
+            this.tbPmbln.BackColor = ColorTranslator.FromHtml("RoyalBlue");
+        }
+
+        private void tbPmbln_MouseLeave(object sender, EventArgs e)
+        {
+            this.tbPmbln.BackColor = ColorTranslator.FromHtml("Transparent");
+        }
+
+        private void tbPmbln_Click(object sender, EventArgs e)
+        {
+            new TmbhPembelian().Show(); this.Hide();
         }
     }
 }

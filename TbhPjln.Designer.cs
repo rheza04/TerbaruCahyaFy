@@ -324,7 +324,7 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::FPTEST2.Properties.Resources.Webp_net_resizeimage;
+            //this.button3.BackgroundImage = global::TerbaruCahyaFy.Properties.Resources.Webp_net_resizeimage;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button3.Location = new System.Drawing.Point(397, 24);
             this.button3.Name = "button3";
@@ -412,7 +412,7 @@
             // 
             this.button1.AutoSize = true;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::FPTEST2.Properties.Resources.shopping_basket_add_icon__1_;
+            //this.button1.Image = global::TerbaruCahyaFy.Properties.Resources.shopping_basket_add_icon__1_;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(131, 197);
             this.button1.Name = "button1";

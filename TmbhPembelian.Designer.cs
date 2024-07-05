@@ -105,7 +105,7 @@
             // btnDatabase
             // 
             this.btnDatabase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatabase.Image = global::FPTEST2.Properties.Resources.asdafedvs;
+            //this.btnDatabase.Image = global::TerbaruCahyaFy.Properties.Resources.asdafedvs;
             this.btnDatabase.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDatabase.Location = new System.Drawing.Point(1115, 214);
             this.btnDatabase.Margin = new System.Windows.Forms.Padding(4);
@@ -202,7 +202,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::TerbaruCahyaFy.Properties.Resources.asdafedvs.png;
+            //this.button1.Image = global::TerbaruCahyaFy.Properties.Resources.asdafedvs;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(27, 210);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
