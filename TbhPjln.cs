@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.OleDb;
-using TerbaruCahyaFy;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace TerbaruCahyaFy
 {
@@ -75,7 +68,6 @@ namespace TerbaruCahyaFy
             col7.UseColumnTextForButtonValue = true;
             dataGridView1.Columns.Add(col7);
         }
-
 
         // hoverrrrrr tambah penjualan
         private void tbPnjln_MouseEnter(object sender, EventArgs e)
@@ -214,12 +206,10 @@ namespace TerbaruCahyaFy
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void label15_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
