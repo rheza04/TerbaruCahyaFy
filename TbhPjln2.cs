@@ -8,9 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using TerbaruCahyaFy;
 
-namespace TerbaruCahyaFy
+namespace FPTEST2
 {
     public partial class TbhPjln : Form
     {
@@ -210,16 +209,6 @@ namespace TerbaruCahyaFy
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             // Tambahkan kode untuk aksi pictureBox1
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -12,22 +12,51 @@ using TerbaruCahyaFy;
 
 namespace TerbaruCahyaFy
 {
-    public partial class TbhPjln : Form
+    public partial class DefaultTbhPjln : Form
     {
         private OleDbConnection connection = new OleDbConnection();
 
-        public TbhPjln(string Username)
+        public DefaultTbhPjln(string Username)
         {
             InitializeComponent();
             labelHi.Text = "Hi, " + Username + " Selamat Bekerja";
             SetupDataGridView();
         }
 
-        public TbhPjln()
+        public DefaultTbhPjln()
         {
             InitializeComponent();
             this.ActiveControl = textBoxIdbrg;
             SetupDataGridView();
+
+            // Buat GroupBox
+            GroupBox groupBox = new GroupBox();
+            groupBox.Text = "Group Box Example";
+            groupBox.Dock = DockStyle.Fill;
+
+            // Buat TableLayoutPanel
+            TableLayoutPanel tableLayoutPanel = new TableLayoutPanel();
+            tableLayoutPanel.Dock = DockStyle.Fill;
+            tableLayoutPanel.RowCount = 1;
+            tableLayoutPanel.ColumnCount = 1;
+            tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+
+            // Buat Label
+            Label label = new Label();
+            label.Text = "Responsive Label";
+            label.AutoSize = true;
+            label.Dock = DockStyle.Fill;
+            label.TextAlign = ContentAlignment.MiddleCenter;
+
+            // Tambahkan Label ke TableLayoutPanel
+            tableLayoutPanel.Controls.Add(label, 0, 0);
+
+            // Tambahkan TableLayoutPanel ke GroupBox
+            groupBox.Controls.Add(tableLayoutPanel);
+
+            // Tambahkan GroupBox ke Form
+            this.Controls.Add(groupBox);
         }
 
         private void SetupDataGridView()
@@ -210,16 +239,6 @@ namespace TerbaruCahyaFy
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             // Tambahkan kode untuk aksi pictureBox1
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
