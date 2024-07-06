@@ -21,16 +21,16 @@ namespace TerbaruCahyaFy
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.labelHeader = new System.Windows.Forms.Label();
+            this.tableLayoutPanelKiriKananPemisah = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelKiri = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelPenjualan = new System.Windows.Forms.TableLayoutPanel();
-            this.labelPembelian = new System.Windows.Forms.Label();
-            this.labellistPnjln = new System.Windows.Forms.Label();
-            this.labelinputSup = new System.Windows.Forms.Label();
-            this.labeltbPnjln = new System.Windows.Forms.Label();
-            this.labelinputBrg = new System.Windows.Forms.Label();
-            this.labelPenjualan = new System.Windows.Forms.Label();
             this.labeltbPmbln = new System.Windows.Forms.Label();
-            this.tableLayoutPanelKiriKananPemisah = new System.Windows.Forms.TableLayoutPanel();
+            this.labelPenjualan = new System.Windows.Forms.Label();
+            this.labelinputBrg = new System.Windows.Forms.Label();
+            this.labeltbPnjln = new System.Windows.Forms.Label();
+            this.labelinputSup = new System.Windows.Forms.Label();
+            this.labellistPnjln = new System.Windows.Forms.Label();
+            this.labelPembelian = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,16 +38,17 @@ namespace TerbaruCahyaFy
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.tableLayoutPanelLogo = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelHarga = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanelKiriKananPemisah.SuspendLayout();
             this.tableLayoutPanelKiri.SuspendLayout();
             this.tableLayoutPanelPenjualan.SuspendLayout();
-            this.tableLayoutPanelKiriKananPemisah.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanelLogo.SuspendLayout();
+            this.tableLayoutPanelHarga.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -56,16 +57,16 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.labelHeader, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanelKiriKananPemisah, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanelLogo, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.81967F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.36066F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.02128F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.15805F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.74199F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1264, 681);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1350, 729);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -78,10 +79,28 @@ namespace TerbaruCahyaFy
             this.labelHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.labelHeader.Location = new System.Drawing.Point(3, 0);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(1258, 71);
+            this.labelHeader.Size = new System.Drawing.Size(1344, 71);
             this.labelHeader.TabIndex = 0;
             this.labelHeader.Text = "Dobit";
             this.labelHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanelKiriKananPemisah
+            // 
+            this.tableLayoutPanelKiriKananPemisah.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tableLayoutPanelKiriKananPemisah.ColumnCount = 2;
+            this.tableLayoutPanelKiriKananPemisah.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.98569F));
+            this.tableLayoutPanelKiriKananPemisah.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.01431F));
+            this.tableLayoutPanelKiriKananPemisah.Controls.Add(this.tableLayoutPanelKiri, 0, 0);
+            this.tableLayoutPanelKiriKananPemisah.Controls.Add(this.dataGridView1, 1, 0);
+            this.tableLayoutPanelKiriKananPemisah.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelKiriKananPemisah.Location = new System.Drawing.Point(3, 186);
+            this.tableLayoutPanelKiriKananPemisah.Name = "tableLayoutPanelKiriKananPemisah";
+            this.tableLayoutPanelKiriKananPemisah.Padding = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanelKiriKananPemisah.RowCount = 1;
+            this.tableLayoutPanelKiriKananPemisah.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelKiriKananPemisah.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 401F));
+            this.tableLayoutPanelKiriKananPemisah.Size = new System.Drawing.Size(1344, 403);
+            this.tableLayoutPanelKiriKananPemisah.TabIndex = 1;
             // 
             // tableLayoutPanelKiri
             // 
@@ -100,7 +119,7 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanelKiri.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelKiri.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelKiri.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelKiri.Size = new System.Drawing.Size(257, 401);
+            this.tableLayoutPanelKiri.Size = new System.Drawing.Size(257, 393);
             this.tableLayoutPanelKiri.TabIndex = 0;
             // 
             // tableLayoutPanelPenjualan
@@ -128,59 +147,31 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanelPenjualan.Size = new System.Drawing.Size(251, 319);
             this.tableLayoutPanelPenjualan.TabIndex = 2;
             // 
-            // labelPembelian
+            // labeltbPmbln
             // 
-            this.labelPembelian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPembelian.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPembelian.Location = new System.Drawing.Point(3, 135);
-            this.labelPembelian.Name = "labelPembelian";
-            this.labelPembelian.Size = new System.Drawing.Size(245, 45);
-            this.labelPembelian.TabIndex = 33;
-            this.labelPembelian.Text = "Pembelian";
-            this.labelPembelian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelPembelian.UseCompatibleTextRendering = true;
+            this.labeltbPmbln.BackColor = System.Drawing.Color.Transparent;
+            this.labeltbPmbln.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labeltbPmbln.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltbPmbln.ForeColor = System.Drawing.Color.Black;
+            this.labeltbPmbln.Location = new System.Drawing.Point(3, 270);
+            this.labeltbPmbln.Name = "labeltbPmbln";
+            this.labeltbPmbln.Size = new System.Drawing.Size(245, 49);
+            this.labeltbPmbln.TabIndex = 37;
+            this.labeltbPmbln.Text = "Tambah Pembelian";
+            this.labeltbPmbln.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labeltbPmbln.UseCompatibleTextRendering = true;
             // 
-            // labellistPnjln
+            // labelPenjualan
             // 
-            this.labellistPnjln.BackColor = System.Drawing.Color.Transparent;
-            this.labellistPnjln.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labellistPnjln.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labellistPnjln.ForeColor = System.Drawing.Color.Black;
-            this.labellistPnjln.Location = new System.Drawing.Point(3, 90);
-            this.labellistPnjln.Name = "labellistPnjln";
-            this.labellistPnjln.Size = new System.Drawing.Size(245, 45);
-            this.labellistPnjln.TabIndex = 34;
-            this.labellistPnjln.Text = "List Data Penjualan";
-            this.labellistPnjln.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labellistPnjln.UseCompatibleTextRendering = true;
-            // 
-            // labelinputSup
-            // 
-            this.labelinputSup.BackColor = System.Drawing.Color.Transparent;
-            this.labelinputSup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelinputSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelinputSup.ForeColor = System.Drawing.Color.Black;
-            this.labelinputSup.Location = new System.Drawing.Point(3, 180);
-            this.labelinputSup.Name = "labelinputSup";
-            this.labelinputSup.Size = new System.Drawing.Size(245, 45);
-            this.labelinputSup.TabIndex = 35;
-            this.labelinputSup.Text = "Input Supplier";
-            this.labelinputSup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelinputSup.UseCompatibleTextRendering = true;
-            // 
-            // labeltbPnjln
-            // 
-            this.labeltbPnjln.BackColor = System.Drawing.Color.Transparent;
-            this.labeltbPnjln.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labeltbPnjln.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltbPnjln.ForeColor = System.Drawing.Color.Black;
-            this.labeltbPnjln.Location = new System.Drawing.Point(3, 45);
-            this.labeltbPnjln.Name = "labeltbPnjln";
-            this.labeltbPnjln.Size = new System.Drawing.Size(245, 45);
-            this.labeltbPnjln.TabIndex = 32;
-            this.labeltbPnjln.Text = "Tambah Penjualan";
-            this.labeltbPnjln.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labeltbPnjln.UseCompatibleTextRendering = true;
+            this.labelPenjualan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPenjualan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPenjualan.Location = new System.Drawing.Point(3, 0);
+            this.labelPenjualan.Name = "labelPenjualan";
+            this.labelPenjualan.Size = new System.Drawing.Size(245, 45);
+            this.labelPenjualan.TabIndex = 31;
+            this.labelPenjualan.Text = "Penjualan";
+            this.labelPenjualan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelPenjualan.UseCompatibleTextRendering = true;
             // 
             // labelinputBrg
             // 
@@ -196,52 +187,64 @@ namespace TerbaruCahyaFy
             this.labelinputBrg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelinputBrg.UseCompatibleTextRendering = true;
             // 
-            // labelPenjualan
+            // labeltbPnjln
             // 
-            this.labelPenjualan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPenjualan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPenjualan.Location = new System.Drawing.Point(3, 0);
-            this.labelPenjualan.Name = "labelPenjualan";
-            this.labelPenjualan.Size = new System.Drawing.Size(245, 45);
-            this.labelPenjualan.TabIndex = 31;
-            this.labelPenjualan.Text = "Penjualan";
-            this.labelPenjualan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelPenjualan.UseCompatibleTextRendering = true;
+            this.labeltbPnjln.BackColor = System.Drawing.Color.Transparent;
+            this.labeltbPnjln.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labeltbPnjln.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltbPnjln.ForeColor = System.Drawing.Color.Black;
+            this.labeltbPnjln.Location = new System.Drawing.Point(3, 45);
+            this.labeltbPnjln.Name = "labeltbPnjln";
+            this.labeltbPnjln.Size = new System.Drawing.Size(245, 45);
+            this.labeltbPnjln.TabIndex = 32;
+            this.labeltbPnjln.Text = "Tambah Penjualan";
+            this.labeltbPnjln.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labeltbPnjln.UseCompatibleTextRendering = true;
             // 
-            // labeltbPmbln
+            // labelinputSup
             // 
-            this.labeltbPmbln.BackColor = System.Drawing.Color.Transparent;
-            this.labeltbPmbln.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labeltbPmbln.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeltbPmbln.ForeColor = System.Drawing.Color.Black;
-            this.labeltbPmbln.Location = new System.Drawing.Point(3, 270);
-            this.labeltbPmbln.Name = "labeltbPmbln";
-            this.labeltbPmbln.Size = new System.Drawing.Size(245, 49);
-            this.labeltbPmbln.TabIndex = 37;
-            this.labeltbPmbln.Text = "Tambah Pembelian";
-            this.labeltbPmbln.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labeltbPmbln.UseCompatibleTextRendering = true;
+            this.labelinputSup.BackColor = System.Drawing.Color.Transparent;
+            this.labelinputSup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelinputSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelinputSup.ForeColor = System.Drawing.Color.Black;
+            this.labelinputSup.Location = new System.Drawing.Point(3, 180);
+            this.labelinputSup.Name = "labelinputSup";
+            this.labelinputSup.Size = new System.Drawing.Size(245, 45);
+            this.labelinputSup.TabIndex = 35;
+            this.labelinputSup.Text = "Input Supplier";
+            this.labelinputSup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelinputSup.UseCompatibleTextRendering = true;
             // 
-            // tableLayoutPanelKiriKananPemisah
+            // labellistPnjln
             // 
-            this.tableLayoutPanelKiriKananPemisah.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tableLayoutPanelKiriKananPemisah.ColumnCount = 2;
-            this.tableLayoutPanelKiriKananPemisah.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.98569F));
-            this.tableLayoutPanelKiriKananPemisah.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.01431F));
-            this.tableLayoutPanelKiriKananPemisah.Controls.Add(this.tableLayoutPanelKiri, 0, 0);
-            this.tableLayoutPanelKiriKananPemisah.Controls.Add(this.dataGridView1, 1, 0);
-            this.tableLayoutPanelKiriKananPemisah.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelKiriKananPemisah.Location = new System.Drawing.Point(3, 140);
-            this.tableLayoutPanelKiriKananPemisah.Name = "tableLayoutPanelKiriKananPemisah";
-            this.tableLayoutPanelKiriKananPemisah.Padding = new System.Windows.Forms.Padding(5);
-            this.tableLayoutPanelKiriKananPemisah.RowCount = 1;
-            this.tableLayoutPanelKiriKananPemisah.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelKiriKananPemisah.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelKiriKananPemisah.Size = new System.Drawing.Size(1258, 411);
-            this.tableLayoutPanelKiriKananPemisah.TabIndex = 1;
+            this.labellistPnjln.BackColor = System.Drawing.Color.Transparent;
+            this.labellistPnjln.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labellistPnjln.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labellistPnjln.ForeColor = System.Drawing.Color.Black;
+            this.labellistPnjln.Location = new System.Drawing.Point(3, 90);
+            this.labellistPnjln.Name = "labellistPnjln";
+            this.labellistPnjln.Size = new System.Drawing.Size(245, 45);
+            this.labellistPnjln.TabIndex = 34;
+            this.labellistPnjln.Text = "List Data Penjualan";
+            this.labellistPnjln.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labellistPnjln.UseCompatibleTextRendering = true;
+            // 
+            // labelPembelian
+            // 
+            this.labelPembelian.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPembelian.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPembelian.Location = new System.Drawing.Point(3, 135);
+            this.labelPembelian.Name = "labelPembelian";
+            this.labelPembelian.Size = new System.Drawing.Size(245, 45);
+            this.labelPembelian.TabIndex = 33;
+            this.labelPembelian.Text = "Pembelian";
+            this.labelPembelian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelPembelian.UseCompatibleTextRendering = true;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -251,10 +254,9 @@ namespace TerbaruCahyaFy
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(269, 8);
+            this.dataGridView1.Location = new System.Drawing.Point(287, 8);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(981, 395);
+            this.dataGridView1.Size = new System.Drawing.Size(1049, 387);
             this.dataGridView1.TabIndex = 1;
             // 
             // Column1
@@ -287,60 +289,79 @@ namespace TerbaruCahyaFy
             this.Column6.HeaderText = "H. Jual Spc";
             this.Column6.Name = "Column6";
             // 
-            // tableLayoutPanel2
+            // tableLayoutPanelLogo
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.26073F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.73927F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 74);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1258, 60);
-            this.tableLayoutPanel2.TabIndex = 2;
+            this.tableLayoutPanelLogo.ColumnCount = 2;
+            this.tableLayoutPanelLogo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.24107F));
+            this.tableLayoutPanelLogo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.75893F));
+            this.tableLayoutPanelLogo.Controls.Add(this.tableLayoutPanelHarga, 1, 0);
+            this.tableLayoutPanelLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelLogo.Location = new System.Drawing.Point(3, 74);
+            this.tableLayoutPanelLogo.Name = "tableLayoutPanelLogo";
+            this.tableLayoutPanelLogo.RowCount = 1;
+            this.tableLayoutPanelLogo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelLogo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelLogo.Size = new System.Drawing.Size(1344, 106);
+            this.tableLayoutPanelLogo.TabIndex = 2;
             // 
-            // tableLayoutPanel3
+            // tableLayoutPanelHarga
             // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.richTextBox1, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1063, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(192, 54);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.tableLayoutPanelHarga.ColumnCount = 1;
+            this.tableLayoutPanelHarga.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelHarga.Controls.Add(this.textBox2, 0, 1);
+            this.tableLayoutPanelHarga.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanelHarga.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelHarga.Location = new System.Drawing.Point(1068, 3);
+            this.tableLayoutPanelHarga.Name = "tableLayoutPanelHarga";
+            this.tableLayoutPanelHarga.RowCount = 2;
+            this.tableLayoutPanelHarga.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37F));
+            this.tableLayoutPanelHarga.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63F));
+            this.tableLayoutPanelHarga.Size = new System.Drawing.Size(273, 100);
+            this.tableLayoutPanelHarga.TabIndex = 0;
             // 
-            // richTextBox1
+            // textBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(29, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(100, 24);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(267, 31);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Cahaya Anugrah";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox2.Font = new System.Drawing.Font("Impact", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(3, 40);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox2.Size = new System.Drawing.Size(267, 57);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "6000";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanelKiriKananPemisah.ResumeLayout(false);
             this.tableLayoutPanelKiri.ResumeLayout(false);
             this.tableLayoutPanelPenjualan.ResumeLayout(false);
-            this.tableLayoutPanelKiriKananPemisah.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanelLogo.ResumeLayout(false);
+            this.tableLayoutPanelHarga.ResumeLayout(false);
+            this.tableLayoutPanelHarga.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -366,8 +387,9 @@ namespace TerbaruCahyaFy
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
-        private TableLayoutPanel tableLayoutPanel2;
-        private TableLayoutPanel tableLayoutPanel3;
-        private RichTextBox richTextBox1;
+        private TableLayoutPanel tableLayoutPanelLogo;
+        private TableLayoutPanel tableLayoutPanelHarga;
+        private TextBox textBox2;
+        private TextBox textBox1;
     }
 }
