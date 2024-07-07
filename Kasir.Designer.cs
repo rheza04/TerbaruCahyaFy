@@ -112,10 +112,10 @@ namespace TerbaruCahyaFy
             // labelHeader
             // 
             this.labelHeader.AutoSize = true;
-            this.labelHeader.BackColor = System.Drawing.Color.RoyalBlue;
+            this.labelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.labelHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelHeader.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeader.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHeader.ForeColor = System.Drawing.Color.White;
             this.labelHeader.Location = new System.Drawing.Point(3, 0);
             this.labelHeader.Name = "labelHeader";
             this.labelHeader.Size = new System.Drawing.Size(1344, 71);
@@ -490,15 +490,17 @@ namespace TerbaruCahyaFy
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Font = new System.Drawing.Font("Impact", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.Yellow;
             this.textBox2.Location = new System.Drawing.Point(3, 38);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox2.Size = new System.Drawing.Size(272, 54);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "6000";
+            this.textBox2.Text = "9.000";
             // 
             // tableLayoutPanel3
             // 
@@ -519,9 +521,11 @@ namespace TerbaruCahyaFy
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Window;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Lime;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(266, 29);
@@ -738,7 +742,7 @@ namespace TerbaruCahyaFy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Kasir";
