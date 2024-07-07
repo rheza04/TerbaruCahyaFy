@@ -315,7 +315,7 @@ namespace TerbaruCahyaFy
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.textBox13, 2);
             this.textBox13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.Location = new System.Drawing.Point(3, 298);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
