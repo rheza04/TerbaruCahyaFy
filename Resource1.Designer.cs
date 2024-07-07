@@ -63,6 +63,16 @@ namespace TerbaruCahyaFy {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap _1d437e7cc2 {
+            get {
+                object obj = ResourceManager.GetObject("_1d437e7cc2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap asdafedvs {
             get {
                 object obj = ResourceManager.GetObject("asdafedvs", resourceCulture);

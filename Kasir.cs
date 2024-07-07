@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TerbaruCahyaFy
 {
-    public partial class Form1 : Form
+    public partial class Kasir : Form
     {
-        public Form1()
+        public Kasir()
         {
             InitializeComponent();
         }
