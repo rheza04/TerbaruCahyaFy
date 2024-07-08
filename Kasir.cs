@@ -16,6 +16,7 @@ namespace TerbaruCahyaFy
     public partial class Kasir : Form
     {
         private string currentIPAddress;
+        private string currentNetworkStatus;
         private Timer timer;
 
         public Kasir()
@@ -23,6 +24,7 @@ namespace TerbaruCahyaFy
             InitializeComponent();
             InitializeCustomComponents();
         }
+
         public Kasir(string Username)
         {
             InitializeComponent();
@@ -31,38 +33,46 @@ namespace TerbaruCahyaFy
             InitializeCustomComponents();
         }
 
-        private async Task<string> GetIPAddress()
+        private void InitializeCustomComponents()
         {
-            if (NetworkInterface.GetIsNetworkAvailable())
-            {
-                // Mendapatkan IP Publik
-                using (var client = new HttpClient())
-                {
-                    return await client.GetStringAsync("https://api.ipify.org");
-                }
-            }
-            else
-            {
-                // Mendapatkan IP Lokal
-                return GetLocalIPAddress();
-            }
-        }
-        private string GetLocalIPAddress()
-        {
-            var host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (var ip in host.AddressList)
-            {
-                if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
-                {
-                    return ip.ToString();
-                }
-            }
-            throw new Exception("Tidak ada jaringan yang tersambung!");
+            // Menginisialisasi timer untuk cek jaringan dan IP
+            timer = new Timer();
+            timer.Interval = 5000; // 5 detik
+            timer.Tick += new EventHandler(CheckStatus);
+            timer.Start();
+
+            // Set status jaringan pertama kali
+            SetNetworkStatus();
+
+            // Set IP pertama kali
+            SetIPAddress();
+
+            // Menampilkan tanggal hari ini
+            textBox1.Text = DateTime.Now.ToString("dd MMMM yyyy");
         }
 
-        private async void CheckIPAddress(object sender, EventArgs e)
+        private void CheckStatus(object sender, EventArgs e)
         {
-            string newIPAddress = await GetIPAddress();
+            // Periksa status jaringan
+            string newNetworkStatus = NetworkInterface.GetIsNetworkAvailable() ? "Lokal Online" : "Lokal Offline";
+            if (newNetworkStatus != currentNetworkStatus)
+            {
+                currentNetworkStatus = newNetworkStatus;
+                textBox21.Text = currentNetworkStatus;
+                if (newNetworkStatus == "Lokal Offline")
+                {
+                    textBox21.BackColor = Color.Red;
+                    textBox21.ForeColor = Color.LightYellow;
+                }
+                else
+                {
+                    textBox21.BackColor = SystemColors.Window;
+                    textBox21.ForeColor = SystemColors.ControlText;
+                }
+            }
+
+            // Periksa alamat IP
+            string newIPAddress = GetLocalIPAddress();
             if (newIPAddress != currentIPAddress)
             {
                 currentIPAddress = newIPAddress;
@@ -70,49 +80,56 @@ namespace TerbaruCahyaFy
             }
         }
 
-        private async void SetIPAddress()
+        private void SetNetworkStatus()
         {
-            currentIPAddress = await GetIPAddress();
-            textBox22.Text = "PC : " + currentIPAddress;
-        }
-
-        private void InitializeCustomComponents()
-        {
-            // Timer cek Ip
-            timer = new Timer();
-            timer.Interval = 10000; // 5 detik
-            timer.Tick += new EventHandler(CheckIPAddress);
-            timer.Start();
-
-            // Ip pertama
-            SetIPAddress();
-
-            // tgl
-            textBox1.Text = DateTime.Now.ToString("dd MMMM yyyy");
-
-            // status jaringan
-            if (NetworkInterface.GetIsNetworkAvailable())
+            currentNetworkStatus = NetworkInterface.GetIsNetworkAvailable() ? "Lokal Online" : "Lokal Offline";
+            textBox21.Text = currentNetworkStatus;
+            if (currentNetworkStatus == "Lokal Offline")
             {
-                textBox21.Text = "Lokal Online";
+                textBox21.BackColor = Color.Red;
+                textBox21.ForeColor = Color.LightYellow;
             }
             else
             {
-                textBox21.Text = "Lokal Offline";
+                textBox21.BackColor = SystemColors.Window;
+                textBox21.ForeColor = SystemColors.ControlText;
             }
+        }
 
-            // ip address
-            string localIP = GetLocalIPAddress();
-            textBox22.Text = "PC : " + localIP;
+        private void SetIPAddress()
+        {
+            currentIPAddress = GetLocalIPAddress();
+            textBox22.Text = "PC : " + currentIPAddress;
+        }
+
+        private string GetLocalIPAddress()
+        {
+            try
+            {
+                var host = Dns.GetHostEntry(Dns.GetHostName());
+                foreach (var ip in host.AddressList)
+                {
+                    if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                    {
+                        return ip.ToString();
+                    }
+                }
+                return "Tidak ada jaringan yang tersambung!";
+            }
+            catch (Exception)
+            {
+                return "Error mendapatkan IP";
+            }
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            // Event handler untuk Paint event pada tableLayoutPanel1
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
-
+            // Event handler untuk Paint event pada panel5
         }
     }
 }
