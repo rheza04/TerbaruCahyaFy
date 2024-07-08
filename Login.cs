@@ -54,8 +54,8 @@ namespace TerbaruCahyaFy
                     MessageBox.Show("IdSupplier dan Password benar");
                     connection.Close();
                     this.Hide();
-                    TbhPjln TbhPjln2 = new TbhPjln(textBoxUsername.Text);
-                    TbhPjln2.ShowDialog();
+                    Kasir Kasir2 = new Kasir(textBoxUsername.Text);
+                    Kasir2.ShowDialog();
                 }
                 else if (count > 1)
                 {
