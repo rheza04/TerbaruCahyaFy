@@ -5,99 +5,91 @@ using System.IO;
 using TerbaruCahyaFy;
 
 namespace TerbaruCahyaFy
-{
-    public partial class LoginForm : Form
     {
-        private SQLiteConnection connection;
-
-        public LoginForm()
+        public partial class LoginForm : Form
         {
-            InitializeComponent();
-            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data Barang.db");
-            connection = new SQLiteConnection($"Data Source={dbPath};Version=3;");
+            private SQLiteConnection connection;
 
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            try
+            public LoginForm()
             {
-                connection.Open();
-                labelCheckConnection.Text = "Connection Successful";
-                connection.Close();
+                InitializeComponent();
+                string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data Barang.db");
+                connection = new SQLiteConnection($"Data Source={dbPath};Version=3;");
             }
-            catch (Exception ex)
+
+            private void Login_Load(object sender, EventArgs e)
             {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
-
-        private void buttonLogin_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                connection.Open();
-                string query = "SELECT * FROM ListSupplier WHERE Username = @Username AND Password = @Password";
-                SQLiteCommand command = new SQLiteCommand(query, connection);
-                command.Parameters.AddWithValue("@Username", textBoxUsername.Text);
-                command.Parameters.AddWithValue("@Password", textBoxPwd.Text);
-
-                SQLiteDataReader reader = command.ExecuteReader();
-                int count = 0;
-                while (reader.Read())
+                try
                 {
-                    count++;
-                }
-
-                if (count == 1)
-                {
-                    MessageBox.Show("IdSupplier dan Password benar");
+                    connection.Open();
+                    labelCheckConnection.Text = "Connection Successful";
                     connection.Close();
-                    this.Hide();
-                    Kasir Kasir2 = new Kasir(textBoxUsername.Text);
-                    Kasir2.ShowDialog();
                 }
-                else if (count > 1)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Duplicate IdSupplier dan Password");
+                    MessageBox.Show("Error: " + ex.Message);
                 }
-                else
+            }
+
+            private void buttonLogin_Click(object sender, EventArgs e)
+            {
+                try
                 {
-                    MessageBox.Show("IdSupplier dan Password salah");
+                    connection.Open();
+                    string query = "SELECT * FROM ListSupplier WHERE Username = @Username AND Password = @Password";
+                    SQLiteCommand command = new SQLiteCommand(query, connection);
+                    command.Parameters.AddWithValue("@Username", textBoxUsername.Text);
+                    command.Parameters.AddWithValue("@Password", textBoxPwd.Text);
+
+                    SQLiteDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string role = reader["Role"].ToString();
+                        if (role == "admin")
+                        {
+                            MessageBox.Show("Login sebagai Admin berhasil");
+                            this.Hide();
+                            InputBarang inputBarangForm = new InputBarang();
+                            inputBarangForm.ShowDialog();
+                        }
+                        else if (role == "user")
+                        {
+                            MessageBox.Show("Login sebagai User berhasil");
+                            this.Hide();
+                            Kasir kasirForm = new Kasir(textBoxUsername.Text);
+                            kasirForm.ShowDialog();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username atau Password salah");
+                    }
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
 
-        private void textBoxIdsp_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
+            private void textBoxUsername_KeyDown(object sender, KeyEventArgs e)
             {
-                textBoxPwd.Focus();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    textBoxPwd.Focus();
+                }
             }
-        }
 
-        private void textBoxPwd_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
+            private void textBoxPwd_KeyDown(object sender, KeyEventArgs e)
             {
-                buttonLogin.PerformClick();
-            }
-        }
-
-        private void textBoxUsername_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                textBoxPwd.Focus();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    buttonLogin.PerformClick();
+                }
             }
         }
     }
-}

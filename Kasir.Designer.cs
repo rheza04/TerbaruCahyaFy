@@ -74,13 +74,13 @@ namespace TerbaruCahyaFy
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanelKiriKananPemisah = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridViewJual = new System.Windows.Forms.DataGridView();
+            this.dataGridViewJualan = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewQR = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,8 +143,8 @@ namespace TerbaruCahyaFy
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanelKiriKananPemisah.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJual)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJualan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQR)).BeginInit();
             this.panel4.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -159,7 +159,7 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.396306F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.129303F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.47439F));
-            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
+            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
             this.tableLayoutPanelSearch.Controls.Add(this.textBox23, 3, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel5, 0, 1);
@@ -181,12 +181,12 @@ namespace TerbaruCahyaFy
             // 
             this.textBox23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox23.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(1154, 1);
+            this.textBox23.Location = new System.Drawing.Point(1152, 1);
             this.textBox23.Margin = new System.Windows.Forms.Padding(1);
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
             this.textBox23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox23.Size = new System.Drawing.Size(189, 43);
+            this.textBox23.Size = new System.Drawing.Size(191, 43);
             this.textBox23.TabIndex = 5;
             // 
             // panel1
@@ -199,7 +199,7 @@ namespace TerbaruCahyaFy
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panel1.Size = new System.Drawing.Size(1151, 43);
+            this.panel1.Size = new System.Drawing.Size(1149, 43);
             this.panel1.TabIndex = 6;
             // 
             // textBox3
@@ -209,7 +209,7 @@ namespace TerbaruCahyaFy
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(0, 5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(1147, 32);
+            this.textBox3.Size = new System.Drawing.Size(1145, 32);
             this.textBox3.TabIndex = 0;
             this.textBox3.Text = "DIBAYAR";
             this.textBox3.WordWrap = false;
@@ -736,18 +736,18 @@ namespace TerbaruCahyaFy
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.dataGridViewJual);
-            this.panel3.Controls.Add(this.dataGridView2);
+            this.panel3.Controls.Add(this.dataGridViewJualan);
+            this.panel3.Controls.Add(this.dataGridViewQR);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(289, 8);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1053, 361);
             this.panel3.TabIndex = 1;
             // 
-            // dataGridViewJual
+            // dataGridViewJualan
             // 
-            this.dataGridViewJual.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridViewJual.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewJualan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridViewJualan.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
@@ -755,9 +755,9 @@ namespace TerbaruCahyaFy
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewJual.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewJual.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewJual.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewJualan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewJualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewJualan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -770,13 +770,13 @@ namespace TerbaruCahyaFy
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewJual.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewJual.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewJual.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewJual.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewJual.Name = "dataGridViewJual";
-            this.dataGridViewJual.Size = new System.Drawing.Size(1049, 357);
-            this.dataGridViewJual.TabIndex = 2;
+            this.dataGridViewJualan.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewJualan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewJualan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewJualan.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewJualan.Name = "dataGridViewJualan";
+            this.dataGridViewJualan.Size = new System.Drawing.Size(1049, 357);
+            this.dataGridViewJualan.TabIndex = 2;
             // 
             // Column1
             // 
@@ -819,10 +819,10 @@ namespace TerbaruCahyaFy
             this.Column5.Name = "Column5";
             this.Column5.Width = 120;
             // 
-            // dataGridView2
+            // dataGridViewQR
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewQR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridViewQR.BackgroundColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
@@ -830,9 +830,9 @@ namespace TerbaruCahyaFy
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewQR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewQR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewQR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -846,13 +846,13 @@ namespace TerbaruCahyaFy
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1049, 357);
-            this.dataGridView2.TabIndex = 3;
+            this.dataGridViewQR.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewQR.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewQR.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewQR.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewQR.Name = "dataGridViewQR";
+            this.dataGridViewQR.Size = new System.Drawing.Size(1049, 357);
+            this.dataGridViewQR.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1369,8 +1369,8 @@ namespace TerbaruCahyaFy
             this.toolStrip1.PerformLayout();
             this.tableLayoutPanelKiriKananPemisah.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJual)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJualan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQR)).EndInit();
             this.panel4.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1426,14 +1426,14 @@ namespace TerbaruCahyaFy
         private Label label7;
         private TableLayoutPanel tableLayoutPanelKiriKananPemisah;
         private Panel panel3;
-        private DataGridView dataGridView2;
+        private DataGridView dataGridViewQR;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn Column6;
-        private DataGridView dataGridViewJual;
+        private DataGridView dataGridViewJualan;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
