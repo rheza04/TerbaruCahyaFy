@@ -159,7 +159,7 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.396306F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.129303F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.47439F));
-            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
             this.tableLayoutPanelSearch.Controls.Add(this.textBox23, 3, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel5, 0, 1);
@@ -181,12 +181,12 @@ namespace TerbaruCahyaFy
             // 
             this.textBox23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox23.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(1152, 1);
+            this.textBox23.Location = new System.Drawing.Point(1148, 1);
             this.textBox23.Margin = new System.Windows.Forms.Padding(1);
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
             this.textBox23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox23.Size = new System.Drawing.Size(191, 43);
+            this.textBox23.Size = new System.Drawing.Size(195, 43);
             this.textBox23.TabIndex = 5;
             // 
             // panel1
@@ -199,7 +199,7 @@ namespace TerbaruCahyaFy
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panel1.Size = new System.Drawing.Size(1149, 43);
+            this.panel1.Size = new System.Drawing.Size(1145, 43);
             this.panel1.TabIndex = 6;
             // 
             // textBox3
@@ -209,10 +209,10 @@ namespace TerbaruCahyaFy
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(0, 5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(1145, 32);
+            this.textBox3.Size = new System.Drawing.Size(1141, 32);
             this.textBox3.TabIndex = 0;
-            this.textBox3.Text = "DIBAYAR";
             this.textBox3.WordWrap = false;
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             // 
             // panel5
             // 
@@ -240,7 +240,6 @@ namespace TerbaruCahyaFy
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(1338, 21);
             this.textBox4.TabIndex = 3;
-            this.textBox4.Text = "ENAM RIBU RUPIAH";
             // 
             // panel6
             // 
@@ -593,7 +592,6 @@ namespace TerbaruCahyaFy
             this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox2.Size = new System.Drawing.Size(210, 50);
             this.textBox2.TabIndex = 0;
-            this.textBox2.Text = "9.000";
             // 
             // panel9
             // 
@@ -1197,7 +1195,6 @@ namespace TerbaruCahyaFy
             this.textBox12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textBox12.Size = new System.Drawing.Size(141, 23);
             this.textBox12.TabIndex = 9;
-            this.textBox12.Text = "64";
             this.textBox12.WordWrap = false;
             // 
             // tabPage2
