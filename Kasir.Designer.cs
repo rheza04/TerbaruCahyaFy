@@ -20,16 +20,17 @@ namespace TerbaruCahyaFy
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kasir));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanelSearch = new System.Windows.Forms.TableLayoutPanel();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -159,7 +160,7 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.396306F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.129303F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.47439F));
-            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
+            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 203F));
             this.tableLayoutPanelSearch.Controls.Add(this.textBox23, 3, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel5, 0, 1);
@@ -180,14 +181,16 @@ namespace TerbaruCahyaFy
             // textBox23
             // 
             this.textBox23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox23.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(1148, 1);
+            this.textBox23.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox23.Location = new System.Drawing.Point(1140, 1);
             this.textBox23.Margin = new System.Windows.Forms.Padding(1);
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
             this.textBox23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox23.Size = new System.Drawing.Size(195, 43);
+            this.textBox23.Size = new System.Drawing.Size(203, 43);
             this.textBox23.TabIndex = 5;
+            this.textBox23.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox23_KeyDown);
+            this.textBox23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox23_KeyPress);
             // 
             // panel1
             // 
@@ -199,17 +202,19 @@ namespace TerbaruCahyaFy
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panel1.Size = new System.Drawing.Size(1145, 43);
+            this.panel1.Size = new System.Drawing.Size(1137, 43);
             this.panel1.TabIndex = 6;
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(0, 5);
+            this.textBox3.Location = new System.Drawing.Point(16, 5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(1141, 32);
+            this.textBox3.Size = new System.Drawing.Size(1117, 32);
             this.textBox3.TabIndex = 0;
             this.textBox3.WordWrap = false;
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
@@ -249,7 +254,7 @@ namespace TerbaruCahyaFy
             this.panel6.Location = new System.Drawing.Point(1, 73);
             this.panel6.Margin = new System.Windows.Forms.Padding(1);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(94, 46);
+            this.panel6.Size = new System.Drawing.Size(93, 46);
             this.panel6.TabIndex = 8;
             // 
             // textBox14
@@ -264,7 +269,7 @@ namespace TerbaruCahyaFy
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
             this.textBox14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox14.Size = new System.Drawing.Size(90, 42);
+            this.textBox14.Size = new System.Drawing.Size(89, 42);
             this.textBox14.TabIndex = 3;
             this.textBox14.Text = "QTY ->";
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -274,10 +279,10 @@ namespace TerbaruCahyaFy
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.textBox15);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(97, 73);
+            this.panel7.Location = new System.Drawing.Point(96, 73);
             this.panel7.Margin = new System.Windows.Forms.Padding(1);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(68, 46);
+            this.panel7.Size = new System.Drawing.Size(67, 46);
             this.panel7.TabIndex = 9;
             // 
             // textBox15
@@ -291,7 +296,7 @@ namespace TerbaruCahyaFy
             this.textBox15.Margin = new System.Windows.Forms.Padding(0);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(64, 42);
+            this.textBox15.Size = new System.Drawing.Size(63, 42);
             this.textBox15.TabIndex = 4;
             this.textBox15.Text = "1";
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -302,10 +307,10 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanelSearch.SetColumnSpan(this.panel8, 2);
             this.panel8.Controls.Add(this.textBox16);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(167, 73);
+            this.panel8.Location = new System.Drawing.Point(165, 73);
             this.panel8.Margin = new System.Windows.Forms.Padding(1);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1176, 46);
+            this.panel8.Size = new System.Drawing.Size(1178, 46);
             this.panel8.TabIndex = 10;
             // 
             // textBox16
@@ -313,12 +318,12 @@ namespace TerbaruCahyaFy
             this.textBox16.BackColor = System.Drawing.Color.Yellow;
             this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox16.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox16.Location = new System.Drawing.Point(0, 0);
             this.textBox16.Margin = new System.Windows.Forms.Padding(0);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(1172, 42);
+            this.textBox16.Size = new System.Drawing.Size(1174, 42);
             this.textBox16.TabIndex = 5;
             // 
             // tableLayoutPanelBottom
@@ -744,16 +749,17 @@ namespace TerbaruCahyaFy
             // 
             // dataGridViewJualan
             // 
-            this.dataGridViewJualan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridViewJualan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewJualan.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewJualan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewJualan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewJualan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridViewJualan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewJualan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -761,74 +767,84 @@ namespace TerbaruCahyaFy
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewJualan.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewJualan.DefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridViewJualan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewJualan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewJualan.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewJualan.Name = "dataGridViewJualan";
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridViewJualan.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridViewJualan.Size = new System.Drawing.Size(1049, 357);
             this.dataGridViewJualan.TabIndex = 2;
             // 
             // Column1
             // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.FillWeight = 45.91837F;
+            this.Column1.Frozen = true;
             this.Column1.HeaderText = "Kode";
-            this.Column1.MinimumWidth = 90;
+            this.Column1.MinimumWidth = 444;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 90;
+            this.Column1.Width = 444;
             // 
             // Column2
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.FillWeight = 123F;
             this.Column2.HeaderText = "Item / Keterangan";
-            this.Column2.MinimumWidth = 120;
+            this.Column2.MinimumWidth = 111;
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle24;
+            this.Column3.FillWeight = 29.99476F;
             this.Column3.HeaderText = "Qty";
             this.Column3.MinimumWidth = 90;
             this.Column3.Name = "Column3";
-            this.Column3.Width = 90;
             // 
             // Column4
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle25;
+            this.Column4.FillWeight = 49.32788F;
             this.Column4.HeaderText = "Harga";
             this.Column4.MinimumWidth = 120;
             this.Column4.Name = "Column4";
-            this.Column4.Width = 120;
             // 
             // Column5
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle26;
             this.Column5.HeaderText = "Sub Total";
-            this.Column5.MinimumWidth = 120;
+            this.Column5.MinimumWidth = 222;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 120;
+            this.Column5.Width = 222;
             // 
             // dataGridViewQR
             // 
             this.dataGridViewQR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridViewQR.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewQR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewQR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridViewQR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewQR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -837,14 +853,14 @@ namespace TerbaruCahyaFy
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.Column6});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewQR.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewQR.DefaultCellStyle = dataGridViewCellStyle33;
             this.dataGridViewQR.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewQR.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewQR.Location = new System.Drawing.Point(0, 0);
@@ -868,8 +884,8 @@ namespace TerbaruCahyaFy
             // 
             // dataGridViewTextBoxColumn3
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridViewTextBoxColumn3.HeaderText = "Barcode";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 90;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -877,8 +893,8 @@ namespace TerbaruCahyaFy
             // 
             // dataGridViewTextBoxColumn4
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle31;
             this.dataGridViewTextBoxColumn4.HeaderText = "H. Jual Unit";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 120;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
@@ -886,8 +902,8 @@ namespace TerbaruCahyaFy
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle32;
             this.dataGridViewTextBoxColumn5.HeaderText = "H. Jual Pcs";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 120;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -1087,13 +1103,12 @@ namespace TerbaruCahyaFy
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.textBox13, 2);
             this.textBox13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.Location = new System.Drawing.Point(3, 285);
             this.textBox13.Multiline = true;
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(251, 33);
             this.textBox13.TabIndex = 9;
-            this.textBox13.Text = "6.000";
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
@@ -1431,11 +1446,6 @@ namespace TerbaruCahyaFy
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridView dataGridViewJualan;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
         private Panel panel4;
         private TabControl tabControl1;
         private TabPage tabPage1;
@@ -1473,5 +1483,10 @@ namespace TerbaruCahyaFy
         protected TextBox textBox22;
         private Panel panel18;
         private TextBox textBox12;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
     }
 }
