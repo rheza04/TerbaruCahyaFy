@@ -81,7 +81,7 @@ namespace TerbaruCahyaFy
 
             textBox3.TextChanged += new EventHandler(textBox3_TextChanged);
             textBox23.KeyDown += new KeyEventHandler(textBox23_KeyDown);
-            dataGridViewQR.CellDoubleClick += new DataGridViewCellEventHandler(dataGridViewQR_CellDoubleClick);
+
 
             textBox23.TextChanged += new EventHandler(textBox23_TextChanged);
             textBox13.TextChanged += new EventHandler(textBox13_TextChanged);
@@ -96,8 +96,14 @@ namespace TerbaruCahyaFy
             //autocomplete textbox3
             textBox3.AutoCompleteMode = AutoCompleteMode.Append;
             textBox3.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            UpdateAutoCompleteSource();
 
+
+
+            // Setup event handlers for dataGridViewQR
+            dataGridViewQR.CellDoubleClick += new DataGridViewCellEventHandler(dataGridViewQR_CellDoubleClick);
             dataGridViewQR.KeyDown += new KeyEventHandler(dataGridViewQR_KeyDown);
+                       
         }
 
         private void UpdateAutoCompleteSource()
@@ -178,18 +184,21 @@ namespace TerbaruCahyaFy
             }
         }
 
+
         private void dataGridViewQR_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 var row = dataGridViewQR.Rows[e.RowIndex];
                 string barcode = row.Cells["Barcode"].Value.ToString();
-                AddItemToDataGridViewJualan(barcode);
-                dataGridViewQR.SendToBack(); // Pindahkan dataGridViewQR ke belakang
-                dataGridViewJualan.BringToFront(); // Pastikan dataGridViewJualan berada di depan
+                ScanBarang(barcode);
+                dataGridViewQR.Visible = false;  // Hide dataGridViewQR
+                dataGridViewJualan.Visible = true;  // Show dataGridViewJualan
                 textBox3.Clear();
             }
         }
+
+
 
         private void dataGridViewQR_KeyDown(object sender, KeyEventArgs e)
         {
@@ -199,69 +208,15 @@ namespace TerbaruCahyaFy
                 {
                     var row = dataGridViewQR.CurrentRow;
                     string barcode = row.Cells["Barcode"].Value.ToString();
-                    AddItemToDataGridViewJualan(barcode);
-                    dataGridViewQR.SendToBack(); // Pindahkan dataGridViewQR ke belakang
-                    dataGridViewJualan.BringToFront(); // Pastikan dataGridViewJualan berada di depan
+                    ScanBarang(barcode);
+                    dataGridViewQR.Visible = false;  // Hide dataGridViewQR
+                    dataGridViewJualan.Visible = true;  // Show dataGridViewJualan
                     textBox3.Clear();
                     e.Handled = true; // Prevents the 'ding' sound when Enter is pressed
                 }
             }
         }
 
-        private void AddItemToDataGridViewJualan(string barcode)
-        {
-            try
-            {
-                connection.Open();
-                string query = "SELECT * FROM Items WHERE Barcode = @Barcode";
-                using (SQLiteCommand command = new SQLiteCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Barcode", barcode);
-                    using (SQLiteDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            string namaItem = reader["NamaItem"].ToString();
-                            int qty = 1;
-                            decimal harga = Convert.ToDecimal(reader["HJualPcs"]);
-                            int sisaQty = Convert.ToInt32(reader["Stok"]);
-
-                            // Cek apakah barang sudah ada di dataGridViewJualan
-                            bool itemFound = false;
-                            foreach (DataGridViewRow dataRow in dataGridViewJualan.Rows)
-                            {
-                                if (dataRow.Cells["Kode"].Value != null && dataRow.Cells["Kode"].Value.ToString() == barcode)
-                                {
-                                    dataRow.Cells["Qty"].Value = Convert.ToInt32(dataRow.Cells["Qty"].Value) + 1;
-                                    dataRow.Cells["SubTotal"].Value = Convert.ToDecimal(dataRow.Cells["SubTotal"].Value) + harga;
-                                    itemFound = true;
-                                    break;
-                                }
-                            }
-
-                            // Jika barang tidak ditemukan, tambahkan sebagai baris baru
-                            if (!itemFound)
-                            {
-                                dataGridViewJualan.Rows.Add(new object[] { barcode, namaItem, qty, harga, harga * qty });
-                            }
-
-                            // Update total setelah menambahkan barang
-                            UpdateTotal();
-                            dataGridViewJualan.BringToFront(); // Pastikan dataGridViewJualan berada di depan
-                            dataGridViewJualan.Focus(); // Fokuskan ke dataGridViewJualan
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
 
 
         private void InitializeDataGridView()
@@ -289,6 +244,7 @@ namespace TerbaruCahyaFy
 
 
 
+
         private void SetupDataGridView()
         {
             dataGridViewJualan.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -299,12 +255,9 @@ namespace TerbaruCahyaFy
 
         private void dataGridViewJualan_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridViewJualan.Columns["Qty"].Index)
-            {
-                UpdateSubTotal(e.RowIndex);
-                UpdateTotal();
-            }
+
         }
+
         private void Qty_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Hanya izinkan angka dan karakter kontrol (seperti backspace)
