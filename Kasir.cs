@@ -27,13 +27,33 @@ namespace TerbaruCahyaFy
 
         public Kasir()
         {
-            InitializeComponent();
-            InitializeDatabaseConnection();
-            InitializeCustomComponents();
-            StartTcpServer();
-            InitializeDataGridView();
-            SetupDataGridView();
+            try
+            {
+                InitializeComponent();
+                Console.WriteLine("InitializeComponent completed.");
+
+                InitializeDatabaseConnection();
+                Console.WriteLine("InitializeDatabaseConnection completed.");
+
+                InitializeDataGridView(); // Pastikan ini dipanggil sebelum setup event handlers
+                Console.WriteLine("InitializeDataGridView completed.");
+
+                InitializeCustomComponents();
+                Console.WriteLine("InitializeCustomComponents completed.");
+
+                // StartTcpServer();
+                // Console.WriteLine("StartTcpServer completed.");
+
+                // SetupDataGridView();
+                // Console.WriteLine("SetupDataGridView completed.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in constructor: " + ex.Message);
+            }
         }
+
+
 
         public Kasir(string Username)
         {
@@ -46,65 +66,95 @@ namespace TerbaruCahyaFy
         //deteksi database konek apa kagak
         private void InitializeDatabaseConnection()
         {
-            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data Barang.db");
-            connection = new SQLiteConnection($"Data Source={dbPath};Version=3;");
             try
             {
+                string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data Barang.db");
+                connection = new SQLiteConnection($"Data Source={dbPath};Version=3;");
                 connection.Open();
                 MessageBox.Show("Connection Successful");
                 connection.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error in InitializeDatabaseConnection: " + ex.Message);
             }
         }
 
+
         private void InitializeCustomComponents()
         {
-            // fungsi cek interval konek jaringan apa kagak
-            timer = new Timer();
-            timer.Interval = 5000; // 5 detik
-            timer.Tick += new EventHandler(CheckStatus);
-            timer.Start();
+            try
+            {
+                // fungsi cek interval konek jaringan apa kagak
+                timer = new Timer();
+                timer.Interval = 5000; // 5 detik
+                timer.Tick += new EventHandler(CheckStatus);
+                timer.Start();
+                Console.WriteLine("Timer for network check initialized.");
 
-            Timer dateTimeTimer = new Timer();
-            dateTimeTimer.Interval = 1000; // 1 detik
-            dateTimeTimer.Tick += new EventHandler(UpdateDateTime);
-            dateTimeTimer.Start();
+                Timer dateTimeTimer = new Timer();
+                dateTimeTimer.Interval = 1000; // 1 detik
+                dateTimeTimer.Tick += new EventHandler(UpdateDateTime);
+                dateTimeTimer.Start();
+                Console.WriteLine("Timer for datetime update initialized.");
 
-            SetNetworkStatus();
-            SetIPAddress();
+                SetNetworkStatus();
+                Console.WriteLine("Network status set.");
 
-            // Menampilkan tanggal hari ini
-            textBox1.Text = DateTime.Now.ToString("dd MMMM yyyy");
+                SetIPAddress();
+                Console.WriteLine("IP address set.");
 
-            textBox3.TextChanged += new EventHandler(textBox3_TextChanged);
-            textBox23.KeyDown += new KeyEventHandler(textBox23_KeyDown);
+                // Menampilkan tanggal hari ini
+                textBox1.Text = DateTime.Now.ToString("dd MMMM yyyy");
+                Console.WriteLine("Current date set in textBox1.");
 
+                // Event handlers for TextBox
+                textBox3.TextChanged += new EventHandler(textBox3_TextChanged);
+                Console.WriteLine("Event handler for textBox3.TextChanged set.");
 
-            textBox23.TextChanged += new EventHandler(textBox23_TextChanged);
-            textBox13.TextChanged += new EventHandler(textBox13_TextChanged);
-            textBoxNama.TextChanged += new EventHandler(textBoxNama_TextChanged);
-            textBoxNama2.TextChanged += new EventHandler(textBoxNama2_TextChanged);
-            textBox23.KeyPress += new KeyPressEventHandler(textBox23_KeyPress);
+                textBox3.KeyDown += new KeyEventHandler(textBox3_KeyDown);
+                Console.WriteLine("Event handler for textBox3.KeyDown set.");
 
-            // Tambahkan event handler untuk dataGridViewJualan
-            dataGridViewJualan.CellValueChanged += new DataGridViewCellEventHandler(dataGridViewJualan_CellValueChanged);
-            dataGridViewJualan.EditingControlShowing += new DataGridViewEditingControlShowingEventHandler(dataGridViewJualan_EditingControlShowing);
+                textBox23.KeyDown += new KeyEventHandler(textBox23_KeyDown);
+                Console.WriteLine("Event handler for textBox23.KeyDown set.");
 
-            //autocomplete textbox3
-            textBox3.AutoCompleteMode = AutoCompleteMode.Append;
-            textBox3.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            UpdateAutoCompleteSource();
+                textBox23.TextChanged += new EventHandler(textBox23_TextChanged);
+                Console.WriteLine("Event handler for textBox23.TextChanged set.");
 
+                textBox13.TextChanged += new EventHandler(textBox13_TextChanged);
+                Console.WriteLine("Event handler for textBox13.TextChanged set.");
 
+                textBoxNama.TextChanged += new EventHandler(textBoxNama_TextChanged);
+                Console.WriteLine("Event handler for textBoxNama_TextChanged set.");
 
-            // Setup event handlers for dataGridViewQR
-            dataGridViewQR.CellDoubleClick += new DataGridViewCellEventHandler(dataGridViewQR_CellDoubleClick);
-            dataGridViewQR.KeyDown += new KeyEventHandler(dataGridViewQR_KeyDown);
-                       
+                textBoxNama2.TextChanged += new EventHandler(textBoxNama2_TextChanged);
+                Console.WriteLine("Event handler for textBoxNama2_TextChanged set.");
+
+                textBox23.KeyPress += new KeyPressEventHandler(textBox23_KeyPress);
+                Console.WriteLine("Event handler for textBox23_KeyPress set.");
+
+                // Event handlers for DataGridView
+                dataGridViewJualan.CellValueChanged += new DataGridViewCellEventHandler(dataGridViewJualan_CellValueChanged);
+                Console.WriteLine("Event handler for dataGridViewJualan.CellValueChanged set.");
+
+                dataGridViewJualan.EditingControlShowing += new DataGridViewEditingControlShowingEventHandler(dataGridViewJualan_EditingControlShowing);
+                Console.WriteLine("Event handler for dataGridViewJualan.EditingControlShowing set.");
+
+                dataGridViewQR.CellDoubleClick += new DataGridViewCellEventHandler(dataGridViewQR_CellDoubleClick);
+                Console.WriteLine("Event handler for dataGridViewQR.CellDoubleClick set.");
+
+                dataGridViewQR.KeyDown += new KeyEventHandler(dataGridViewQR_KeyDown);
+                Console.WriteLine("Event handler for dataGridViewQR.KeyDown set.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in InitializeCustomComponents: " + ex.Message);
+            }
         }
+
+
+
+
 
         private void UpdateAutoCompleteSource()
         {
@@ -154,6 +204,9 @@ namespace TerbaruCahyaFy
                 adapter.Fill(dt);
                 dataGridViewQR.DataSource = dt;
 
+                Console.WriteLine($"Search Query: {query}");
+                Console.WriteLine($"Number of items found: {dt.Rows.Count}");
+
                 // Update autocomplete suggestions
                 AutoCompleteStringCollection suggestions = new AutoCompleteStringCollection();
                 foreach (DataRow row in dt.Rows)
@@ -167,16 +220,18 @@ namespace TerbaruCahyaFy
                 {
                     dataGridViewQR.Visible = true;
                     dataGridViewJualan.Visible = false;
+                    Console.WriteLine("dataGridViewQR is visible.");
                 }
                 else
                 {
                     dataGridViewQR.Visible = false;
                     dataGridViewJualan.Visible = true;
+                    Console.WriteLine("dataGridViewQR is not visible.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error in textBox3_TextChanged: " + ex.Message);
             }
             finally
             {
@@ -185,18 +240,22 @@ namespace TerbaruCahyaFy
         }
 
 
+
+
         private void dataGridViewQR_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 var row = dataGridViewQR.Rows[e.RowIndex];
                 string barcode = row.Cells["Barcode"].Value.ToString();
-                ScanBarang(barcode);
-                dataGridViewQR.Visible = false;  // Hide dataGridViewQR
-                dataGridViewJualan.Visible = true;  // Show dataGridViewJualan
+                AddItemToDataGridViewJualan(barcode);
+                dataGridViewQR.SendToBack();  // Pindahkan dataGridViewQR ke belakang
+                dataGridViewJualan.BringToFront();  // Pindahkan dataGridViewJualan ke depan
                 textBox3.Clear();
             }
         }
+
+
 
 
 
@@ -208,14 +267,76 @@ namespace TerbaruCahyaFy
                 {
                     var row = dataGridViewQR.CurrentRow;
                     string barcode = row.Cells["Barcode"].Value.ToString();
-                    ScanBarang(barcode);
-                    dataGridViewQR.Visible = false;  // Hide dataGridViewQR
-                    dataGridViewJualan.Visible = true;  // Show dataGridViewJualan
+                    AddItemToDataGridViewJualan(barcode);
+                    dataGridViewQR.SendToBack();  // Pindahkan dataGridViewQR ke belakang
+                    dataGridViewJualan.BringToFront();  // Pindahkan dataGridViewJualan ke depan
                     textBox3.Clear();
-                    e.Handled = true; // Prevents the 'ding' sound when Enter is pressed
+                    e.Handled = true;
                 }
             }
         }
+
+
+
+
+
+
+        private void AddItemToDataGridViewJualan(string barcode)
+        {
+            try
+            {
+                connection.Open();
+                string query = "SELECT * FROM Items WHERE Barcode = @Barcode";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Barcode", barcode);
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string namaItem = reader["NamaItem"].ToString();
+                            int qty = 1;
+                            decimal harga = Convert.ToDecimal(reader["HJualPcs"]);
+                            int sisaQty = Convert.ToInt32(reader["Stok"]);
+
+                            bool itemFound = false;
+                            foreach (DataGridViewRow dataRow in dataGridViewJualan.Rows)
+                            {
+                                if (dataRow.Cells["Kode"].Value != null && dataRow.Cells["Kode"].Value.ToString() == barcode)
+                                {
+                                    dataRow.Cells["Qty"].Value = Convert.ToInt32(dataRow.Cells["Qty"].Value) + 1;
+                                    dataRow.Cells["SubTotal"].Value = Convert.ToDecimal(dataRow.Cells["SubTotal"].Value) + harga;
+                                    itemFound = true;
+                                    break;
+                                }
+                            }
+
+                            if (!itemFound)
+                            {
+                                dataGridViewJualan.Rows.Add(new object[] { barcode, namaItem, qty, harga, harga * qty });
+                            }
+
+                            UpdateTotal();
+                            Console.WriteLine($"Item added: {namaItem}, Barcode: {barcode}, Qty: {qty}, Harga: {harga}, SisaQty: {sisaQty}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("No item found with the given barcode.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in AddItemToDataGridViewJualan: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
 
 
 
@@ -238,8 +359,14 @@ namespace TerbaruCahyaFy
             dataGridViewJualan.Columns["SubTotal"].DefaultCellStyle.Format = "N0";
 
             dataGridViewQR.Visible = false; // Hide dataGridViewQR by default
-        }
 
+            // Debug log
+            Console.WriteLine("Columns added: ");
+            foreach (DataGridViewColumn column in dataGridViewJualan.Columns)
+            {
+                Console.WriteLine(column.Name);
+            }
+        }
 
 
 
@@ -247,16 +374,44 @@ namespace TerbaruCahyaFy
 
         private void SetupDataGridView()
         {
-            dataGridViewJualan.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewJualan.Columns["Qty"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewJualan.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dataGridViewJualan.Columns["SubTotal"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            try
+            {
+                dataGridViewJualan.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridViewJualan.Columns["Qty"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridViewJualan.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dataGridViewJualan.Columns["SubTotal"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+                Console.WriteLine("SetupDataGridView completed");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in SetupDataGridView: " + ex.Message);
+            }
         }
+
 
         private void dataGridViewJualan_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+            // Debug log
+            Console.WriteLine("CellValueChanged triggered. ColumnIndex: " + e.ColumnIndex);
+            if (dataGridViewJualan.Columns["Qty"] != null)
+            {
+                Console.WriteLine("Qty column index: " + dataGridViewJualan.Columns["Qty"].Index);
+            }
+            else
+            {
+                Console.WriteLine("Qty column not found!");
+            }
 
+            if (e.ColumnIndex == dataGridViewJualan.Columns["Qty"].Index)
+            {
+                UpdateSubTotal(e.RowIndex);
+                UpdateTotal();
+            }
         }
+
+
+
 
         private void Qty_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -266,6 +421,7 @@ namespace TerbaruCahyaFy
                 e.Handled = true;
             }
         }
+
         private void UpdateSubTotal(int rowIndex)
         {
             var row = dataGridViewJualan.Rows[rowIndex];
@@ -322,10 +478,11 @@ namespace TerbaruCahyaFy
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error in TcpServer: " + ex.Message);
                 }
             });
         }
+
 
         //fungsi scanbarang textbox3
         private void ScanBarang(string barcode)
@@ -394,11 +551,6 @@ namespace TerbaruCahyaFy
             }
         }
 
-
-
-
-
-
         private void UpdateTotal()
         {
             decimal total = 0;
@@ -412,7 +564,6 @@ namespace TerbaruCahyaFy
             textBox2.Text = total.ToString("N0");
             textBox4.Text = Terbilang((int)total) + " RUPIAH";
         }
-
 
         private string Terbilang(int angka)
         {
@@ -476,7 +627,6 @@ namespace TerbaruCahyaFy
             }
         }
 
-
         //titik pada textbox23 = belum bisa
         private void textBox23_TextChanged(object sender, EventArgs e)
         {
@@ -500,7 +650,6 @@ namespace TerbaruCahyaFy
             }
         }
 
-
         private void textBox23_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Hanya izinkan angka, titik, dan karakter kontrol (seperti backspace)
@@ -515,18 +664,24 @@ namespace TerbaruCahyaFy
             }
         }
 
-
-     
-
-
-
-
         private void textBox3_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 ScanBarang(textBox3.Text);
                 textBox3.Clear();
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete)
+            {
+                // Allow backspace and delete to work properly
+                int selectionStart = textBox3.SelectionStart;
+                if (textBox3.Text.Length > 0 && selectionStart > 0)
+                {
+                    textBox3.Text = textBox3.Text.Remove(selectionStart - 1, 1);
+                    textBox3.SelectionStart = selectionStart - 1;
+                }
+                e.Handled = true; // Prevent the default behavior
             }
         }
 
@@ -562,24 +717,40 @@ namespace TerbaruCahyaFy
 
         private void SetNetworkStatus()
         {
-            currentNetworkStatus = NetworkInterface.GetIsNetworkAvailable() ? "Lokal Online" : "Lokal Offline";
-            textBox21.Text = currentNetworkStatus;
-            if (currentNetworkStatus == "Lokal Offline")
+            try
             {
-                textBox21.BackColor = Color.Red;
-                textBox21.ForeColor = Color.LightYellow;
+                currentNetworkStatus = NetworkInterface.GetIsNetworkAvailable() ? "Lokal Online" : "Lokal Offline";
+                textBox21.Text = currentNetworkStatus;
+                if (currentNetworkStatus == "Lokal Offline")
+                {
+                    textBox21.BackColor = Color.Red;
+                    textBox21.ForeColor = Color.LightYellow;
+                }
+                else
+                {
+                    textBox21.BackColor = SystemColors.Window;
+                    textBox21.ForeColor = SystemColors.ControlText;
+                }
+                Console.WriteLine("SetNetworkStatus completed.");
             }
-            else
+            catch (Exception ex)
             {
-                textBox21.BackColor = SystemColors.Window;
-                textBox21.ForeColor = SystemColors.ControlText;
+                MessageBox.Show("Error in SetNetworkStatus: " + ex.Message);
             }
         }
 
         private void SetIPAddress()
         {
-            currentIPAddress = GetLocalIPAddress();
-            textBox22.Text = "PC : " + currentIPAddress;
+            try
+            {
+                currentIPAddress = GetLocalIPAddress();
+                textBox22.Text = "PC : " + currentIPAddress;
+                Console.WriteLine("SetIPAddress completed.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error in SetIPAddress: " + ex.Message);
+            }
         }
 
         private string GetLocalIPAddress()
@@ -589,15 +760,16 @@ namespace TerbaruCahyaFy
                 var host = Dns.GetHostEntry(Dns.GetHostName());
                 foreach (var ip in host.AddressList)
                 {
-                    if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                    if (ip.AddressFamily == AddressFamily.InterNetwork)
                     {
                         return ip.ToString();
                     }
                 }
                 return "Tidak ada jaringan yang tersambung!";
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show("Error in GetLocalIPAddress: " + ex.Message);
                 return "Error mendapatkan IP";
             }
         }

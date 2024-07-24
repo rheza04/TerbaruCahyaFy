@@ -66,6 +66,7 @@ namespace TerbaruCahyaFy
             this.panel9 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -176,7 +177,7 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.396306F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.129303F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.47439F));
-            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
+            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
             this.tableLayoutPanelSearch.Controls.Add(this.textBox23, 3, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel5, 0, 1);
@@ -198,12 +199,12 @@ namespace TerbaruCahyaFy
             // 
             this.textBox23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox23.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(1130, 1);
+            this.textBox23.Location = new System.Drawing.Point(1114, 1);
             this.textBox23.Margin = new System.Windows.Forms.Padding(1);
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
             this.textBox23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox23.Size = new System.Drawing.Size(213, 43);
+            this.textBox23.Size = new System.Drawing.Size(229, 43);
             this.textBox23.TabIndex = 5;
             this.textBox23.TextChanged += new System.EventHandler(this.textBox23_TextChanged);
             this.textBox23.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox23_KeyDown);
@@ -219,7 +220,7 @@ namespace TerbaruCahyaFy
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panel1.Size = new System.Drawing.Size(1127, 43);
+            this.panel1.Size = new System.Drawing.Size(1111, 43);
             this.panel1.TabIndex = 6;
             // 
             // textBox3
@@ -227,13 +228,13 @@ namespace TerbaruCahyaFy
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.textBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.textBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(16, 5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(1107, 32);
+            this.textBox3.Size = new System.Drawing.Size(1090, 22);
             this.textBox3.TabIndex = 0;
             this.textBox3.WordWrap = false;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
@@ -274,7 +275,7 @@ namespace TerbaruCahyaFy
             this.panel6.Location = new System.Drawing.Point(1, 73);
             this.panel6.Margin = new System.Windows.Forms.Padding(1);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(92, 46);
+            this.panel6.Size = new System.Drawing.Size(91, 46);
             this.panel6.TabIndex = 8;
             // 
             // textBox14
@@ -289,7 +290,7 @@ namespace TerbaruCahyaFy
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
             this.textBox14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox14.Size = new System.Drawing.Size(88, 42);
+            this.textBox14.Size = new System.Drawing.Size(87, 42);
             this.textBox14.TabIndex = 3;
             this.textBox14.Text = "QTY ->";
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -299,10 +300,10 @@ namespace TerbaruCahyaFy
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.textBox15);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(95, 73);
+            this.panel7.Location = new System.Drawing.Point(94, 73);
             this.panel7.Margin = new System.Windows.Forms.Padding(1);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(67, 46);
+            this.panel7.Size = new System.Drawing.Size(66, 46);
             this.panel7.TabIndex = 9;
             // 
             // textBox15
@@ -316,7 +317,7 @@ namespace TerbaruCahyaFy
             this.textBox15.Margin = new System.Windows.Forms.Padding(0);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(63, 42);
+            this.textBox15.Size = new System.Drawing.Size(62, 42);
             this.textBox15.TabIndex = 4;
             this.textBox15.Text = "1";
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -327,10 +328,10 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanelSearch.SetColumnSpan(this.panel8, 2);
             this.panel8.Controls.Add(this.textBox16);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(164, 73);
+            this.panel8.Location = new System.Drawing.Point(162, 73);
             this.panel8.Margin = new System.Windows.Forms.Padding(1);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1179, 46);
+            this.panel8.Size = new System.Drawing.Size(1181, 46);
             this.panel8.TabIndex = 10;
             // 
             // textBox16
@@ -343,7 +344,7 @@ namespace TerbaruCahyaFy
             this.textBox16.Margin = new System.Windows.Forms.Padding(0);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(1175, 42);
+            this.textBox16.Size = new System.Drawing.Size(1177, 42);
             this.textBox16.TabIndex = 5;
             // 
             // tableLayoutPanelBottom
@@ -647,12 +648,22 @@ namespace TerbaruCahyaFy
             // 
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tableLayoutPanelLogo.SetColumnSpan(this.panel19, 2);
+            this.panel19.Controls.Add(this.textBox7);
             this.panel19.Controls.Add(this.pictureBox1);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel19.Location = new System.Drawing.Point(3, 3);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(1102, 91);
             this.panel19.TabIndex = 2;
+            // 
+            // textBox7
+            // 
+            this.textBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.textBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textBox7.Location = new System.Drawing.Point(272, 40);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(152, 20);
+            this.textBox7.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -1213,7 +1224,6 @@ namespace TerbaruCahyaFy
             this.dataGridViewJualan.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewJualan.Size = new System.Drawing.Size(1049, 357);
             this.dataGridViewJualan.TabIndex = 2;
-            this.dataGridViewJualan.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewJualan_EditingControlShowing);
             // 
             // Column1
             // 
@@ -1294,8 +1304,7 @@ namespace TerbaruCahyaFy
             this.dataGridViewQR.Name = "dataGridViewQR";
             this.dataGridViewQR.Size = new System.Drawing.Size(1049, 357);
             this.dataGridViewQR.TabIndex = 1;
-            this.dataGridViewQR.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewQR_CellDoubleClick);
-            this.dataGridViewQR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridViewQR_KeyDown);
+            this.dataGridViewQR.Visible = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1488,6 +1497,7 @@ namespace TerbaruCahyaFy
             this.panel2.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -1625,5 +1635,6 @@ namespace TerbaruCahyaFy
         private TextBox textBoxNama;
         private Panel panel24;
         private TextBox textBox6;
+        private TextBox textBox7;
     }
 }
