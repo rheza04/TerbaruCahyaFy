@@ -176,7 +176,6 @@ namespace TerbaruCahyaFy
         {
             if (isTextChanging) return;
             isTextChanging = true;
-            FillTextBoxesFromDatabase("Barcode", textBoxBarcode.Text);
 
             using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
             {
@@ -342,49 +341,43 @@ namespace TerbaruCahyaFy
             using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
             {
                 string query = $"SELECT * FROM Items WHERE {column} = @value COLLATE NOCASE";
-                SQLiteCommand command = new SQLiteCommand(query, conn);
-                command.Parameters.AddWithValue("@value", value);
-                conn.Open();
-                using (SQLiteDataReader reader = command.ExecuteReader())
+                using (SQLiteCommand command = new SQLiteCommand(query, conn))
                 {
-                    if (reader.Read())
+                    command.Parameters.AddWithValue("@value", value);
+                    conn.Open();
+                    using (SQLiteDataReader reader = command.ExecuteReader())
                     {
-                        textBoxID.TextChanged -= textBoxID_TextChanged;
-                        textBoxBarcode.TextChanged -= textBoxBarcode_TextChanged;
-                        textBoxNamaItem.TextChanged -= textBoxNamaItem_TextChanged;
+                        if (reader.Read())
+                        {
+                            textBoxID.TextChanged -= textBoxID_TextChanged;
+                            textBoxBarcode.TextChanged -= textBoxBarcode_TextChanged;
+                            textBoxNamaItem.TextChanged -= textBoxNamaItem_TextChanged;
 
-                        textBoxID.Text = reader["ID"].ToString();
-                        textBoxBarcode.Text = reader["Barcode"].ToString();
-                        textBoxNamaItem.Text = reader["NamaItem"].ToString();
-                        textBoxHargaJual.Text = reader["HJualItem"].ToString();
-                        textBoxModal.Text = reader["Modal"].ToString();
-                        textBoxStok.Text = reader["Stok"].ToString();
+                            textBoxID.Text = reader["ID"].ToString();
+                            textBoxBarcode.Text = reader["Barcode"].ToString();
+                            textBoxNamaItem.Text = reader["NamaItem"].ToString();
+                            textBoxHargaJual.Text = reader["HJualItem"].ToString();
+                            textBoxModal.Text = reader["Modal"].ToString();
+                            textBoxStok.Text = reader["Stok"].ToString();
 
-                        textBoxID.TextChanged += textBoxID_TextChanged;
-                        textBoxBarcode.TextChanged += textBoxBarcode_TextChanged;
-                        textBoxNamaItem.TextChanged += textBoxNamaItem_TextChanged;
-                    }
-                    else
-                    {
-                        textBoxID.TextChanged -= textBoxID_TextChanged;
-                        textBoxBarcode.TextChanged -= textBoxBarcode_TextChanged;
-                        textBoxNamaItem.TextChanged -= textBoxNamaItem_TextChanged;
-
-                        textBoxID.Clear();
-                        textBoxBarcode.Clear();
-                        textBoxNamaItem.Clear();
-                        textBoxHargaJual.Clear();
-                        textBoxModal.Clear();
-                        textBoxStok.Clear();
-
-                        textBoxID.TextChanged += textBoxID_TextChanged;
-                        textBoxBarcode.TextChanged += textBoxBarcode_TextChanged;
-                        textBoxNamaItem.TextChanged += textBoxNamaItem_TextChanged;
+                            textBoxID.TextChanged += textBoxID_TextChanged;
+                            textBoxBarcode.TextChanged += textBoxBarcode_TextChanged;
+                            textBoxNamaItem.TextChanged += textBoxNamaItem_TextChanged;
+                        }
+                        else
+                        {
+                            textBoxID.Clear();
+                            textBoxBarcode.Clear();
+                            textBoxNamaItem.Clear();
+                            textBoxHargaJual.Clear();
+                            textBoxModal.Clear();
+                            textBoxStok.Clear();
+                        }
                     }
                 }
             }
-            UpdateDataGridViewWithSearchResults();
         }
+
 
         private void buttonRestock_Click(object sender, EventArgs e)
         {
@@ -512,15 +505,23 @@ namespace TerbaruCahyaFy
                 return;
             }
 
-            using (AdminEdit formEdit = new AdminEdit(textBoxID.Text, connection))
+            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
             {
-                if (formEdit.ShowDialog() == DialogResult.OK)
+                conn.Open();
+                using (AdminEdit editForm = new AdminEdit(textBoxID.Text, conn))
                 {
-                    LoadData();
-                    UpdateTextBoxes(textBoxID.Text, "ID");
+                    if (editForm.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadData();
+                        FillTextBoxesFromDatabase("ID", textBoxID.Text);
+                    }
                 }
             }
         }
+
+
+
+
 
         private void buttonHapus_Click(object sender, EventArgs e)
         {
