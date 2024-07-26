@@ -19,7 +19,6 @@ namespace TerbaruCahyaFy
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kasir));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -27,10 +26,8 @@ namespace TerbaruCahyaFy
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kasir));
             this.tableLayoutPanelSearch = new System.Windows.Forms.TableLayoutPanel();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -59,15 +56,6 @@ namespace TerbaruCahyaFy
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.textBox22 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanelLogo = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanelHarga = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -113,12 +101,14 @@ namespace TerbaruCahyaFy
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewQR = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanelLogo = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelHarga = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -144,12 +134,6 @@ namespace TerbaruCahyaFy
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel17.SuspendLayout();
-            this.tableLayoutPanelLogo.SuspendLayout();
-            this.tableLayoutPanelHarga.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanelKiriKananPemisah.SuspendLayout();
@@ -168,6 +152,12 @@ namespace TerbaruCahyaFy
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJualan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQR)).BeginInit();
+            this.tableLayoutPanelLogo.SuspendLayout();
+            this.tableLayoutPanelHarga.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -177,7 +167,7 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.396306F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.129303F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.47439F));
-            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
+            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 255F));
             this.tableLayoutPanelSearch.Controls.Add(this.textBox23, 3, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel5, 0, 1);
@@ -199,16 +189,13 @@ namespace TerbaruCahyaFy
             // 
             this.textBox23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox23.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(1114, 1);
+            this.textBox23.Location = new System.Drawing.Point(1088, 1);
             this.textBox23.Margin = new System.Windows.Forms.Padding(1);
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
             this.textBox23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox23.Size = new System.Drawing.Size(229, 43);
+            this.textBox23.Size = new System.Drawing.Size(255, 43);
             this.textBox23.TabIndex = 5;
-            this.textBox23.TextChanged += new System.EventHandler(this.textBox23_TextChanged);
-            this.textBox23.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox23_KeyDown);
-            this.textBox23.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox23_KeyPress);
             // 
             // panel1
             // 
@@ -220,7 +207,7 @@ namespace TerbaruCahyaFy
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panel1.Size = new System.Drawing.Size(1111, 43);
+            this.panel1.Size = new System.Drawing.Size(1085, 43);
             this.panel1.TabIndex = 6;
             // 
             // textBox3
@@ -228,17 +215,13 @@ namespace TerbaruCahyaFy
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.textBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(16, 5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(1090, 22);
+            this.textBox3.Size = new System.Drawing.Size(1064, 28);
             this.textBox3.TabIndex = 0;
             this.textBox3.WordWrap = false;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             // 
             // panel5
             // 
@@ -275,7 +258,7 @@ namespace TerbaruCahyaFy
             this.panel6.Location = new System.Drawing.Point(1, 73);
             this.panel6.Margin = new System.Windows.Forms.Padding(1);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(91, 46);
+            this.panel6.Size = new System.Drawing.Size(89, 46);
             this.panel6.TabIndex = 8;
             // 
             // textBox14
@@ -290,7 +273,7 @@ namespace TerbaruCahyaFy
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
             this.textBox14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox14.Size = new System.Drawing.Size(87, 42);
+            this.textBox14.Size = new System.Drawing.Size(85, 42);
             this.textBox14.TabIndex = 3;
             this.textBox14.Text = "QTY ->";
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -300,10 +283,10 @@ namespace TerbaruCahyaFy
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.textBox15);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(94, 73);
+            this.panel7.Location = new System.Drawing.Point(92, 73);
             this.panel7.Margin = new System.Windows.Forms.Padding(1);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(66, 46);
+            this.panel7.Size = new System.Drawing.Size(64, 46);
             this.panel7.TabIndex = 9;
             // 
             // textBox15
@@ -317,7 +300,7 @@ namespace TerbaruCahyaFy
             this.textBox15.Margin = new System.Windows.Forms.Padding(0);
             this.textBox15.Multiline = true;
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(62, 42);
+            this.textBox15.Size = new System.Drawing.Size(60, 42);
             this.textBox15.TabIndex = 4;
             this.textBox15.Text = "1";
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -328,10 +311,10 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanelSearch.SetColumnSpan(this.panel8, 2);
             this.panel8.Controls.Add(this.textBox16);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(162, 73);
+            this.panel8.Location = new System.Drawing.Point(158, 73);
             this.panel8.Margin = new System.Windows.Forms.Padding(1);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1181, 46);
+            this.panel8.Size = new System.Drawing.Size(1185, 46);
             this.panel8.TabIndex = 10;
             // 
             // textBox16
@@ -344,7 +327,7 @@ namespace TerbaruCahyaFy
             this.textBox16.Margin = new System.Windows.Forms.Padding(0);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(1177, 42);
+            this.textBox16.Size = new System.Drawing.Size(1181, 42);
             this.textBox16.TabIndex = 5;
             // 
             // tableLayoutPanelBottom
@@ -563,120 +546,6 @@ namespace TerbaruCahyaFy
             this.textBox22.TabIndex = 10;
             this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tableLayoutPanelLogo
-            // 
-            this.tableLayoutPanelLogo.ColumnCount = 3;
-            this.tableLayoutPanelLogo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.05357F));
-            this.tableLayoutPanelLogo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.53571F));
-            this.tableLayoutPanelLogo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.48512F));
-            this.tableLayoutPanelLogo.Controls.Add(this.tableLayoutPanelHarga, 2, 0);
-            this.tableLayoutPanelLogo.Controls.Add(this.panel19, 0, 0);
-            this.tableLayoutPanelLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelLogo.Location = new System.Drawing.Point(3, 99);
-            this.tableLayoutPanelLogo.Name = "tableLayoutPanelLogo";
-            this.tableLayoutPanelLogo.RowCount = 1;
-            this.tableLayoutPanelLogo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelLogo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 97F));
-            this.tableLayoutPanelLogo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 97F));
-            this.tableLayoutPanelLogo.Size = new System.Drawing.Size(1344, 97);
-            this.tableLayoutPanelLogo.TabIndex = 2;
-            // 
-            // tableLayoutPanelHarga
-            // 
-            this.tableLayoutPanelHarga.ColumnCount = 1;
-            this.tableLayoutPanelHarga.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelHarga.Controls.Add(this.panel2, 0, 1);
-            this.tableLayoutPanelHarga.Controls.Add(this.panel9, 0, 0);
-            this.tableLayoutPanelHarga.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelHarga.Location = new System.Drawing.Point(1111, 3);
-            this.tableLayoutPanelHarga.Name = "tableLayoutPanelHarga";
-            this.tableLayoutPanelHarga.RowCount = 2;
-            this.tableLayoutPanelHarga.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37F));
-            this.tableLayoutPanelHarga.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63F));
-            this.tableLayoutPanelHarga.Size = new System.Drawing.Size(230, 91);
-            this.tableLayoutPanelHarga.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.AutoSize = true;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(3, 36);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.panel2.Size = new System.Drawing.Size(224, 52);
-            this.panel2.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(5, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox2.Size = new System.Drawing.Size(210, 50);
-            this.textBox2.TabIndex = 0;
-            // 
-            // panel9
-            // 
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel9.Controls.Add(this.label7);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(3, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(224, 27);
-            this.panel9.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.SystemColors.Window;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.label7.Size = new System.Drawing.Size(220, 23);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "CAHAYA ANUGRAH";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel19
-            // 
-            this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanelLogo.SetColumnSpan(this.panel19, 2);
-            this.panel19.Controls.Add(this.textBox7);
-            this.panel19.Controls.Add(this.pictureBox1);
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(3, 3);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(1102, 91);
-            this.panel19.TabIndex = 2;
-            // 
-            // textBox7
-            // 
-            this.textBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.textBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textBox7.Location = new System.Drawing.Point(272, 40);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(152, 20);
-            this.textBox7.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 91);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -721,11 +590,10 @@ namespace TerbaruCahyaFy
             // 
             // toolStripButton1
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.Image = global::TerbaruCahyaFy.Properties.Resources.cashier_1967348;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(79, 68);
+            this.toolStripButton1.Size = new System.Drawing.Size(59, 68);
             this.toolStripButton1.Text = "Kassa";
             this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -737,11 +605,10 @@ namespace TerbaruCahyaFy
             // 
             // toolStripButton2
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton2.Image = global::TerbaruCahyaFy.Properties.Resources.calculator_11276946;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(79, 68);
+            this.toolStripButton2.Size = new System.Drawing.Size(76, 68);
             this.toolStripButton2.Text = "Lap. Kassa";
             this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -753,7 +620,7 @@ namespace TerbaruCahyaFy
             // 
             // toolStripButton3
             // 
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Image = global::TerbaruCahyaFy.Properties.Resources.square_14034319;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(59, 68);
@@ -857,7 +724,6 @@ namespace TerbaruCahyaFy
             this.textBox13.Size = new System.Drawing.Size(257, 37);
             this.textBox13.TabIndex = 18;
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // textBox11
             // 
@@ -1102,7 +968,6 @@ namespace TerbaruCahyaFy
             this.textBoxNama.Size = new System.Drawing.Size(143, 26);
             this.textBoxNama.TabIndex = 3;
             this.textBoxNama.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxNama.TextChanged += new System.EventHandler(this.textBoxNama_TextChanged);
             // 
             // panel24
             // 
@@ -1223,14 +1088,14 @@ namespace TerbaruCahyaFy
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dataGridViewJualan.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewJualan.Size = new System.Drawing.Size(1049, 357);
-            this.dataGridViewJualan.TabIndex = 2;
+            this.dataGridViewJualan.TabIndex = 1;
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column1.FillWeight = 45.91837F;
             this.Column1.Frozen = true;
-            this.Column1.HeaderText = "Kode";
+            this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 444;
             this.Column1.Name = "Column1";
             this.Column1.Width = 444;
@@ -1283,75 +1148,125 @@ namespace TerbaruCahyaFy
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewQR.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewQR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewQR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.Column6});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewQR.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewQR.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewQR.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewQR.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewQR.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewQR.Name = "dataGridViewQR";
             this.dataGridViewQR.Size = new System.Drawing.Size(1049, 357);
-            this.dataGridViewQR.TabIndex = 1;
+            this.dataGridViewQR.TabIndex = 2;
             this.dataGridViewQR.Visible = false;
             // 
-            // dataGridViewTextBoxColumn1
+            // tableLayoutPanelLogo
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Kode";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 90;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 90;
+            this.tableLayoutPanelLogo.ColumnCount = 3;
+            this.tableLayoutPanelLogo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.05357F));
+            this.tableLayoutPanelLogo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.53571F));
+            this.tableLayoutPanelLogo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.48512F));
+            this.tableLayoutPanelLogo.Controls.Add(this.tableLayoutPanelHarga, 2, 0);
+            this.tableLayoutPanelLogo.Controls.Add(this.panel19, 0, 0);
+            this.tableLayoutPanelLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelLogo.Location = new System.Drawing.Point(3, 99);
+            this.tableLayoutPanelLogo.Name = "tableLayoutPanelLogo";
+            this.tableLayoutPanelLogo.RowCount = 1;
+            this.tableLayoutPanelLogo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelLogo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 97F));
+            this.tableLayoutPanelLogo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 97F));
+            this.tableLayoutPanelLogo.Size = new System.Drawing.Size(1344, 97);
+            this.tableLayoutPanelLogo.TabIndex = 2;
             // 
-            // dataGridViewTextBoxColumn2
+            // tableLayoutPanelHarga
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nama Item";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 120;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.tableLayoutPanelHarga.ColumnCount = 1;
+            this.tableLayoutPanelHarga.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelHarga.Controls.Add(this.panel2, 0, 1);
+            this.tableLayoutPanelHarga.Controls.Add(this.panel9, 0, 0);
+            this.tableLayoutPanelHarga.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelHarga.Location = new System.Drawing.Point(1111, 3);
+            this.tableLayoutPanelHarga.Name = "tableLayoutPanelHarga";
+            this.tableLayoutPanelHarga.RowCount = 2;
+            this.tableLayoutPanelHarga.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37F));
+            this.tableLayoutPanelHarga.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63F));
+            this.tableLayoutPanelHarga.Size = new System.Drawing.Size(230, 91);
+            this.tableLayoutPanelHarga.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn3
+            // panel2
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Barcode";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 90;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 91;
+            this.panel2.AutoSize = true;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(3, 36);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(5);
+            this.panel2.Size = new System.Drawing.Size(224, 52);
+            this.panel2.TabIndex = 4;
             // 
-            // dataGridViewTextBoxColumn4
+            // textBox2
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridViewTextBoxColumn4.HeaderText = "H. Jual Unit";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 120;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 120;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(5, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox2.Size = new System.Drawing.Size(210, 50);
+            this.textBox2.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn5
+            // panel9
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridViewTextBoxColumn5.HeaderText = "H. Jual Pcs";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 120;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 120;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel9.Controls.Add(this.label7);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(3, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(224, 27);
+            this.panel9.TabIndex = 5;
             // 
-            // Column6
+            // label7
             // 
-            this.Column6.HeaderText = "H. Jual Spc";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 109;
+            this.label7.BackColor = System.Drawing.SystemColors.Window;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.label7.Size = new System.Drawing.Size(220, 23);
+            this.label7.TabIndex = 3;
+            this.label7.Text = "CAHAYA ANUGRAH";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel19
+            // 
+            this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tableLayoutPanelLogo.SetColumnSpan(this.panel19, 2);
+            this.panel19.Controls.Add(this.pictureBox1);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel19.Location = new System.Drawing.Point(3, 3);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(1102, 91);
+            this.panel19.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(155, 91);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // toolStrip2
             // 
@@ -1490,15 +1405,6 @@ namespace TerbaruCahyaFy
             this.panel15.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
-            this.tableLayoutPanelLogo.ResumeLayout(false);
-            this.tableLayoutPanelHarga.ResumeLayout(false);
-            this.tableLayoutPanelHarga.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -1529,6 +1435,14 @@ namespace TerbaruCahyaFy
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJualan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQR)).EndInit();
+            this.tableLayoutPanelLogo.ResumeLayout(false);
+            this.tableLayoutPanelHarga.ResumeLayout(false);
+            this.tableLayoutPanelHarga.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -1538,19 +1452,12 @@ namespace TerbaruCahyaFy
         #endregion
 
         private TableLayoutPanel tableLayoutPanelSearch;
-        private TextBox textBox23;
         private Panel panel1;
-        private TextBox textBox3;
         private Panel panel5;
-        private TextBox textBox4;
         private Panel panel6;
-        private TextBox textBox14;
         private Panel panel7;
-        private TextBox textBox15;
         private Panel panel8;
-        private TextBox textBox16;
         private TableLayoutPanel tableLayoutPanelBottom;
-        private TableLayoutPanel tableLayoutPanelLogo;
         private TableLayoutPanel tableLayoutPanel1;
         private ToolStrip toolStrip1;
         private ToolStripButton toolStripButton1;
@@ -1569,21 +1476,6 @@ namespace TerbaruCahyaFy
         private ToolStripButton pasteToolStripButton;
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripButton helpToolStripButton;
-        private TableLayoutPanel tableLayoutPanelHarga;
-        private Panel panel2;
-        private TextBox textBox2;
-        private Panel panel9;
-        private Label label7;
-        private TableLayoutPanel tableLayoutPanelKiriKananPemisah;
-        private Panel panel3;
-        private DataGridView dataGridViewQR;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridView dataGridViewJualan;
         private Panel panel10;
         private TextBox textBox1;
         private Panel panel11;
@@ -1599,16 +1491,17 @@ namespace TerbaruCahyaFy
         private Panel panel16;
         private Panel panel17;
         protected TextBox textBox22;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private Panel panel19;
-        private PictureBox pictureBox1;
+        private TextBox textBox23;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private TextBox textBox14;
+        private TextBox textBox15;
+        private TextBox textBox16;
+        private TableLayoutPanel tableLayoutPanelKiriKananPemisah;
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TableLayoutPanel tableLayoutPanel2;
+        private TextBox textBox13;
         private TextBox textBox11;
         private Label label1;
         private Label label2;
@@ -1620,11 +1513,6 @@ namespace TerbaruCahyaFy
         private TextBox textBox12;
         private Panel panel20;
         private TextBox textBox9;
-        private TabPage tabPage2;
-        private TabPage tabPage3;
-        private TextBox textBox13;
-        private Label label8;
-        private Label label9;
         private Panel panel4;
         private TextBox textBox10;
         private Panel panel21;
@@ -1635,6 +1523,25 @@ namespace TerbaruCahyaFy
         private TextBox textBoxNama;
         private Panel panel24;
         private TextBox textBox6;
-        private TextBox textBox7;
+        private TabPage tabPage2;
+        private Label label8;
+        private TabPage tabPage3;
+        private Label label9;
+        private Panel panel3;
+        private DataGridView dataGridViewJualan;
+        private DataGridView dataGridViewQR;
+        private TableLayoutPanel tableLayoutPanelLogo;
+        private TableLayoutPanel tableLayoutPanelHarga;
+        private Panel panel2;
+        private TextBox textBox2;
+        private Panel panel9;
+        private Label label7;
+        private Panel panel19;
+        private PictureBox pictureBox1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
     }
 }

@@ -49,7 +49,7 @@ namespace TerbaruCahyaFy
                         {
                             MessageBox.Show("Login sebagai Admin berhasil");
                             this.Hide();
-                            InputBarang inputBarangForm = new InputBarang();
+                            Admin inputBarangForm = new Admin();
                             inputBarangForm.ShowDialog();
                         }
                         else if (role == "user")
