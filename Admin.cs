@@ -27,6 +27,7 @@ namespace TerbaruCahyaFy
             InitializeComponent();
             InitializeDatabaseConnection();
             LoadData();
+            LoadData2();
 
             textBoxID.TextChanged += textBoxID_TextChanged;
             textBoxBarcode.TextChanged += textBoxBarcode_TextChanged;
@@ -40,6 +41,14 @@ namespace TerbaruCahyaFy
             SetupAutoCompleteForID();
             SetupAutoCompleteForBarcode();
             SetupAutoCompleteForNamaItem();
+
+            textBoxUsername.TextChanged += textBoxUsername_TextChanged;
+
+            buttonTambahUser.Click += buttonTambahUser_Click;
+            buttonEditUser.Click += buttonEditUser_Click;
+            buttonHapusUser.Click += buttonHapusUser_Click;
+
+            SetupAutoCompleteForUsername();
         }
 
         private void InitializeDatabaseConnection()
@@ -80,6 +89,52 @@ namespace TerbaruCahyaFy
             }
         }
 
+        private void LoadData2()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+            {
+                string query = "SELECT * FROM User";
+                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn))
+                {
+                    DataTable dataTable = new DataTable();
+                    try
+                    {
+                        conn.Open();
+                        adapter.Fill(dataTable);
+                        dataGridViewUser.DataSource = dataTable;
+                    }
+                    catch (SQLiteException ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void UpdateDataGridViewWithSearchResults2()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+            {
+                string query = "SELECT * FROM User WHERE 1=1";
+
+                if (!string.IsNullOrEmpty(textBoxUsername.Text))
+                {
+                    query += " AND Username LIKE @Username";
+                }
+
+                SQLiteCommand command = new SQLiteCommand(query, conn);
+                if (!string.IsNullOrEmpty(textBoxUsername.Text))
+                {
+                    command.Parameters.AddWithValue("@Username", "%" + textBoxUsername.Text + "%");
+                }
+
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+                dataGridViewUser.DataSource = dataTable;
+            }
+        }
+
         private void UpdateDataGridViewWithSearchResults()
         {
             using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
@@ -117,6 +172,128 @@ namespace TerbaruCahyaFy
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
                 dataGridViewItem.DataSource = dataTable;
+            }
+        }
+
+        private void textBoxUsername_TextChanged(object sender, EventArgs e)
+        {
+            if (isTextChanging) return;
+            isTextChanging = true;
+
+            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+            {
+                string query = "SELECT * FROM User WHERE Username = @value COLLATE NOCASE";
+                SQLiteCommand command = new SQLiteCommand(query, conn);
+                command.Parameters.AddWithValue("@value", textBoxUsername.Text);
+                conn.Open();
+                using (SQLiteDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        textBoxUsername.TextChanged -= textBoxUsername_TextChanged;
+
+                        textBoxPassword.Text = reader["Password"].ToString();
+                        comboBoxRole.Text = reader["Role"].ToString();
+                        textBoxNama.Text = reader["Nama"].ToString();
+                        textBoxHP.Text = reader["NoHP"].ToString();
+                        textBoxAlamat.Text = reader["Alamat"].ToString();
+
+                        textBoxUsername.TextChanged += textBoxUsername_TextChanged;
+                    }
+                    else
+                    {
+                        textBoxUsername.TextChanged -= textBoxUsername_TextChanged;
+
+                        textBoxPassword.Text = string.Empty;
+                        comboBoxRole.Text = string.Empty;
+                        textBoxNama.Text = string.Empty;
+                        textBoxHP.Text = string.Empty;
+                        textBoxAlamat.Text = string.Empty;
+
+                        textBoxUsername.TextChanged += textBoxUsername_TextChanged;
+                    }
+                }
+            }
+            isTextChanging = false;
+            UpdateDataGridViewWithSearchResults2();
+        }
+
+        private void SetupAutoCompleteForUsername()
+        {
+            textBoxUsername.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBoxUsername.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            AutoCompleteStringCollection autoCompleteData = new AutoCompleteStringCollection();
+            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+            {
+                string query = "SELECT Username FROM User";
+                SQLiteCommand command = new SQLiteCommand(query, conn);
+                conn.Open();
+                SQLiteDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    autoCompleteData.Add(reader["Username"].ToString());
+                }
+            }
+            textBoxUsername.AutoCompleteCustomSource = autoCompleteData;
+        }
+
+        private void buttonTambahUser_Click(object sender, EventArgs e)
+        {
+            using (AdminTambahUser formTambah = new AdminTambahUser(connection))
+            {
+                if (formTambah.ShowDialog() == DialogResult.OK)
+                {
+                    LoadData2(); // Perbarui DataGridView setelah user ditambahkan
+                }
+            }
+        }
+
+        private void buttonEditUser_Click(object sender, EventArgs e)
+        {
+            if (textBoxUsername.Text == string.Empty)
+            {
+                MessageBox.Show("Pilih user terlebih dahulu.");
+                return;
+            }
+
+            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+            {
+                conn.Open();
+                using (AdminEditUser editForm = new AdminEditUser(textBoxUsername.Text, conn))
+                {
+                    if (editForm.ShowDialog() == DialogResult.OK)
+                    {
+                        LoadData2();
+                        FillTextBoxesFromDatabase("Username", textBoxUsername.Text);
+                    }
+                }
+            }
+        }
+
+        private void buttonHapusUser_Click(object sender, EventArgs e)
+        {
+            if (textBoxUsername.Text == string.Empty)
+            {
+                MessageBox.Show("Pilih user terlebih dahulu.");
+                return;
+            }
+
+            // Menampilkan dialog konfirmasi
+            DialogResult dialogResult = MessageBox.Show("Apakah Anda yakin ingin menghapus user ini?", "Konfirmasi Hapus", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+                {
+                    string query = "DELETE FROM User WHERE Username = @username";
+                    SQLiteCommand command = new SQLiteCommand(query, conn);
+                    command.Parameters.AddWithValue("@username", textBoxUsername.Text);
+                    conn.Open();
+                    command.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Data berhasil dihapus.");
+                LoadData2();
             }
         }
 
@@ -468,34 +645,15 @@ namespace TerbaruCahyaFy
 
         private void buttonTambah_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+            using (AdminTambahItem formTambah = new AdminTambahItem(connection))
             {
-                string checkQuery = "SELECT COUNT(*) FROM Items WHERE ID = @id";
-                SQLiteCommand checkCommand = new SQLiteCommand(checkQuery, conn);
-                checkCommand.Parameters.AddWithValue("@id", textBoxID.Text);
-                conn.Open();
-                int count = Convert.ToInt32(checkCommand.ExecuteScalar());
-                if (count > 0)
+                if (formTambah.ShowDialog() == DialogResult.OK)
                 {
-                    MessageBox.Show("Data sudah ada.");
-                }
-                else
-                {
-                    string query = "INSERT INTO Items (ID, Barcode, NamaItem, HJualItem, Modal, Stok) VALUES (@id, @barcode, @namaItem, @hargaJual, @modal, @stok)";
-                    SQLiteCommand command = new SQLiteCommand(query, conn);
-                    command.Parameters.AddWithValue("@id", textBoxID.Text);
-                    command.Parameters.AddWithValue("@barcode", textBoxBarcode.Text);
-                    command.Parameters.AddWithValue("@namaItem", textBoxNamaItem.Text);
-                    command.Parameters.AddWithValue("@hargaJual", textBoxHargaJual.Text);
-                    command.Parameters.AddWithValue("@modal", textBoxModal.Text);
-                    command.Parameters.AddWithValue("@stok", textBoxStok.Text);
-                    command.ExecuteNonQuery();
-
-                    MessageBox.Show("Data berhasil ditambahkan.");
-                    LoadData();
+                    LoadData(); // Perbarui DataGridView setelah item ditambahkan
                 }
             }
         }
+
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
@@ -508,7 +666,7 @@ namespace TerbaruCahyaFy
             using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
             {
                 conn.Open();
-                using (AdminEdit editForm = new AdminEdit(textBoxID.Text, conn))
+                using (AdminEditItem editForm = new AdminEditItem(textBoxID.Text, conn))
                 {
                     if (editForm.ShowDialog() == DialogResult.OK)
                     {
@@ -519,10 +677,6 @@ namespace TerbaruCahyaFy
             }
         }
 
-
-
-
-
         private void buttonHapus_Click(object sender, EventArgs e)
         {
             if (textBoxID.Text == string.Empty)
@@ -531,17 +685,27 @@ namespace TerbaruCahyaFy
                 return;
             }
 
-            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+            // Menampilkan dialog konfirmasi
+            DialogResult dialogResult = MessageBox.Show("Apakah Anda yakin ingin menghapus item ini?", "Konfirmasi Hapus", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                string query = "DELETE FROM Items WHERE ID = @id";
-                SQLiteCommand command = new SQLiteCommand(query, conn);
-                command.Parameters.AddWithValue("@id", textBoxID.Text);
-                conn.Open();
-                command.ExecuteNonQuery();
-            }
+                using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+                {
+                    string query = "DELETE FROM Items WHERE ID = @id";
+                    SQLiteCommand command = new SQLiteCommand(query, conn);
+                    command.Parameters.AddWithValue("@id", textBoxID.Text);
+                    conn.Open();
+                    command.ExecuteNonQuery();
+                }
 
-            MessageBox.Show("Data berhasil dihapus.");
-            LoadData();
+                MessageBox.Show("Data berhasil dihapus.");
+                LoadData();
+            }
+            else
+            {
+
+            }
         }
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TerbaruCahyaFy
 {
-    partial class AdminEdit
+    partial class AdminEditItem
     {
         /// <summary>
         /// Required designer variable.
@@ -349,15 +349,15 @@
             this.label7.Text = "Barcode";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // AdminEdit
+            // AdminEditItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 254);
             this.Controls.Add(this.tableLayoutPanel6);
-            this.Name = "AdminEdit";
+            this.Name = "AdminEditItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Edit Item";
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.panel27.ResumeLayout(false);

@@ -103,6 +103,16 @@ namespace TerbaruCahyaFy {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap delete_13884433 {
+            get {
+                object obj = ResourceManager.GetObject("delete_13884433", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap kisspng_sales_symbol_ribbon_printing_offers_5ac32f29c7ed23_3216909815227410338189 {
             get {
                 object obj = ResourceManager.GetObject("kisspng_sales_symbol_ribbon_printing_offers_5ac32f29c7ed23_3216909815227410338189" +

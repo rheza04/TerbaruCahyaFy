@@ -30,6 +30,8 @@
         {            
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -40,10 +42,39 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1User = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelUser = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxHP = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxAlamat = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBoxNama = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.buttonTambahUser = new System.Windows.Forms.Button();
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.buttonEditUser = new System.Windows.Forms.Button();
+            this.buttonHapusUser = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBoxRole = new System.Windows.Forms.ComboBox();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.dataGridViewUser = new System.Windows.Forms.DataGridView();
             this.toolStripOptionUser = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanelBottom = new System.Windows.Forms.TableLayoutPanel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -61,21 +92,16 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.toolStripHeaderUser = new System.Windows.Forms.ToolStrip();
+            this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.cutToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.copyToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.paneltengah = new System.Windows.Forms.TableLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.panel1Item = new System.Windows.Forms.Panel();
             this.tableLayoutPanelItem = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -95,17 +121,27 @@
             this.panel21 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.toolStripHeaderItem = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonRestock = new System.Windows.Forms.Button();
             this.panel27 = new System.Windows.Forms.Panel();
@@ -125,6 +161,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.textBoxBarcode = new System.Windows.Forms.TextBox();
+            this.buttonTambah = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonHapus = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panelGridview = new System.Windows.Forms.Panel();
             this.dataGridViewItem = new System.Windows.Forms.DataGridView();
@@ -135,40 +174,25 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.toolStripOptionItem = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.panelUser = new System.Windows.Forms.Panel();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.buttonTambah = new System.Windows.Forms.Button();
-            this.buttonEdit = new System.Windows.Forms.Button();
-            this.buttonHapus = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripOptionItem = new System.Windows.Forms.ToolStrip();
             this.toolStripButton4Item = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5User = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton6Keluar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.printToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.cutToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.copyToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.pasteToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1User = new System.Windows.Forms.Panel();
+            this.imageList3 = new System.Windows.Forms.ImageList(this.components);
+            this.tableLayoutPanel1User.SuspendLayout();
+            this.tableLayoutPanelUser.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
             this.toolStripOptionUser.SuspendLayout();
             this.tableLayoutPanelBottom.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -179,11 +203,6 @@
             this.panel15.SuspendLayout();
             this.panel17.SuspendLayout();
             this.toolStripHeaderUser.SuspendLayout();
-            this.paneltengah.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.panel1Item.SuspendLayout();
             this.tableLayoutPanelItem.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -197,7 +216,9 @@
             this.toolStripHeaderItem.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
             this.panel27.SuspendLayout();
             this.panel28.SuspendLayout();
@@ -211,11 +232,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartPendapatan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartKeuntungan)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
-            this.toolStripOptionItem.SuspendLayout();
-            this.panelUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolStripOptionItem.SuspendLayout();
+            this.panel1User.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -225,27 +244,432 @@
             this.imageList1.Images.SetKeyName(0, "asdwas.png");
             this.imageList1.Images.SetKeyName(1, "calculator_11276946.png");
             this.imageList1.Images.SetKeyName(2, "visits_520647.png");
+            this.imageList1.Images.SetKeyName(3, "delete_13884433.png");
+            this.imageList1.Images.SetKeyName(4, "reload_13884451.png");
+            this.imageList1.Images.SetKeyName(5, "plus_13884449 (1).png");
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanel1User
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.toolStripOptionUser, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanelBottom, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.toolStripHeaderUser, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.paneltengah, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(32, 40);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1232, 600);
-            this.tableLayoutPanel1.TabIndex = 5;
+            this.tableLayoutPanel1User.ColumnCount = 1;
+            this.tableLayoutPanel1User.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1User.Controls.Add(this.tableLayoutPanelUser, 0, 2);
+            this.tableLayoutPanel1User.Controls.Add(this.toolStripOptionUser, 0, 1);
+            this.tableLayoutPanel1User.Controls.Add(this.tableLayoutPanelBottom, 0, 3);
+            this.tableLayoutPanel1User.Controls.Add(this.toolStripHeaderUser, 0, 0);
+            this.tableLayoutPanel1User.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1User.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1User.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1User.Name = "tableLayoutPanel1User";
+            this.tableLayoutPanel1User.RowCount = 4;
+            this.tableLayoutPanel1User.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1User.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.tableLayoutPanel1User.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1User.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel1User.Size = new System.Drawing.Size(1350, 729);
+            this.tableLayoutPanel1User.TabIndex = 5;
+            // 
+            // tableLayoutPanelUser
+            // 
+            this.tableLayoutPanelUser.BackColor = System.Drawing.SystemColors.Window;
+            this.tableLayoutPanelUser.ColumnCount = 3;
+            this.tableLayoutPanelUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.20155F));
+            this.tableLayoutPanelUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.3876F));
+            this.tableLayoutPanelUser.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanelUser.Controls.Add(this.tableLayoutPanel11, 0, 0);
+            this.tableLayoutPanelUser.Controls.Add(this.panel29, 1, 0);
+            this.tableLayoutPanelUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelUser.Location = new System.Drawing.Point(3, 107);
+            this.tableLayoutPanelUser.Name = "tableLayoutPanelUser";
+            this.tableLayoutPanelUser.RowCount = 3;
+            this.tableLayoutPanelUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.05657F));
+            this.tableLayoutPanelUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.44592F));
+            this.tableLayoutPanelUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.331115F));
+            this.tableLayoutPanelUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelUser.Size = new System.Drawing.Size(1344, 593);
+            this.tableLayoutPanelUser.TabIndex = 11;
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.BackColor = System.Drawing.SystemColors.Window;
+            this.tableLayoutPanel11.ColumnCount = 4;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel11.Controls.Add(this.button5, 3, 1);
+            this.tableLayoutPanel11.Controls.Add(this.panel2, 1, 4);
+            this.tableLayoutPanel11.Controls.Add(this.label22, 0, 5);
+            this.tableLayoutPanel11.Controls.Add(this.panel3, 1, 5);
+            this.tableLayoutPanel11.Controls.Add(this.label23, 0, 4);
+            this.tableLayoutPanel11.Controls.Add(this.panel4, 1, 3);
+            this.tableLayoutPanel11.Controls.Add(this.panel6, 1, 0);
+            this.tableLayoutPanel11.Controls.Add(this.label24, 0, 3);
+            this.tableLayoutPanel11.Controls.Add(this.label25, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.label26, 0, 2);
+            this.tableLayoutPanel11.Controls.Add(this.panel22, 1, 1);
+            this.tableLayoutPanel11.Controls.Add(this.buttonTambahUser, 1, 7);
+            this.tableLayoutPanel11.Controls.Add(this.buttonEditUser, 1, 7);
+            this.tableLayoutPanel11.Controls.Add(this.buttonHapusUser, 1, 7);
+            this.tableLayoutPanel11.Controls.Add(this.label27, 0, 1);
+            this.tableLayoutPanel11.Controls.Add(this.comboBoxRole, 1, 2);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 9;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(480, 386);
+            this.tableLayoutPanel11.TabIndex = 11;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ImageKey = "visits_520647.png";
+            this.button5.ImageList = this.imageList1;
+            this.button5.Location = new System.Drawing.Point(363, 38);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(37, 29);
+            this.button5.TabIndex = 20;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tableLayoutPanel11.SetColumnSpan(this.panel2, 3);
+            this.panel2.Controls.Add(this.textBoxHP);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Enabled = false;
+            this.panel2.Location = new System.Drawing.Point(125, 145);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(350, 25);
+            this.panel2.TabIndex = 15;
+            // 
+            // textBoxHP
+            // 
+            this.textBoxHP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxHP.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBoxHP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxHP.Enabled = false;
+            this.textBoxHP.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxHP.Location = new System.Drawing.Point(5, 2);
+            this.textBoxHP.Margin = new System.Windows.Forms.Padding(10);
+            this.textBoxHP.Name = "textBoxHP";
+            this.textBoxHP.Size = new System.Drawing.Size(341, 18);
+            this.textBoxHP.TabIndex = 0;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(5, 180);
+            this.label22.Margin = new System.Windows.Forms.Padding(5);
+            this.label22.Name = "label22";
+            this.label22.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label22.Size = new System.Drawing.Size(110, 25);
+            this.label22.TabIndex = 14;
+            this.label22.Text = "Alamat";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tableLayoutPanel11.SetColumnSpan(this.panel3, 3);
+            this.panel3.Controls.Add(this.textBoxAlamat);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Enabled = false;
+            this.panel3.Location = new System.Drawing.Point(125, 180);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(5, 2, 0, 0);
+            this.tableLayoutPanel11.SetRowSpan(this.panel3, 2);
+            this.panel3.Size = new System.Drawing.Size(350, 60);
+            this.panel3.TabIndex = 13;
+            // 
+            // textBoxAlamat
+            // 
+            this.textBoxAlamat.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAlamat.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBoxAlamat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxAlamat.Enabled = false;
+            this.textBoxAlamat.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAlamat.Location = new System.Drawing.Point(5, 2);
+            this.textBoxAlamat.Margin = new System.Windows.Forms.Padding(10);
+            this.textBoxAlamat.Multiline = true;
+            this.textBoxAlamat.Name = "textBoxAlamat";
+            this.textBoxAlamat.Size = new System.Drawing.Size(341, 54);
+            this.textBoxAlamat.TabIndex = 0;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(5, 145);
+            this.label23.Margin = new System.Windows.Forms.Padding(5);
+            this.label23.Name = "label23";
+            this.label23.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label23.Size = new System.Drawing.Size(110, 25);
+            this.label23.TabIndex = 11;
+            this.label23.Text = "No. HP/Telp";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tableLayoutPanel11.SetColumnSpan(this.panel4, 3);
+            this.panel4.Controls.Add(this.textBoxNama);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Enabled = false;
+            this.panel4.Location = new System.Drawing.Point(125, 110);
+            this.panel4.Margin = new System.Windows.Forms.Padding(5);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(5, 2, 0, 0);
+            this.panel4.Size = new System.Drawing.Size(350, 25);
+            this.panel4.TabIndex = 7;
+            // 
+            // textBoxNama
+            // 
+            this.textBoxNama.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNama.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBoxNama.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxNama.Enabled = false;
+            this.textBoxNama.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNama.Location = new System.Drawing.Point(5, 2);
+            this.textBoxNama.Margin = new System.Windows.Forms.Padding(10);
+            this.textBoxNama.Name = "textBoxNama";
+            this.textBoxNama.Size = new System.Drawing.Size(341, 18);
+            this.textBoxNama.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.Window;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tableLayoutPanel11.SetColumnSpan(this.panel6, 3);
+            this.panel6.Controls.Add(this.textBoxUsername);
+            this.panel6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(125, 5);
+            this.panel6.Margin = new System.Windows.Forms.Padding(5);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(5, 2, 0, 0);
+            this.panel6.Size = new System.Drawing.Size(350, 25);
+            this.panel6.TabIndex = 4;
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxUsername.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBoxUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.Location = new System.Drawing.Point(5, 2);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(341, 18);
+            this.textBoxUsername.TabIndex = 0;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(5, 110);
+            this.label24.Margin = new System.Windows.Forms.Padding(5);
+            this.label24.Name = "label24";
+            this.label24.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label24.Size = new System.Drawing.Size(110, 25);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Nama";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(5, 5);
+            this.label25.Margin = new System.Windows.Forms.Padding(5);
+            this.label25.Name = "label25";
+            this.label25.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label25.Size = new System.Drawing.Size(110, 25);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Username";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label26.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(5, 75);
+            this.label26.Margin = new System.Windows.Forms.Padding(5);
+            this.label26.Name = "label26";
+            this.label26.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label26.Size = new System.Drawing.Size(110, 25);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Role";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.SystemColors.Control;
+            this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tableLayoutPanel11.SetColumnSpan(this.panel22, 2);
+            this.panel22.Controls.Add(this.textBoxPassword);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel22.Location = new System.Drawing.Point(125, 40);
+            this.panel22.Margin = new System.Windows.Forms.Padding(5);
+            this.panel22.Name = "panel22";
+            this.panel22.Padding = new System.Windows.Forms.Padding(5, 2, 0, 0);
+            this.panel22.Size = new System.Drawing.Size(230, 25);
+            this.panel22.TabIndex = 9;
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxPassword.Enabled = false;
+            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Location = new System.Drawing.Point(5, 2);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(221, 18);
+            this.textBoxPassword.TabIndex = 0;
+            // 
+            // buttonTambahUser
+            // 
+            this.buttonTambahUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonTambahUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTambahUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTambahUser.ImageKey = "add_14722474.png";
+            this.buttonTambahUser.ImageList = this.imageList2;
+            this.buttonTambahUser.Location = new System.Drawing.Point(130, 255);
+            this.buttonTambahUser.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
+            this.buttonTambahUser.Name = "buttonTambahUser";
+            this.buttonTambahUser.Size = new System.Drawing.Size(102, 40);
+            this.buttonTambahUser.TabIndex = 18;
+            this.buttonTambahUser.Text = "Tambah";
+            this.buttonTambahUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonTambahUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonTambahUser.UseVisualStyleBackColor = true;
+            // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "edit_14721775.png");
+            this.imageList2.Images.SetKeyName(1, "add_14722474.png");
+            this.imageList2.Images.SetKeyName(2, "delete_14721891.png");
+            // 
+            // buttonEditUser
+            // 
+            this.buttonEditUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEditUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEditUser.ImageKey = "edit_14721775.png";
+            this.buttonEditUser.ImageList = this.imageList2;
+            this.buttonEditUser.Location = new System.Drawing.Point(250, 255);
+            this.buttonEditUser.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
+            this.buttonEditUser.Name = "buttonEditUser";
+            this.buttonEditUser.Size = new System.Drawing.Size(102, 40);
+            this.buttonEditUser.TabIndex = 18;
+            this.buttonEditUser.Text = "Edit";
+            this.buttonEditUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEditUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEditUser.UseVisualStyleBackColor = true;
+            // 
+            // buttonHapusUser
+            // 
+            this.buttonHapusUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonHapusUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHapusUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHapusUser.ImageKey = "delete_14721891.png";
+            this.buttonHapusUser.ImageList = this.imageList2;
+            this.buttonHapusUser.Location = new System.Drawing.Point(370, 255);
+            this.buttonHapusUser.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
+            this.buttonHapusUser.Name = "buttonHapusUser";
+            this.buttonHapusUser.Size = new System.Drawing.Size(102, 40);
+            this.buttonHapusUser.TabIndex = 18;
+            this.buttonHapusUser.Text = "Hapus";
+            this.buttonHapusUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonHapusUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHapusUser.UseVisualStyleBackColor = true;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(5, 40);
+            this.label27.Margin = new System.Windows.Forms.Padding(5);
+            this.label27.Name = "label27";
+            this.label27.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.label27.Size = new System.Drawing.Size(110, 25);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Password";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // comboBoxRole
+            // 
+            this.tableLayoutPanel11.SetColumnSpan(this.comboBoxRole, 2);
+            this.comboBoxRole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxRole.DropDownHeight = 50;
+            this.comboBoxRole.Enabled = false;
+            this.comboBoxRole.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxRole.FormattingEnabled = true;
+            this.comboBoxRole.IntegralHeight = false;
+            this.comboBoxRole.ItemHeight = 17;
+            this.comboBoxRole.Items.AddRange(new object[] {
+            "Admin",
+            "User"});
+            this.comboBoxRole.Location = new System.Drawing.Point(124, 74);
+            this.comboBoxRole.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxRole.Name = "comboBoxRole";
+            this.comboBoxRole.Size = new System.Drawing.Size(232, 25);
+            this.comboBoxRole.TabIndex = 19;
+            // 
+            // panel29
+            // 
+            this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tableLayoutPanelUser.SetColumnSpan(this.panel29, 2);
+            this.panel29.Controls.Add(this.dataGridViewUser);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel29.Location = new System.Drawing.Point(489, 3);
+            this.panel29.Name = "panel29";
+            this.tableLayoutPanelUser.SetRowSpan(this.panel29, 2);
+            this.panel29.Size = new System.Drawing.Size(852, 578);
+            this.panel29.TabIndex = 3;
+            // 
+            // dataGridViewUser
+            // 
+            this.dataGridViewUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewUser.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridViewUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewUser.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewUser.Name = "dataGridViewUser";
+            this.dataGridViewUser.ReadOnly = true;
+            this.dataGridViewUser.Size = new System.Drawing.Size(848, 574);
+            this.dataGridViewUser.TabIndex = 0;
             // 
             // toolStripOptionUser
             // 
@@ -260,19 +684,51 @@
             this.toolStripButton3});
             this.toolStripOptionUser.Location = new System.Drawing.Point(0, 25);
             this.toolStripOptionUser.Name = "toolStripOptionUser";
-            this.toolStripOptionUser.Size = new System.Drawing.Size(1232, 71);
+            this.toolStripOptionUser.Size = new System.Drawing.Size(1350, 79);
             this.toolStripOptionUser.TabIndex = 3;
             this.toolStripOptionUser.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::TerbaruCahyaFy.Properties.Resources.add_16728917;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(59, 76);
+            this.toolStripButton1.Text = "Item";
+            this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 71);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 79);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Checked = true;
+            this.toolStripButton2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripButton2.Image = global::TerbaruCahyaFy.Properties.Resources.add_friend_2583145;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(59, 76);
+            this.toolStripButton2.Text = "User";
+            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 71);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 79);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = global::TerbaruCahyaFy.Properties.Resources.square_14034319;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(59, 76);
+            this.toolStripButton3.Text = "Keluar";
+            this.toolStripButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // tableLayoutPanelBottom
             // 
@@ -295,11 +751,11 @@
             this.tableLayoutPanelBottom.Controls.Add(this.panel17, 7, 0);
             this.tableLayoutPanelBottom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelBottom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanelBottom.Location = new System.Drawing.Point(3, 577);
+            this.tableLayoutPanelBottom.Location = new System.Drawing.Point(3, 706);
             this.tableLayoutPanelBottom.Name = "tableLayoutPanelBottom";
             this.tableLayoutPanelBottom.RowCount = 1;
             this.tableLayoutPanelBottom.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelBottom.Size = new System.Drawing.Size(1226, 20);
+            this.tableLayoutPanelBottom.Size = new System.Drawing.Size(1344, 20);
             this.tableLayoutPanelBottom.TabIndex = 3;
             // 
             // panel10
@@ -504,191 +960,91 @@
             this.helpToolStripButton});
             this.toolStripHeaderUser.Location = new System.Drawing.Point(0, 0);
             this.toolStripHeaderUser.Name = "toolStripHeaderUser";
-            this.toolStripHeaderUser.Size = new System.Drawing.Size(1232, 25);
+            this.toolStripHeaderUser.Size = new System.Drawing.Size(1350, 25);
             this.toolStripHeaderUser.TabIndex = 5;
             this.toolStripHeaderUser.Text = "toolStrip2";
+            // 
+            // newToolStripButton
+            // 
+            this.newToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
+            this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newToolStripButton.Name = "newToolStripButton";
+            this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton.Text = "&New";
+            // 
+            // openToolStripButton
+            // 
+            this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
+            this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openToolStripButton.Name = "openToolStripButton";
+            this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.openToolStripButton.Text = "&Open";
+            // 
+            // saveToolStripButton
+            // 
+            this.saveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
+            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripButton.Name = "saveToolStripButton";
+            this.saveToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton.Text = "&Save";
+            // 
+            // printToolStripButton
+            // 
+            this.printToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
+            this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printToolStripButton.Name = "printToolStripButton";
+            this.printToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.printToolStripButton.Text = "&Print";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
             // 
+            // cutToolStripButton
+            // 
+            this.cutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton.Image")));
+            this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cutToolStripButton.Name = "cutToolStripButton";
+            this.cutToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.cutToolStripButton.Text = "C&ut";
+            // 
+            // copyToolStripButton
+            // 
+            this.copyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.copyToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripButton.Image")));
+            this.copyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.copyToolStripButton.Name = "copyToolStripButton";
+            this.copyToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.copyToolStripButton.Text = "&Copy";
+            // 
+            // pasteToolStripButton
+            // 
+            this.pasteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pasteToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripButton.Image")));
+            this.pasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.pasteToolStripButton.Name = "pasteToolStripButton";
+            this.pasteToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.pasteToolStripButton.Text = "&Paste";
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // paneltengah
+            // helpToolStripButton
             // 
-            this.paneltengah.BackColor = System.Drawing.SystemColors.Window;
-            this.paneltengah.ColumnCount = 2;
-            this.paneltengah.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.03426F));
-            this.paneltengah.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.96574F));
-            this.paneltengah.Controls.Add(this.panel5, 1, 0);
-            this.paneltengah.Controls.Add(this.groupBox1, 0, 0);
-            this.paneltengah.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paneltengah.Location = new System.Drawing.Point(3, 99);
-            this.paneltengah.Name = "paneltengah";
-            this.paneltengah.RowCount = 1;
-            this.paneltengah.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.paneltengah.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 472F));
-            this.paneltengah.Size = new System.Drawing.Size(1226, 472);
-            this.paneltengah.TabIndex = 10;
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.dataGridView1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(408, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(815, 466);
-            this.panel5.TabIndex = 3;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(811, 462);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(399, 253);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.panel4, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.panel3, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.panel6, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 3, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(393, 234);
-            this.tableLayoutPanel2.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel2.SetColumnSpan(this.panel4, 3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(101, 108);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(289, 29);
-            this.panel4.TabIndex = 7;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel2.SetColumnSpan(this.panel3, 3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(101, 73);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(289, 29);
-            this.panel3.TabIndex = 6;
-            // 
-            // panel6
-            // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel2.SetColumnSpan(this.panel6, 3);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(101, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(289, 29);
-            this.panel6.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 105);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(92, 35);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Email";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(92, 35);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 35);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(92, 35);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Password";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 70);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(92, 35);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "No. HP/ Telp";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tableLayoutPanel2.SetColumnSpan(this.panel2, 2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(101, 38);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(190, 29);
-            this.panel2.TabIndex = 9;
+            this.helpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.helpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton.Image")));
+            this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.helpToolStripButton.Name = "helpToolStripButton";
+            this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.helpToolStripButton.Text = "He&lp";
             // 
             // panel1Item
             // 
@@ -714,11 +1070,9 @@
             this.tableLayoutPanelItem.Name = "tableLayoutPanelItem";
             this.tableLayoutPanelItem.RowCount = 4;
             this.tableLayoutPanelItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanelItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.tableLayoutPanelItem.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanelItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanelItem.Size = new System.Drawing.Size(1350, 729);
             this.tableLayoutPanelItem.TabIndex = 6;
             // 
@@ -956,15 +1310,87 @@
             this.toolStripHeaderItem.TabIndex = 5;
             this.toolStripHeaderItem.Text = "toolStrip4";
             // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton7.Text = "&New";
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton8.Text = "&Open";
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton9.Text = "&Save";
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
+            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton10.Text = "&Print";
+            // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButton11
+            // 
+            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
+            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton11.Text = "C&ut";
+            // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton12.Text = "&Copy";
+            // 
+            // toolStripButton13
+            // 
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
+            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton13.Text = "&Paste";
+            // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton14
+            // 
+            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
+            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton14.Name = "toolStripButton14";
+            this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton14.Text = "He&lp";
             // 
             // tableLayoutPanel5
             // 
@@ -982,14 +1408,14 @@
             this.tableLayoutPanel5.Controls.Add(this.chartKeuntungan, 2, 2);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 99);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 107);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 3;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.94595F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.83784F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.0432F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1344, 601);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1344, 593);
             this.tableLayoutPanel5.TabIndex = 10;
             // 
             // tableLayoutPanel8
@@ -1003,12 +1429,12 @@
             this.tableLayoutPanel8.Controls.Add(this.label19, 1, 1);
             this.tableLayoutPanel8.Controls.Add(this.pictureBox3, 0, 1);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(897, 279);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(897, 275);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(444, 71);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(444, 70);
             this.tableLayoutPanel8.TabIndex = 13;
             // 
             // label17
@@ -1044,10 +1470,21 @@
             this.label19.Location = new System.Drawing.Point(227, 40);
             this.label19.Margin = new System.Windows.Forms.Padding(5);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(212, 26);
+            this.label19.Size = new System.Drawing.Size(212, 25);
             this.label19.TabIndex = 2;
             this.label19.Text = "Jumlah";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox3.Image = global::TerbaruCahyaFy.Properties.Resources.coins_566445;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 38);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(53, 29);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // tableLayoutPanel3
             // 
@@ -1060,12 +1497,12 @@
             this.tableLayoutPanel3.Controls.Add(this.label16, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.pictureBox2, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(489, 279);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(489, 275);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(402, 71);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(402, 70);
             this.tableLayoutPanel3.TabIndex = 12;
             // 
             // label14
@@ -1101,10 +1538,21 @@
             this.label16.Location = new System.Drawing.Point(206, 40);
             this.label16.Margin = new System.Windows.Forms.Padding(5);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(191, 26);
+            this.label16.Size = new System.Drawing.Size(191, 25);
             this.label16.TabIndex = 2;
             this.label16.Text = "Jumlah";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = global::TerbaruCahyaFy.Properties.Resources.coins_566445;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 38);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(53, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // tableLayoutPanel6
             // 
@@ -1134,16 +1582,16 @@
             this.tableLayoutPanel6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 7;
+            this.tableLayoutPanel6.RowCount = 8;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(480, 270);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(480, 266);
             this.tableLayoutPanel6.TabIndex = 11;
             // 
             // buttonRestock
@@ -1386,6 +1834,54 @@
             this.textBoxBarcode.Size = new System.Drawing.Size(341, 18);
             this.textBoxBarcode.TabIndex = 0;
             // 
+            // buttonTambah
+            // 
+            this.buttonTambah.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonTambah.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTambah.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_add_icon__1_;
+            this.buttonTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTambah.Location = new System.Drawing.Point(130, 220);
+            this.buttonTambah.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
+            this.buttonTambah.Name = "buttonTambah";
+            this.buttonTambah.Size = new System.Drawing.Size(102, 38);
+            this.buttonTambah.TabIndex = 18;
+            this.buttonTambah.Text = "Tambah";
+            this.buttonTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonTambah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonTambah.UseVisualStyleBackColor = true;
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEdit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEdit.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_refresh_icon;
+            this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEdit.Location = new System.Drawing.Point(250, 220);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(102, 38);
+            this.buttonEdit.TabIndex = 18;
+            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            // 
+            // buttonHapus
+            // 
+            this.buttonHapus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonHapus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHapus.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_remove_icon;
+            this.buttonHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHapus.Location = new System.Drawing.Point(370, 220);
+            this.buttonHapus.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
+            this.buttonHapus.Name = "buttonHapus";
+            this.buttonHapus.Size = new System.Drawing.Size(102, 38);
+            this.buttonHapus.TabIndex = 18;
+            this.buttonHapus.Text = "Hapus";
+            this.buttonHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonHapus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHapus.UseVisualStyleBackColor = true;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -1408,20 +1904,27 @@
             this.panelGridview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGridview.Location = new System.Drawing.Point(489, 3);
             this.panelGridview.Name = "panelGridview";
-            this.panelGridview.Size = new System.Drawing.Size(852, 270);
+            this.panelGridview.Size = new System.Drawing.Size(852, 266);
             this.panelGridview.TabIndex = 3;
             // 
             // dataGridViewItem
             // 
+            this.dataGridViewItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewItem.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewItem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridViewItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewItem.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewItem.Name = "dataGridViewItem";
             this.dataGridViewItem.ReadOnly = true;
-            this.dataGridViewItem.Size = new System.Drawing.Size(848, 266);
-            this.dataGridViewItem.TabIndex = 2;
+            this.dataGridViewItem.Size = new System.Drawing.Size(848, 262);
+            this.dataGridViewItem.TabIndex = 0;
             // 
             // chartJmlhTrans
             // 
@@ -1431,14 +1934,14 @@
             this.chartJmlhTrans.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
             this.chartJmlhTrans.Legends.Add(legend1);
-            this.chartJmlhTrans.Location = new System.Drawing.Point(10, 363);
+            this.chartJmlhTrans.Location = new System.Drawing.Point(10, 358);
             this.chartJmlhTrans.Margin = new System.Windows.Forms.Padding(10);
             this.chartJmlhTrans.Name = "chartJmlhTrans";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartJmlhTrans.Series.Add(series1);
-            this.chartJmlhTrans.Size = new System.Drawing.Size(466, 228);
+            this.chartJmlhTrans.Size = new System.Drawing.Size(466, 225);
             this.chartJmlhTrans.TabIndex = 4;
             this.chartJmlhTrans.Text = "chart1";
             // 
@@ -1450,14 +1953,14 @@
             this.chartPendapatan.Dock = System.Windows.Forms.DockStyle.Fill;
             legend2.Name = "Legend1";
             this.chartPendapatan.Legends.Add(legend2);
-            this.chartPendapatan.Location = new System.Drawing.Point(496, 363);
+            this.chartPendapatan.Location = new System.Drawing.Point(496, 358);
             this.chartPendapatan.Margin = new System.Windows.Forms.Padding(10);
             this.chartPendapatan.Name = "chartPendapatan";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chartPendapatan.Series.Add(series2);
-            this.chartPendapatan.Size = new System.Drawing.Size(388, 228);
+            this.chartPendapatan.Size = new System.Drawing.Size(388, 225);
             this.chartPendapatan.TabIndex = 5;
             this.chartPendapatan.Text = "chart2";
             // 
@@ -1469,14 +1972,14 @@
             this.chartKeuntungan.Dock = System.Windows.Forms.DockStyle.Fill;
             legend3.Name = "Legend1";
             this.chartKeuntungan.Legends.Add(legend3);
-            this.chartKeuntungan.Location = new System.Drawing.Point(904, 363);
+            this.chartKeuntungan.Location = new System.Drawing.Point(904, 358);
             this.chartKeuntungan.Margin = new System.Windows.Forms.Padding(10);
             this.chartKeuntungan.Name = "chartKeuntungan";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             this.chartKeuntungan.Series.Add(series3);
-            this.chartKeuntungan.Size = new System.Drawing.Size(430, 228);
+            this.chartKeuntungan.Size = new System.Drawing.Size(430, 225);
             this.chartKeuntungan.TabIndex = 6;
             this.chartKeuntungan.Text = "chart3";
             // 
@@ -1491,12 +1994,12 @@
             this.tableLayoutPanel7.Controls.Add(this.label13, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.pictureBox1, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 279);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 275);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(480, 71);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(480, 70);
             this.tableLayoutPanel7.TabIndex = 8;
             // 
             // label11
@@ -1532,10 +2035,21 @@
             this.label13.Location = new System.Drawing.Point(245, 40);
             this.label13.Margin = new System.Windows.Forms.Padding(5);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(230, 26);
+            this.label13.Size = new System.Drawing.Size(230, 25);
             this.label13.TabIndex = 2;
             this.label13.Text = "Jumlah";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::TerbaruCahyaFy.Properties.Resources.coins_566445;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // toolStripOptionItem
             // 
@@ -1550,325 +2064,66 @@
             this.toolStripButton6Keluar});
             this.toolStripOptionItem.Location = new System.Drawing.Point(0, 25);
             this.toolStripOptionItem.Name = "toolStripOptionItem";
-            this.toolStripOptionItem.Size = new System.Drawing.Size(1350, 71);
+            this.toolStripOptionItem.Size = new System.Drawing.Size(1350, 79);
             this.toolStripOptionItem.TabIndex = 3;
             this.toolStripOptionItem.Text = "toolStrip3";
+            // 
+            // toolStripButton4Item
+            // 
+            this.toolStripButton4Item.Checked = true;
+            this.toolStripButton4Item.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripButton4Item.Image = global::TerbaruCahyaFy.Properties.Resources.add_16728917__3_;
+            this.toolStripButton4Item.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4Item.Name = "toolStripButton4Item";
+            this.toolStripButton4Item.Size = new System.Drawing.Size(59, 76);
+            this.toolStripButton4Item.Text = "Item";
+            this.toolStripButton4Item.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButton4Item.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 71);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 71);
-            // 
-            // panelUser
-            // 
-            this.panelUser.Controls.Add(this.tableLayoutPanel1);
-            this.panelUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelUser.Location = new System.Drawing.Point(0, 0);
-            this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(1350, 729);
-            this.panelUser.TabIndex = 2;
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton7.Text = "&New";
-            // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton8.Text = "&Open";
-            // 
-            // toolStripButton9
-            // 
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton9.Text = "&Save";
-            // 
-            // toolStripButton10
-            // 
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton10.Text = "&Print";
-            // 
-            // toolStripButton11
-            // 
-            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
-            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton11.Text = "C&ut";
-            // 
-            // toolStripButton12
-            // 
-            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
-            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton12.Text = "&Copy";
-            // 
-            // toolStripButton13
-            // 
-            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
-            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton13.Text = "&Paste";
-            // 
-            // toolStripButton14
-            // 
-            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
-            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton14.Text = "He&lp";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = global::TerbaruCahyaFy.Properties.Resources.coins_566445;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 38);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(53, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::TerbaruCahyaFy.Properties.Resources.coins_566445;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 38);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(53, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // buttonTambah
-            // 
-            this.buttonTambah.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonTambah.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTambah.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_add_icon__1_;
-            this.buttonTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTambah.Location = new System.Drawing.Point(130, 220);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
-            this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(102, 40);
-            this.buttonTambah.TabIndex = 18;
-            this.buttonTambah.Text = "Tambah";
-            this.buttonTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonTambah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTambah.UseVisualStyleBackColor = true;
-            // 
-            // buttonEdit
-            // 
-            this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEdit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdit.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_refresh_icon;
-            this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEdit.Location = new System.Drawing.Point(250, 220);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(102, 40);
-            this.buttonEdit.TabIndex = 18;
-            this.buttonEdit.Text = "Edit";
-            this.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEdit.UseVisualStyleBackColor = true;
-            // 
-            // buttonHapus
-            // 
-            this.buttonHapus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonHapus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHapus.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_remove_icon;
-            this.buttonHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHapus.Location = new System.Drawing.Point(370, 220);
-            this.buttonHapus.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
-            this.buttonHapus.Name = "buttonHapus";
-            this.buttonHapus.Size = new System.Drawing.Size(102, 40);
-            this.buttonHapus.TabIndex = 18;
-            this.buttonHapus.Text = "Hapus";
-            this.buttonHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonHapus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHapus.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::TerbaruCahyaFy.Properties.Resources.coins_566445;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // toolStripButton4Item
-            // 
-            this.toolStripButton4Item.Image = global::TerbaruCahyaFy.Properties.Resources.add_16728917;
-            this.toolStripButton4Item.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4Item.Name = "toolStripButton4Item";
-            this.toolStripButton4Item.Size = new System.Drawing.Size(59, 68);
-            this.toolStripButton4Item.Text = "Item";
-            this.toolStripButton4Item.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton4Item.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 79);
             // 
             // toolStripButton5User
             // 
             this.toolStripButton5User.Image = global::TerbaruCahyaFy.Properties.Resources.add_friend_2583145;
             this.toolStripButton5User.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5User.Name = "toolStripButton5User";
-            this.toolStripButton5User.Size = new System.Drawing.Size(59, 68);
+            this.toolStripButton5User.Size = new System.Drawing.Size(59, 76);
             this.toolStripButton5User.Text = "User";
             this.toolStripButton5User.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton5User.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 79);
             // 
             // toolStripButton6Keluar
             // 
             this.toolStripButton6Keluar.Image = global::TerbaruCahyaFy.Properties.Resources.square_14034319;
             this.toolStripButton6Keluar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6Keluar.Name = "toolStripButton6Keluar";
-            this.toolStripButton6Keluar.Size = new System.Drawing.Size(59, 68);
+            this.toolStripButton6Keluar.Size = new System.Drawing.Size(59, 76);
             this.toolStripButton6Keluar.Text = "Keluar";
             this.toolStripButton6Keluar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolStripButton6Keluar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // toolStripButton1
+            // panel1User
             // 
-            this.toolStripButton1.Image = global::TerbaruCahyaFy.Properties.Resources.add_16728917;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(59, 68);
-            this.toolStripButton1.Text = "Barang";
-            this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.panel1User.Controls.Add(this.tableLayoutPanel1User);
+            this.panel1User.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1User.Location = new System.Drawing.Point(0, 0);
+            this.panel1User.Name = "panel1User";
+            this.panel1User.Size = new System.Drawing.Size(1350, 729);
+            this.panel1User.TabIndex = 2;
             // 
-            // toolStripButton2
+            // imageList3
             // 
-            this.toolStripButton2.Image = global::TerbaruCahyaFy.Properties.Resources.add_friend_2583145;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(59, 68);
-            this.toolStripButton2.Text = "User";
-            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Image = global::TerbaruCahyaFy.Properties.Resources.square_14034319;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(59, 68);
-            this.toolStripButton3.Text = "Keluar";
-            this.toolStripButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // newToolStripButton
-            // 
-            this.newToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
-            this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton.Text = "&New";
-            // 
-            // openToolStripButton
-            // 
-            this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
-            this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.openToolStripButton.Name = "openToolStripButton";
-            this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.openToolStripButton.Text = "&Open";
-            // 
-            // saveToolStripButton
-            // 
-            this.saveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
-            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.saveToolStripButton.Text = "&Save";
-            // 
-            // printToolStripButton
-            // 
-            this.printToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.printToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripButton.Image")));
-            this.printToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripButton.Name = "printToolStripButton";
-            this.printToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.printToolStripButton.Text = "&Print";
-            // 
-            // cutToolStripButton
-            // 
-            this.cutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.cutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton.Image")));
-            this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.cutToolStripButton.Name = "cutToolStripButton";
-            this.cutToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.cutToolStripButton.Text = "C&ut";
-            // 
-            // copyToolStripButton
-            // 
-            this.copyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.copyToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripButton.Image")));
-            this.copyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.copyToolStripButton.Name = "copyToolStripButton";
-            this.copyToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.copyToolStripButton.Text = "&Copy";
-            // 
-            // pasteToolStripButton
-            // 
-            this.pasteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pasteToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripButton.Image")));
-            this.pasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.pasteToolStripButton.Name = "pasteToolStripButton";
-            this.pasteToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.pasteToolStripButton.Text = "&Paste";
-            // 
-            // helpToolStripButton
-            // 
-            this.helpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.helpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton.Image")));
-            this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.helpToolStripButton.Name = "helpToolStripButton";
-            this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.helpToolStripButton.Text = "He&lp";
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageKey = "visits_520647.png";
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(297, 38);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 29);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
+            this.imageList3.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList3.ImageStream")));
+            this.imageList3.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList3.Images.SetKeyName(0, "cash-register_6632833.png");
             // 
             // Admin
             // 
@@ -1876,13 +2131,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.panel1User);
             this.Controls.Add(this.panel1Item);
-            this.Controls.Add(this.panelUser);
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel1User.ResumeLayout(false);
+            this.tableLayoutPanel1User.PerformLayout();
+            this.tableLayoutPanelUser.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            this.panel29.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).EndInit();
             this.toolStripOptionUser.ResumeLayout(false);
             this.toolStripOptionUser.PerformLayout();
             this.tableLayoutPanelBottom.ResumeLayout(false);
@@ -1902,12 +2172,6 @@
             this.panel17.PerformLayout();
             this.toolStripHeaderUser.ResumeLayout(false);
             this.toolStripHeaderUser.PerformLayout();
-            this.paneltengah.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.panel1Item.ResumeLayout(false);
             this.tableLayoutPanelItem.ResumeLayout(false);
             this.tableLayoutPanelItem.PerformLayout();
@@ -1931,8 +2195,10 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.panel27.ResumeLayout(false);
@@ -1954,12 +2220,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartKeuntungan)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStripOptionItem.ResumeLayout(false);
             this.toolStripOptionItem.PerformLayout();
-            this.panelUser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1User.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1967,7 +2231,7 @@
         #endregion
 
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1User;
         private System.Windows.Forms.ToolStrip toolStripOptionUser;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -2001,29 +2265,9 @@
         private System.Windows.Forms.ToolStripButton pasteToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
-        private System.Windows.Forms.TableLayoutPanel paneltengah;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1Item;
-        private System.Windows.Forms.Panel panelUser;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1User;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelItem;
-        private System.Windows.Forms.ToolStrip toolStripOptionItem;
-        private System.Windows.Forms.ToolStripButton toolStripButton4Item;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5User;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6Keluar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox2;
@@ -2052,32 +2296,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripButton toolStripButton14;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Panel panelGridview;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartJmlhTrans;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartPendapatan;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartKeuntungan;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button buttonRestock;
-        private System.Windows.Forms.Button buttonTambah;
-        private System.Windows.Forms.Button buttonEdit;
-        private System.Windows.Forms.Button buttonHapus;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
@@ -2088,12 +2306,71 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView dataGridViewItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button buttonRestock;
+        private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.TextBox textBoxModal;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.TextBox textBoxStok;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.TextBox textBoxHargaJual;
-        private System.Windows.Forms.TextBox textBoxID;
-        private System.Windows.Forms.TextBox textBoxBarcode;
+        private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.TextBox textBoxNamaItem;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.TextBox textBoxBarcode;
+        private System.Windows.Forms.Button buttonTambah;
+        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonHapus;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panelGridview;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartJmlhTrans;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPendapatan;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartKeuntungan;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStrip toolStripOptionItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton4Item;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripButton5User;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6Keluar;
+        private System.Windows.Forms.DataGridView dataGridViewItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelUser;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBoxHP;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox textBoxAlamat;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox textBoxNama;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.Button buttonTambahUser;
+        private System.Windows.Forms.Button buttonEditUser;
+        private System.Windows.Forms.Button buttonHapusUser;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.DataGridView dataGridViewUser;
+        private System.Windows.Forms.ComboBox comboBoxRole;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.ImageList imageList3;
     }
 }

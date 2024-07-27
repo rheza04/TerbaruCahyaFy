@@ -117,41 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="add_16728917 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_16728917 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add_16728917" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_16728917.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cashier_1967348" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cashier_1967348.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="package_2696075" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\package_2696075.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="book_15142039" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\book_15142039.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="visits_520647" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\visits_520647.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="square_14034319" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\square_14034319.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="coins_566445" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coins_566445.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add_16728917 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_16728917 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="calculator_11276946" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calculator_11276946.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add-friend_2583145" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add-friend_2583145.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add_16728917 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_16728917 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADy
+        BQAAAk1TRnQBSQFMAwEBAAEQAQABEAEAARwBAAEcAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABcAMA
+        ARwDAAEBAQABIAYAATH/AP8A/wD/AP8A/wD/AP8A/wD/AMQABAIDHgErAzMBUgM7AWcDOwFnAzMBUgMe
+        ASsEAv8AlQADAgEDAy8BSQNEAaYDFgHvAwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AxYB7wNEAaYDLwFJ
+        AwIBA/8AgQAEAgM3AVwDLwHYAwAB/wMAAf8DAAH/AwAB/wMgAecDQAG4A0ABuAMgAecDAAH/AwAB/wMA
+        Af8DAAH/Ay8B2AM3AVwEAv8AdQADIAEuAzoByQMAAf8DHQHqAzoBxgMAAf8DIQHmAzMBUwQCCAAEAgMz
+        AVMDIQHmAwAB/wM6AcYDHQHqAwAB/wM6AckDIAEu/wBpAAQBAz8BdAMKAfkDDAH4A0MBhAMXAR8DHQHr
+        AyEB5gMYASAYAAMYASADIQHmAx0B6wMXAR8DQwGFAwoB+QMKAfkDPwF0BAH/AF0AAwgBCgNEAasDAAH/
+        AzQB0AMeASsEAANBAXoDAAH/AzMBUwgAAyABLQNFAZIDOQFhDAADMwFTAwAB/wNBAXkEAAMfASwDNAHQ
+        AwAB/wNEAasDCAEK/wBVAAMMARADOwHFAwAB/wNFAaADBgEICAADOQHHAyAB5wQCBAADIAEtAw8B9QMA
+        Af8DQwGqDAAEAgMgAecDOQHHCAADBwEJA0UBoQMAAf8DOwHFAwwBEP8AUQADOwHEAwAB/wNCAYAQAAMc
+        AewDQAG4CAADRQGSAwAB/wMlATcEAQNDAaoDOQFhCAADQAG4AxwB7BAAA0IBggMAAf8DOwHE/wBRAAM7
+        AcQDAAH/A0IBghAAAxwB7ANAAbgIAANFAZIDAAH/AyUBNwMlATcDAAH/A0UBkggAA0ABuAMcAewMAAQB
+        A0IBgAMAAf8DOwHE/wBRAAMMARADOwHFAwAB/wNFAaEDBwEJCAADOQHHAyAB5wQCBAADIAEtAw8B9QMA
+        Af8DAAH/Aw8B9QMgAS0EAAQCAyAB5wM5AccIAAMGAQgDRQGgAwAB/wM7AcUDDAEQ/wBVAAMIAQoDRAGr
+        AwAB/wM0AdADHwEsBAADQQF5AwAB/wMzAVMIAAMgAS0DRQGSA0UBkgMgAS0IAAMzAVMDAAH/A0EBegQA
+        Ax4BKwM0AdADAAH/A0QBqwMIAQr/AF0ABAEDPwF0AwoB+QMKAfkDQwGFAxcBHwMdAesDIQHmAxgBIBgA
+        AxgBIAMhAeYDHQHrAxcBHwNDAYQDDAH4AwoB+QM/AXQEAf8AaQADIAEuAzoByQMAAf8DHQHqAzoBxgMA
+        Af8DIQHmAzMBUwQCCAAEAgMzAVMDIQHmAwAB/wM6AcYDHQHqAwAB/wM6AckDIAEu/wB1AAQCAzcBXAMv
+        AdgDAAH/AwAB/wMAAf8DAAH/AyAB5wNAAbgDQAG4AyAB5wMAAf8DAAH/AwAB/wMAAf8DLwHYAzcBXAQC
+        /wCBAAMCAQMDLwFJA0QBpgMWAe8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DFgHvA0QBpgMvAUkDAgED
+        /wCVAAQCAx4BKwMzAVIDOwFnAzsBZwMzAVIDHgErBAL/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wAEAAFC
+        AU0BPgcAAT4DAAEoAwABcAMAARwDAAEBAQABAQUAAcABARYAA/8BAAP/AfAMAAP/AfAMAAP/AfAMAAP/
+        AfAMAAP/AfAMAAP/AfAMAAH/AcABPwHwDAAB/gEAAQcB8AwAAfgBAAEBAfAMAAHwAQYBAAHwDAABwAEf
+        AYABMAwAAYIBMQHEARAMAAEGASEBxg0AAR4BYAFnAYAMAAEeAWABZw0AAQYBIAFGDQABggEwAcQBEAwA
+        AcABHwGAATAMAAHwAQYBAAHwDAAB+AEAAQEB8AwAAf4BAAEHAfAMAAH/AcABPwHwDAAD/wHwDAAD/wHw
+        DAAD/wHwDAAD/wHwDAAD/wHwDAAD/wHwDAAL
+</value>
   </data>
 </root>
