@@ -63,7 +63,7 @@ namespace TerbaruCahyaFy
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Image = global::TerbaruCahyaFy.Properties.Resources.user_16353506;
             this.pictureBox2.Location = new System.Drawing.Point(42, 101);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(46, 36);
@@ -151,6 +151,7 @@ namespace TerbaruCahyaFy
             this.Controls.Add(this.labelCheckConnection);
             this.Controls.Add(this.groupBoxLogin);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

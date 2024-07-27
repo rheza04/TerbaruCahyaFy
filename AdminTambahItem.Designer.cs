@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminTambahItem));
             this.buttonTambah = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxBarcode = new System.Windows.Forms.TextBox();
@@ -355,6 +356,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 254);
             this.Controls.Add(this.tableLayoutPanel6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminTambahItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tambah Item";

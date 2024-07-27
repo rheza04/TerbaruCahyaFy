@@ -461,6 +461,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(546, 305);
             this.Controls.Add(this.tableLayoutPanel11);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminTambahUser";
             this.Text = "Tambah User";
             this.panel22.ResumeLayout(false);

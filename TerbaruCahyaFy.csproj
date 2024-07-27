@@ -283,6 +283,9 @@
   <ItemGroup>
     <None Include="Resources\delete_13884433.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_16353506.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

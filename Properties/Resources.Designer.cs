@@ -173,6 +173,16 @@ namespace TerbaruCahyaFy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user_16353506 {
+            get {
+                object obj = ResourceManager.GetObject("user_16353506", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap visits_520647 {
             get {
                 object obj = ResourceManager.GetObject("visits_520647", resourceCulture);

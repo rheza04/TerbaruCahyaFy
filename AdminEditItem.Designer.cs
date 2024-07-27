@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminEditItem));
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.textBoxModal = new System.Windows.Forms.TextBox();
@@ -355,6 +356,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 254);
             this.Controls.Add(this.tableLayoutPanel6);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminEditItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Item";
