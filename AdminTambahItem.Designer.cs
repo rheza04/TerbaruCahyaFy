@@ -68,7 +68,7 @@
             this.buttonTambah.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(79, 24);
-            this.buttonTambah.TabIndex = 18;
+            this.buttonTambah.TabIndex = 7;
             this.buttonTambah.Text = "Tambah";
             this.buttonTambah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonTambah.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@
             this.textBoxBarcode.Location = new System.Drawing.Point(5, 2);
             this.textBoxBarcode.Name = "textBoxBarcode";
             this.textBoxBarcode.Size = new System.Drawing.Size(338, 18);
-            this.textBoxBarcode.TabIndex = 0;
+            this.textBoxBarcode.TabIndex = 2;
             // 
             // label5
             // 
@@ -150,7 +150,7 @@
             this.panel26.Name = "panel26";
             this.panel26.Padding = new System.Windows.Forms.Padding(5, 2, 0, 0);
             this.panel26.Size = new System.Drawing.Size(347, 25);
-            this.panel26.TabIndex = 9;
+            this.panel26.TabIndex = 0;
             // 
             // textBoxID
             // 
@@ -160,7 +160,7 @@
             this.textBoxID.Location = new System.Drawing.Point(5, 2);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(338, 18);
-            this.textBoxID.TabIndex = 0;
+            this.textBoxID.TabIndex = 1;
             // 
             // panel25
             // 
@@ -173,7 +173,7 @@
             this.panel25.Name = "panel25";
             this.panel25.Padding = new System.Windows.Forms.Padding(5, 2, 0, 0);
             this.panel25.Size = new System.Drawing.Size(347, 25);
-            this.panel25.TabIndex = 4;
+            this.panel25.TabIndex = 0;
             // 
             // buttonBatal
             // 
@@ -197,7 +197,7 @@
             this.textBoxNamaItem.Location = new System.Drawing.Point(5, 2);
             this.textBoxNamaItem.Name = "textBoxNamaItem";
             this.textBoxNamaItem.Size = new System.Drawing.Size(338, 18);
-            this.textBoxNamaItem.TabIndex = 0;
+            this.textBoxNamaItem.TabIndex = 3;
             // 
             // label10
             // 
@@ -235,7 +235,7 @@
             this.textBoxHargaJual.Margin = new System.Windows.Forms.Padding(10);
             this.textBoxHargaJual.Name = "textBoxHargaJual";
             this.textBoxHargaJual.Size = new System.Drawing.Size(338, 18);
-            this.textBoxHargaJual.TabIndex = 0;
+            this.textBoxHargaJual.TabIndex = 4;
             // 
             // textBoxStok
             // 
@@ -246,7 +246,7 @@
             this.textBoxStok.Margin = new System.Windows.Forms.Padding(10);
             this.textBoxStok.Name = "textBoxStok";
             this.textBoxStok.Size = new System.Drawing.Size(219, 18);
-            this.textBoxStok.TabIndex = 0;
+            this.textBoxStok.TabIndex = 6;
             // 
             // label9
             // 
@@ -284,7 +284,7 @@
             this.textBoxModal.Margin = new System.Windows.Forms.Padding(10);
             this.textBoxModal.Name = "textBoxModal";
             this.textBoxModal.Size = new System.Drawing.Size(338, 18);
-            this.textBoxModal.TabIndex = 0;
+            this.textBoxModal.TabIndex = 5;
             // 
             // panel27
             // 
@@ -348,7 +348,7 @@
             this.panel24.Name = "panel24";
             this.panel24.Padding = new System.Windows.Forms.Padding(5, 2, 0, 0);
             this.panel24.Size = new System.Drawing.Size(347, 25);
-            this.panel24.TabIndex = 6;
+            this.panel24.TabIndex = 0;
             // 
             // AdminTambahItem
             // 

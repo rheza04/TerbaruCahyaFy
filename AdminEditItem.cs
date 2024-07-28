@@ -1,7 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Net.Http;
+using System.Net.NetworkInformation;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
-using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace TerbaruCahyaFy
 {
@@ -21,7 +33,7 @@ namespace TerbaruCahyaFy
 
         private void InitializeCustomComponents()
         {
-            // Tambahkan event handler
+           
             buttonEdit.Click += new EventHandler(buttonEdit_Click);
             buttonBatal.Click += new EventHandler(buttonBatal_Click);
         }
@@ -86,7 +98,7 @@ namespace TerbaruCahyaFy
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            // Validasi duplikasi
+           
             if (IsDuplicate("ID", textBoxID.Text, originalId))
             {
                 MessageBox.Show("Maaf, ID yang Anda mau ubah sudah ada.");

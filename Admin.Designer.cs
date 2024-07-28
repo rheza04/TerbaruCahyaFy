@@ -70,11 +70,11 @@
             this.panel29 = new System.Windows.Forms.Panel();
             this.dataGridViewUser = new System.Windows.Forms.DataGridView();
             this.toolStripOptionUser = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonUserItem1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonUserUser2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonUserKeluar3 = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanelBottom = new System.Windows.Forms.TableLayoutPanel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -143,7 +143,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonRestock = new System.Windows.Forms.Button();
+            this.buttonRestockItem = new System.Windows.Forms.Button();
             this.panel27 = new System.Windows.Forms.Panel();
             this.textBoxModal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -161,9 +161,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.textBoxBarcode = new System.Windows.Forms.TextBox();
-            this.buttonTambah = new System.Windows.Forms.Button();
-            this.buttonEdit = new System.Windows.Forms.Button();
-            this.buttonHapus = new System.Windows.Forms.Button();
+            this.buttonTambahItem = new System.Windows.Forms.Button();
+            this.buttonEditItem = new System.Windows.Forms.Button();
+            this.buttonHapusItem = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panelGridview = new System.Windows.Forms.Panel();
             this.dataGridViewItem = new System.Windows.Forms.DataGridView();
@@ -176,11 +176,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripOptionItem = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton4Item = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonItemItem1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5User = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonItemUser2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6Keluar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonItemKeluar3 = new System.Windows.Forms.ToolStripButton();
             this.panel1User = new System.Windows.Forms.Panel();
             this.imageList3 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1User.SuspendLayout();
@@ -348,7 +348,6 @@
             this.tableLayoutPanel11.SetColumnSpan(this.panel2, 3);
             this.panel2.Controls.Add(this.textBoxHP);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Enabled = false;
             this.panel2.Location = new System.Drawing.Point(125, 145);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
@@ -390,7 +389,6 @@
             this.tableLayoutPanel11.SetColumnSpan(this.panel3, 3);
             this.panel3.Controls.Add(this.textBoxAlamat);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Enabled = false;
             this.panel3.Location = new System.Drawing.Point(125, 180);
             this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
@@ -434,7 +432,6 @@
             this.tableLayoutPanel11.SetColumnSpan(this.panel4, 3);
             this.panel4.Controls.Add(this.textBoxNama);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Enabled = false;
             this.panel4.Location = new System.Drawing.Point(125, 110);
             this.panel4.Margin = new System.Windows.Forms.Padding(5);
             this.panel4.Name = "panel4";
@@ -473,7 +470,7 @@
             // textBoxUsername
             // 
             this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUsername.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBoxUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxUsername.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.Location = new System.Drawing.Point(5, 2);
@@ -623,7 +620,6 @@
             // 
             // comboBoxRole
             // 
-            this.tableLayoutPanel11.SetColumnSpan(this.comboBoxRole, 2);
             this.comboBoxRole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBoxRole.DropDownHeight = 50;
             this.comboBoxRole.Enabled = false;
@@ -637,7 +633,7 @@
             this.comboBoxRole.Location = new System.Drawing.Point(124, 74);
             this.comboBoxRole.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxRole.Name = "comboBoxRole";
-            this.comboBoxRole.Size = new System.Drawing.Size(232, 25);
+            this.comboBoxRole.Size = new System.Drawing.Size(112, 25);
             this.comboBoxRole.TabIndex = 19;
             // 
             // panel29
@@ -677,58 +673,58 @@
             this.toolStripOptionUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripOptionUser.ImageScalingSize = new System.Drawing.Size(55, 55);
             this.toolStripOptionUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.toolStripButtonUserItem1,
             this.toolStripSeparator1,
-            this.toolStripButton2,
+            this.toolStripButtonUserUser2,
             this.toolStripSeparator2,
-            this.toolStripButton3});
+            this.toolStripButtonUserKeluar3});
             this.toolStripOptionUser.Location = new System.Drawing.Point(0, 25);
             this.toolStripOptionUser.Name = "toolStripOptionUser";
             this.toolStripOptionUser.Size = new System.Drawing.Size(1350, 79);
             this.toolStripOptionUser.TabIndex = 3;
             this.toolStripOptionUser.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // toolStripButtonUserItem1
             // 
-            this.toolStripButton1.Image = global::TerbaruCahyaFy.Properties.Resources.add_16728917;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(59, 76);
-            this.toolStripButton1.Text = "Item";
-            this.toolStripButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButtonUserItem1.Image = global::TerbaruCahyaFy.Properties.Resources.add_16728917;
+            this.toolStripButtonUserItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonUserItem1.Name = "toolStripButtonUserItem1";
+            this.toolStripButtonUserItem1.Size = new System.Drawing.Size(59, 76);
+            this.toolStripButtonUserItem1.Text = "Item";
+            this.toolStripButtonUserItem1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButtonUserItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 79);
             // 
-            // toolStripButton2
+            // toolStripButtonUserUser2
             // 
-            this.toolStripButton2.Checked = true;
-            this.toolStripButton2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolStripButton2.Image = global::TerbaruCahyaFy.Properties.Resources.add_friend_2583145;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(59, 76);
-            this.toolStripButton2.Text = "User";
-            this.toolStripButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButtonUserUser2.Checked = true;
+            this.toolStripButtonUserUser2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripButtonUserUser2.Image = global::TerbaruCahyaFy.Properties.Resources.add_friend_2583145;
+            this.toolStripButtonUserUser2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonUserUser2.Name = "toolStripButtonUserUser2";
+            this.toolStripButtonUserUser2.Size = new System.Drawing.Size(59, 76);
+            this.toolStripButtonUserUser2.Text = "User";
+            this.toolStripButtonUserUser2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButtonUserUser2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 79);
             // 
-            // toolStripButton3
+            // toolStripButtonUserKeluar3
             // 
-            this.toolStripButton3.Image = global::TerbaruCahyaFy.Properties.Resources.square_14034319;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(59, 76);
-            this.toolStripButton3.Text = "Keluar";
-            this.toolStripButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButtonUserKeluar3.Image = global::TerbaruCahyaFy.Properties.Resources.square_14034319;
+            this.toolStripButtonUserKeluar3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonUserKeluar3.Name = "toolStripButtonUserKeluar3";
+            this.toolStripButtonUserKeluar3.Size = new System.Drawing.Size(59, 76);
+            this.toolStripButtonUserKeluar3.Text = "Keluar";
+            this.toolStripButtonUserKeluar3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButtonUserKeluar3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // tableLayoutPanelBottom
             // 
@@ -1562,7 +1558,7 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.Controls.Add(this.buttonRestock, 3, 5);
+            this.tableLayoutPanel6.Controls.Add(this.buttonRestockItem, 3, 5);
             this.tableLayoutPanel6.Controls.Add(this.panel27, 1, 4);
             this.tableLayoutPanel6.Controls.Add(this.label9, 0, 5);
             this.tableLayoutPanel6.Controls.Add(this.panel28, 1, 5);
@@ -1574,9 +1570,9 @@
             this.tableLayoutPanel6.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.label8, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.panel26, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.buttonTambah, 1, 6);
-            this.tableLayoutPanel6.Controls.Add(this.buttonEdit, 2, 6);
-            this.tableLayoutPanel6.Controls.Add(this.buttonHapus, 3, 6);
+            this.tableLayoutPanel6.Controls.Add(this.buttonTambahItem, 1, 6);
+            this.tableLayoutPanel6.Controls.Add(this.buttonEditItem, 2, 6);
+            this.tableLayoutPanel6.Controls.Add(this.buttonHapusItem, 3, 6);
             this.tableLayoutPanel6.Controls.Add(this.label7, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1594,18 +1590,18 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(480, 266);
             this.tableLayoutPanel6.TabIndex = 11;
             // 
-            // buttonRestock
+            // buttonRestockItem
             // 
-            this.buttonRestock.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonRestock.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRestock.ImageKey = "(none)";
-            this.buttonRestock.ImageList = this.imageList1;
-            this.buttonRestock.Location = new System.Drawing.Point(363, 178);
-            this.buttonRestock.Name = "buttonRestock";
-            this.buttonRestock.Size = new System.Drawing.Size(76, 29);
-            this.buttonRestock.TabIndex = 16;
-            this.buttonRestock.Text = "Restock";
-            this.buttonRestock.UseVisualStyleBackColor = true;
+            this.buttonRestockItem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonRestockItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRestockItem.ImageKey = "(none)";
+            this.buttonRestockItem.ImageList = this.imageList1;
+            this.buttonRestockItem.Location = new System.Drawing.Point(363, 178);
+            this.buttonRestockItem.Name = "buttonRestockItem";
+            this.buttonRestockItem.Size = new System.Drawing.Size(76, 29);
+            this.buttonRestockItem.TabIndex = 16;
+            this.buttonRestockItem.Text = "Restock";
+            this.buttonRestockItem.UseVisualStyleBackColor = true;
             // 
             // panel27
             // 
@@ -1740,7 +1736,7 @@
             this.textBoxNamaItem.Location = new System.Drawing.Point(5, 2);
             this.textBoxNamaItem.Name = "textBoxNamaItem";
             this.textBoxNamaItem.Size = new System.Drawing.Size(341, 18);
-            this.textBoxNamaItem.TabIndex = 0;
+            this.textBoxNamaItem.TabIndex = 18;
             // 
             // panel25
             // 
@@ -1832,55 +1828,55 @@
             this.textBoxBarcode.Location = new System.Drawing.Point(5, 2);
             this.textBoxBarcode.Name = "textBoxBarcode";
             this.textBoxBarcode.Size = new System.Drawing.Size(341, 18);
-            this.textBoxBarcode.TabIndex = 0;
+            this.textBoxBarcode.TabIndex = 18;
             // 
-            // buttonTambah
+            // buttonTambahItem
             // 
-            this.buttonTambah.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonTambah.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTambah.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_add_icon__1_;
-            this.buttonTambah.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTambah.Location = new System.Drawing.Point(130, 220);
-            this.buttonTambah.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
-            this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(102, 38);
-            this.buttonTambah.TabIndex = 18;
-            this.buttonTambah.Text = "Tambah";
-            this.buttonTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonTambah.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonTambah.UseVisualStyleBackColor = true;
+            this.buttonTambahItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonTambahItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTambahItem.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_add_icon__1_;
+            this.buttonTambahItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonTambahItem.Location = new System.Drawing.Point(130, 220);
+            this.buttonTambahItem.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
+            this.buttonTambahItem.Name = "buttonTambahItem";
+            this.buttonTambahItem.Size = new System.Drawing.Size(102, 38);
+            this.buttonTambahItem.TabIndex = 18;
+            this.buttonTambahItem.Text = "Tambah";
+            this.buttonTambahItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonTambahItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonTambahItem.UseVisualStyleBackColor = true;
             // 
-            // buttonEdit
+            // buttonEditItem
             // 
-            this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEdit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdit.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_refresh_icon;
-            this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEdit.Location = new System.Drawing.Point(250, 220);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(102, 38);
-            this.buttonEdit.TabIndex = 18;
-            this.buttonEdit.Text = "Edit";
-            this.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEditItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEditItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEditItem.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_refresh_icon;
+            this.buttonEditItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEditItem.Location = new System.Drawing.Point(250, 220);
+            this.buttonEditItem.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
+            this.buttonEditItem.Name = "buttonEditItem";
+            this.buttonEditItem.Size = new System.Drawing.Size(102, 38);
+            this.buttonEditItem.TabIndex = 18;
+            this.buttonEditItem.Text = "Edit";
+            this.buttonEditItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEditItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEditItem.UseVisualStyleBackColor = true;
             // 
-            // buttonHapus
+            // buttonHapusItem
             // 
-            this.buttonHapus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonHapus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHapus.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_remove_icon;
-            this.buttonHapus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHapus.Location = new System.Drawing.Point(370, 220);
-            this.buttonHapus.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
-            this.buttonHapus.Name = "buttonHapus";
-            this.buttonHapus.Size = new System.Drawing.Size(102, 38);
-            this.buttonHapus.TabIndex = 18;
-            this.buttonHapus.Text = "Hapus";
-            this.buttonHapus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonHapus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHapus.UseVisualStyleBackColor = true;
+            this.buttonHapusItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonHapusItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHapusItem.Image = global::TerbaruCahyaFy.Resource1.shopping_basket_remove_icon;
+            this.buttonHapusItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHapusItem.Location = new System.Drawing.Point(370, 220);
+            this.buttonHapusItem.Margin = new System.Windows.Forms.Padding(10, 10, 8, 10);
+            this.buttonHapusItem.Name = "buttonHapusItem";
+            this.buttonHapusItem.Size = new System.Drawing.Size(102, 38);
+            this.buttonHapusItem.TabIndex = 18;
+            this.buttonHapusItem.Text = "Hapus";
+            this.buttonHapusItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonHapusItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHapusItem.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -2057,58 +2053,58 @@
             this.toolStripOptionItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripOptionItem.ImageScalingSize = new System.Drawing.Size(55, 55);
             this.toolStripOptionItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton4Item,
+            this.toolStripButtonItemItem1,
             this.toolStripSeparator4,
-            this.toolStripButton5User,
+            this.toolStripButtonItemUser2,
             this.toolStripSeparator5,
-            this.toolStripButton6Keluar});
+            this.toolStripButtonItemKeluar3});
             this.toolStripOptionItem.Location = new System.Drawing.Point(0, 25);
             this.toolStripOptionItem.Name = "toolStripOptionItem";
             this.toolStripOptionItem.Size = new System.Drawing.Size(1350, 79);
             this.toolStripOptionItem.TabIndex = 3;
             this.toolStripOptionItem.Text = "toolStrip3";
             // 
-            // toolStripButton4Item
+            // toolStripButtonItemItem1
             // 
-            this.toolStripButton4Item.Checked = true;
-            this.toolStripButton4Item.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolStripButton4Item.Image = global::TerbaruCahyaFy.Properties.Resources.add_16728917__3_;
-            this.toolStripButton4Item.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4Item.Name = "toolStripButton4Item";
-            this.toolStripButton4Item.Size = new System.Drawing.Size(59, 76);
-            this.toolStripButton4Item.Text = "Item";
-            this.toolStripButton4Item.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton4Item.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButtonItemItem1.Checked = true;
+            this.toolStripButtonItemItem1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripButtonItemItem1.Image = global::TerbaruCahyaFy.Properties.Resources.add_16728917__3_;
+            this.toolStripButtonItemItem1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonItemItem1.Name = "toolStripButtonItemItem1";
+            this.toolStripButtonItemItem1.Size = new System.Drawing.Size(59, 76);
+            this.toolStripButtonItemItem1.Text = "Item";
+            this.toolStripButtonItemItem1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButtonItemItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 79);
             // 
-            // toolStripButton5User
+            // toolStripButtonItemUser2
             // 
-            this.toolStripButton5User.Image = global::TerbaruCahyaFy.Properties.Resources.add_friend_2583145;
-            this.toolStripButton5User.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5User.Name = "toolStripButton5User";
-            this.toolStripButton5User.Size = new System.Drawing.Size(59, 76);
-            this.toolStripButton5User.Text = "User";
-            this.toolStripButton5User.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton5User.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButtonItemUser2.Image = global::TerbaruCahyaFy.Properties.Resources.add_friend_2583145;
+            this.toolStripButtonItemUser2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonItemUser2.Name = "toolStripButtonItemUser2";
+            this.toolStripButtonItemUser2.Size = new System.Drawing.Size(59, 76);
+            this.toolStripButtonItemUser2.Text = "User";
+            this.toolStripButtonItemUser2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButtonItemUser2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 79);
             // 
-            // toolStripButton6Keluar
+            // toolStripButtonItemKeluar3
             // 
-            this.toolStripButton6Keluar.Image = global::TerbaruCahyaFy.Properties.Resources.square_14034319;
-            this.toolStripButton6Keluar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6Keluar.Name = "toolStripButton6Keluar";
-            this.toolStripButton6Keluar.Size = new System.Drawing.Size(59, 76);
-            this.toolStripButton6Keluar.Text = "Keluar";
-            this.toolStripButton6Keluar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.toolStripButton6Keluar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButtonItemKeluar3.Image = global::TerbaruCahyaFy.Properties.Resources.square_14034319;
+            this.toolStripButtonItemKeluar3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonItemKeluar3.Name = "toolStripButtonItemKeluar3";
+            this.toolStripButtonItemKeluar3.Size = new System.Drawing.Size(59, 76);
+            this.toolStripButtonItemKeluar3.Text = "Keluar";
+            this.toolStripButtonItemKeluar3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolStripButtonItemKeluar3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // panel1User
             // 
@@ -2131,8 +2127,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.panel1User);
             this.Controls.Add(this.panel1Item);
+            this.Controls.Add(this.panel1User);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2234,11 +2230,11 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1User;
         private System.Windows.Forms.ToolStrip toolStripOptionUser;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButtonUserItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButtonUserUser2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButtonUserKeluar3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelBottom;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox textBox1;
@@ -2308,7 +2304,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Button buttonRestock;
+        private System.Windows.Forms.Button buttonRestockItem;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.TextBox textBoxModal;
         private System.Windows.Forms.Label label9;
@@ -2326,9 +2322,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.TextBox textBoxBarcode;
-        private System.Windows.Forms.Button buttonTambah;
-        private System.Windows.Forms.Button buttonEdit;
-        private System.Windows.Forms.Button buttonHapus;
+        private System.Windows.Forms.Button buttonTambahItem;
+        private System.Windows.Forms.Button buttonEditItem;
+        private System.Windows.Forms.Button buttonHapusItem;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panelGridview;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartJmlhTrans;
@@ -2340,11 +2336,11 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip toolStripOptionItem;
-        private System.Windows.Forms.ToolStripButton toolStripButton4Item;
+        private System.Windows.Forms.ToolStripButton toolStripButtonItemItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5User;
+        private System.Windows.Forms.ToolStripButton toolStripButtonItemUser2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6Keluar;
+        private System.Windows.Forms.ToolStripButton toolStripButtonItemKeluar3;
         private System.Windows.Forms.DataGridView dataGridViewItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelUser;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;

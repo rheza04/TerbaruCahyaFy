@@ -33,10 +33,10 @@ namespace TerbaruCahyaFy
             textBoxBarcode.TextChanged += textBoxBarcode_TextChanged;
             textBoxNamaItem.TextChanged += textBoxNamaItem_TextChanged;
 
-            buttonRestock.Click += buttonRestock_Click;
-            buttonTambah.Click += buttonTambah_Click;
-            buttonEdit.Click += buttonEdit_Click;
-            buttonHapus.Click += buttonHapus_Click;
+            buttonRestockItem.Click += buttonRestockItem_Click;
+            buttonTambahItem.Click += buttonTambahItem_Click;
+            buttonEditItem.Click += buttonEditItem_Click;
+            buttonHapusItem.Click += buttonHapusItem_Click;
 
             SetupAutoCompleteForID();
             SetupAutoCompleteForBarcode();
@@ -49,6 +49,13 @@ namespace TerbaruCahyaFy
             buttonHapusUser.Click += buttonHapusUser_Click;
 
             SetupAutoCompleteForUsername();
+
+            toolStripButtonUserItem1.Click += new EventHandler(toolStripButtonUserItem1_Click);
+            toolStripButtonUserUser2.Click += new EventHandler(toolStripButtonUserUser2_Click);
+            toolStripButtonItemItem1.Click += new EventHandler(toolStripButtonItemItem1_Click);
+            toolStripButtonItemUser2.Click += new EventHandler(toolStripButtonItemUser2_Click);
+            toolStripButtonUserKeluar3.Click += new EventHandler(toolStripButtonUserKeluar3_Click);
+            toolStripButtonItemKeluar3.Click += new EventHandler(toolStripButtonItemKeluar3_Click);
         }
 
         private void InitializeDatabaseConnection()
@@ -195,7 +202,7 @@ namespace TerbaruCahyaFy
                         textBoxPassword.Text = reader["Password"].ToString();
                         comboBoxRole.Text = reader["Role"].ToString();
                         textBoxNama.Text = reader["Nama"].ToString();
-                        textBoxHP.Text = reader["NoHP"].ToString();
+                        textBoxHP.Text = reader["No_HP_Telp"].ToString();
                         textBoxAlamat.Text = reader["Alamat"].ToString();
 
                         textBoxUsername.TextChanged += textBoxUsername_TextChanged;
@@ -216,6 +223,26 @@ namespace TerbaruCahyaFy
             }
             isTextChanging = false;
             UpdateDataGridViewWithSearchResults2();
+        }
+
+        private void UpdateAutoCompleteForUsername()
+        {
+            textBoxUsername.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBoxUsername.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+            AutoCompleteStringCollection autoCompleteData = new AutoCompleteStringCollection();
+            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+            {
+                string query = "SELECT Username FROM User";
+                SQLiteCommand command = new SQLiteCommand(query, conn);
+                conn.Open();
+                SQLiteDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    autoCompleteData.Add(reader["Username"].ToString());
+                }
+            }
+            textBoxUsername.AutoCompleteCustomSource = autoCompleteData;
         }
 
         private void SetupAutoCompleteForUsername()
@@ -244,7 +271,8 @@ namespace TerbaruCahyaFy
             {
                 if (formTambah.ShowDialog() == DialogResult.OK)
                 {
-                    LoadData2(); // Perbarui DataGridView setelah user ditambahkan
+                    LoadData2();
+                    UpdateAutoCompleteForUsername();
                 }
             }
         }
@@ -257,16 +285,13 @@ namespace TerbaruCahyaFy
                 return;
             }
 
-            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+            using (AdminEditUser editForm = new AdminEditUser(textBoxUsername.Text, connection))
             {
-                conn.Open();
-                using (AdminEditUser editForm = new AdminEditUser(textBoxUsername.Text, conn))
+                if (editForm.ShowDialog() == DialogResult.OK)
                 {
-                    if (editForm.ShowDialog() == DialogResult.OK)
-                    {
-                        LoadData2();
-                        FillTextBoxesFromDatabase("Username", textBoxUsername.Text);
-                    }
+                    LoadData2();
+                    FillUserTextBoxesFromDatabase("Username", textBoxUsername.Text);
+                    UpdateAutoCompleteForUsername();
                 }
             }
         }
@@ -279,23 +304,24 @@ namespace TerbaruCahyaFy
                 return;
             }
 
-            // Menampilkan dialog konfirmasi
             DialogResult dialogResult = MessageBox.Show("Apakah Anda yakin ingin menghapus user ini?", "Konfirmasi Hapus", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
                 {
-                    string query = "DELETE FROM User WHERE Username = @username";
-                    SQLiteCommand command = new SQLiteCommand(query, conn);
-                    command.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     conn.Open();
-                    command.ExecuteNonQuery();
+                    using (SQLiteCommand command = new SQLiteCommand("DELETE FROM User WHERE Username = @username", conn))
+                    {
+                        command.Parameters.AddWithValue("@username", textBoxUsername.Text);
+                        command.ExecuteNonQuery();
+                    }
                 }
 
                 MessageBox.Show("Data berhasil dihapus.");
                 LoadData2();
             }
         }
+
 
         private void textBoxID_TextChanged(object sender, EventArgs e)
         {
@@ -384,7 +410,7 @@ namespace TerbaruCahyaFy
                         textBoxBarcode.TextChanged -= textBoxBarcode_TextChanged;
                         textBoxNamaItem.TextChanged -= textBoxNamaItem_TextChanged;
 
-                        // Hanya kosongkan textBoxBarcode jika nilai baru tidak ditemukan di database
+                       
                         textBoxID.Text = string.Empty;
                         textBoxNamaItem.Text = string.Empty;
                         textBoxHargaJual.Text = string.Empty;
@@ -555,8 +581,48 @@ namespace TerbaruCahyaFy
             }
         }
 
+        private void FillUserTextBoxesFromDatabase(string column, string value)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+            {
+                string query = $"SELECT * FROM User WHERE {column} = @value COLLATE NOCASE";
+                using (SQLiteCommand command = new SQLiteCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@value", value);
+                    conn.Open();
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            textBoxUsername.TextChanged -= textBoxUsername_TextChanged;
 
-        private void buttonRestock_Click(object sender, EventArgs e)
+                            textBoxUsername.Text = reader["Username"].ToString();
+                            textBoxPassword.Text = reader["Password"].ToString();
+                            comboBoxRole.Text = reader["Role"].ToString();
+                            textBoxNama.Text = reader["Nama"].ToString();
+                            textBoxHP.Text = reader["No_Hp_Telp"].ToString();
+                            textBoxAlamat.Text = reader["Alamat"].ToString();
+
+                            textBoxUsername.TextChanged += textBoxUsername_TextChanged;
+                        }
+                        else
+                        {
+                            textBoxUsername.Clear();
+                            textBoxPassword.Clear();
+                            comboBoxRole.Text = string.Empty;
+                            textBoxNama.Clear();
+                            textBoxHP.Clear();
+                            textBoxAlamat.Clear();
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        private void buttonRestockItem_Click(object sender, EventArgs e)
         {
             if (textBoxID.Text == string.Empty)
             {
@@ -643,19 +709,19 @@ namespace TerbaruCahyaFy
             }
         }
 
-        private void buttonTambah_Click(object sender, EventArgs e)
+        private void buttonTambahItem_Click(object sender, EventArgs e)
         {
             using (AdminTambahItem formTambah = new AdminTambahItem(connection))
             {
                 if (formTambah.ShowDialog() == DialogResult.OK)
                 {
-                    LoadData(); // Perbarui DataGridView setelah item ditambahkan
+                    LoadData();
                 }
             }
         }
 
 
-        private void buttonEdit_Click(object sender, EventArgs e)
+        private void buttonEditItem_Click(object sender, EventArgs e)
         {
             if (textBoxID.Text == string.Empty)
             {
@@ -677,7 +743,37 @@ namespace TerbaruCahyaFy
             }
         }
 
-        private void buttonHapus_Click(object sender, EventArgs e)
+        private void toolStripButtonUserUser2_Click(object sender, EventArgs e)
+        {
+            panel1User.BringToFront();
+        }
+
+        private void toolStripButtonItemUser2_Click(object sender, EventArgs e)
+        {
+            panel1User.BringToFront(); 
+        }
+
+        private void toolStripButtonUserItem1_Click(object sender, EventArgs e)
+        {
+            panel1Item.BringToFront();
+        }
+
+        private void toolStripButtonItemItem1_Click(object sender, EventArgs e)
+        {
+            panel1Item.BringToFront();
+        }
+
+        private void toolStripButtonUserKeluar3_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
+        }
+
+        private void toolStripButtonItemKeluar3_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
+        }
+
+        private void buttonHapusItem_Click(object sender, EventArgs e)
         {
             if (textBoxID.Text == string.Empty)
             {
@@ -685,7 +781,7 @@ namespace TerbaruCahyaFy
                 return;
             }
 
-            // Menampilkan dialog konfirmasi
+            
             DialogResult dialogResult = MessageBox.Show("Apakah Anda yakin ingin menghapus item ini?", "Konfirmasi Hapus", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

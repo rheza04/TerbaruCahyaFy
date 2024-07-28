@@ -1,95 +1,122 @@
 ﻿using System;
-using System.Data.SQLite;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Net.Http;
+using System.Net.NetworkInformation;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 using System.IO;
+using Microsoft.VisualBasic;
 using TerbaruCahyaFy;
 
 namespace TerbaruCahyaFy
+{
+    public partial class LoginForm : Form
     {
-        public partial class LoginForm : Form
+        private SQLiteConnection connection;
+
+        public LoginForm()
         {
-            private SQLiteConnection connection;
+            InitializeComponent();
+            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data Barang.db");
+            connection = new SQLiteConnection($"Data Source={dbPath};Version=3;");
+        }
 
-            public LoginForm()
+        private void Login_Load(object sender, EventArgs e)
+        {
+            try
             {
-                InitializeComponent();
-                string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data Barang.db");
-                connection = new SQLiteConnection($"Data Source={dbPath};Version=3;");
+                connection.Open();
+                labelCheckConnection.Text = "Connection Successful";
+                connection.Close();
             }
-
-            private void Login_Load(object sender, EventArgs e)
+            catch (Exception ex)
             {
-                try
-                {
-                    connection.Open();
-                    labelCheckConnection.Text = "Connection Successful";
-                    connection.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
+                MessageBox.Show("Error: " + ex.Message);
             }
+        }
 
-            private void buttonLogin_Click(object sender, EventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            try
             {
-                try
+                connection.Open();
+                string query = "SELECT * FROM User WHERE Username = @Username AND Password = @Password";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
-                    connection.Open();
-                    string query = "SELECT * FROM ListSupplier WHERE Username = @Username AND Password = @Password";
-                    SQLiteCommand command = new SQLiteCommand(query, connection);
                     command.Parameters.AddWithValue("@Username", textBoxUsername.Text);
                     command.Parameters.AddWithValue("@Password", textBoxPwd.Text);
 
-                    SQLiteDataReader reader = command.ExecuteReader();
-                    if (reader.Read())
+                    using (SQLiteDataReader reader = command.ExecuteReader())
                     {
-                        string role = reader["Role"].ToString();
-                        if (role == "admin")
+                        if (reader.Read())
                         {
-                            MessageBox.Show("Login sebagai Admin berhasil");
-                            this.Hide();
-                            Admin inputBarangForm = new Admin();
-                            inputBarangForm.ShowDialog();
+                            string role = reader["Role"].ToString();
+                            reader.Close();
+                            connection.Close(); 
+
+                            if (role == "Admin")
+                            {
+                                MessageBox.Show("Login sebagai Admin berhasil");
+                                this.Hide();
+                                using (Admin inputBarangForm = new Admin())
+                                {
+                                    inputBarangForm.ShowDialog();
+                                }
+                                this.Show();
+                            }
+                            else if (role == "User")
+                            {
+                                MessageBox.Show("Login sebagai User berhasil");
+                                this.Hide();
+                                using (Kasir kasirForm = new Kasir(textBoxUsername.Text))
+                                {
+                                    kasirForm.ShowDialog();
+                                }
+                                this.Show();
+                            }
                         }
-                        else if (role == "user")
+                        else
                         {
-                            MessageBox.Show("Login sebagai User berhasil");
-                            this.Hide();
-                            Kasir kasirForm = new Kasir(textBoxUsername.Text);
-                            kasirForm.ShowDialog();
+                            MessageBox.Show("Username atau Password salah");
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("Username atau Password salah");
-                    }
-                    connection.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
                 }
             }
-
-            private void textBoxUsername_KeyDown(object sender, KeyEventArgs e)
+            catch (Exception ex)
             {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    textBoxPwd.Focus();
-                }
+                MessageBox.Show("Error: " + ex.Message);
             }
-
-            private void textBoxPwd_KeyDown(object sender, KeyEventArgs e)
+            finally
             {
-                if (e.KeyCode == Keys.Enter)
+                if (connection.State == ConnectionState.Open)
                 {
-                    buttonLogin.PerformClick();
+                    connection.Close();
                 }
             }
         }
+
+        private void textBoxUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBoxPwd.Focus();
+            }
+        }
+
+        private void textBoxPwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonLogin.PerformClick();
+            }
+        }
     }
+}

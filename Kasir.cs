@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
+using Microsoft.VisualBasic;
 
 namespace TerbaruCahyaFy
 {
@@ -29,14 +30,14 @@ namespace TerbaruCahyaFy
         {
             InitializeComponent();
             InitializeDatabaseConnection();
-            InitializeDataGridView(); // Pastikan ini dipanggil sebelum setup event handlers
+            InitializeDataGridView(); 
             InitializeCustomComponents();
             StartTcpServer();
             SetupDataGridView();
 
-            // Tambahkan event handler untuk KeyDown
+           
             this.KeyDown += new KeyEventHandler(Kasir_KeyDown);
-            this.KeyPreview = true; // Agar form bisa menerima event KeyDown sebelum kontrol lainnya
+            this.KeyPreview = true; 
         }
 
         public Kasir(string Username)
@@ -47,7 +48,7 @@ namespace TerbaruCahyaFy
             InitializeCustomComponents();
         }
 
-        //deteksi database konek apa kagak
+       
         private void InitializeDatabaseConnection()
         {
             string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data Barang.db");
@@ -66,29 +67,29 @@ namespace TerbaruCahyaFy
 
         private void InitializeCustomComponents()
         {
-            // fungsi cek interval konek jaringan apa kagak
+          
             timer = new Timer();
-            timer.Interval = 5000; // 5 detik
+            timer.Interval = 5000;
             timer.Tick += new EventHandler(CheckStatus);
             timer.Start();
 
             Timer dateTimeTimer = new Timer();
-            dateTimeTimer.Interval = 1000; // 1 detik
+            dateTimeTimer.Interval = 1000; 
             dateTimeTimer.Tick += new EventHandler(UpdateDateTime);
             dateTimeTimer.Start();
 
             SetNetworkStatus();
             SetIPAddress();
 
-            // Menampilkan tanggal hari ini
+           
             textBox1.Text = DateTime.Now.ToString("dd MMMM yyyy");
 
-            // Mengaktifkan autocomplete pada textBox3
+        
             textBox3.AutoCompleteMode = AutoCompleteMode.Append;
             textBox3.AutoCompleteSource = AutoCompleteSource.CustomSource;
             UpdateAutoCompleteSource();
 
-            // Event handlers and other initialization
+          
             textBox3.TextChanged += new EventHandler(textBox3_TextChanged);
             textBox3.KeyDown += new KeyEventHandler(textBox3_KeyDown);
 
@@ -118,13 +119,10 @@ namespace TerbaruCahyaFy
                     dataGridViewJualan.BringToFront();
                 }
                 textBox3.Focus();
-                e.Handled = true; // Prevent the default behavior of the keys
+                e.Handled = true; 
                 Console.WriteLine("dataGridViewQR hidden (if visible) and focus set to textBox3 by F2 or Space key press.");
             }
         }
-
-
-
 
         private void UpdateAutoCompleteSource()
         {
@@ -210,7 +208,7 @@ namespace TerbaruCahyaFy
                     {
                         if (reader.Read())
                         {
-                            string id = reader["ID"].ToString(); // Sesuaikan dengan nama kolom di database
+                            string id = reader["ID"].ToString(); 
                             string namaItem = reader["NamaItem"].ToString();
                             int qty = 1;
                             decimal harga = Convert.ToDecimal(reader["HJualItem"]);
@@ -338,7 +336,7 @@ namespace TerbaruCahyaFy
 
         private void dataGridViewJualan_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            // Debug log
+           
             Console.WriteLine("CellValueChanged triggered. ColumnIndex: " + e.ColumnIndex);
             if (dataGridViewJualan.Columns["Qty"] != null)
             {
@@ -358,7 +356,7 @@ namespace TerbaruCahyaFy
 
         private void Qty_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Hanya izinkan angka dan karakter kontrol (seperti backspace)
+          
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
@@ -400,7 +398,7 @@ namespace TerbaruCahyaFy
             {
                 try
                 {
-                    int port = 5789; // Port default yang sering digunakan oleh aplikasi barcode scanner
+                    int port = 5789; 
                     tcpListener = new TcpListener(IPAddress.Any, port);
                     tcpListener.Start();
 
@@ -412,7 +410,7 @@ namespace TerbaruCahyaFy
                         int bytesRead = stream.Read(buffer, 0, buffer.Length);
                         string barcode = Encoding.UTF8.GetString(buffer, 0, bytesRead);
 
-                        // Panggil metode ScanBarang di thread UI
+                       
                         this.Invoke((MethodInvoker)delegate
                         {
                             ScanBarang(barcode.Trim());
@@ -453,7 +451,7 @@ namespace TerbaruCahyaFy
                             textBox12.Text = sisaQty.ToString();
                             textBox13.Text = harga.ToString("N0");
 
-                            // Cek apakah barang sudah ada di dataGridViewJualan
+                          
                             bool itemFound = false;
                             foreach (DataGridViewRow row in dataGridViewJualan.Rows)
                             {
@@ -466,13 +464,13 @@ namespace TerbaruCahyaFy
                                 }
                             }
 
-                            // Jika barang tidak ditemukan, tambahkan sebagai baris baru
+                         
                             if (!itemFound)
                             {
                                 dataGridViewJualan.Rows.Add(new object[] { id, barcode, namaItem, qty, harga, harga * qty });
                             }
 
-                            // Update total setelah menambahkan barang
+                         
                             UpdateTotal();
                         }
                     }
@@ -541,37 +539,36 @@ namespace TerbaruCahyaFy
             {
                 try
                 {
-                    // Nominal uang dari customer
+                 
                     decimal bayar = Convert.ToDecimal(textBox23.Text.Replace(".", ""));
 
-                    // Total belanja
+                 
                     decimal totalBelanja = Convert.ToDecimal(textBox2.Text.Replace(",", ""));
 
-                    // Kembalian
+                 
                     decimal kembalian = bayar - totalBelanja;
 
-                    // Menampilkan kembalian
+                 
                     textBox2.Text = kembalian.ToString("N0");
                     label7.Text = "KEMBALIAN";
                     textBox4.Text = Terbilang((int)bayar) + " RUPIAH";
                     textBox3.Text = "DIBAYAR";
 
-                    // Pesan konfirmasi pembayaran
+                
                     DialogResult result = MessageBox.Show("Apakah Anda ingin membayar dengan tunai?", "Konfirmasi Pembayaran", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
                         MessageBox.Show("Pembayaran berhasil!");
-                        ResetForm(); // Reset form untuk nota baru
+                        ResetForm(); 
                     }
                 }
                 catch (FormatException)
                 {
-                    // MessageBox.Show("Format jumlah pembayaran tidak valid.");
+                   
                 }
             }
         }
-
-        //titik pada textbox23 = belum bisa
+      
         private void textBox23_TextChanged(object sender, EventArgs e)
         {
             if (decimal.TryParse(textBox23.Text, out decimal amount))
@@ -596,12 +593,12 @@ namespace TerbaruCahyaFy
 
         private void textBox23_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Hanya izinkan angka, titik, dan karakter kontrol (seperti backspace)
+           
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
-            // Hanya satu titik yang diperbolehkan
+          
             if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
             {
                 e.Handled = true;
@@ -618,20 +615,20 @@ namespace TerbaruCahyaFy
             }
             else if (e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete)
             {
-                // Allow backspace and delete to work properly
+               
                 int selectionStart = textBox3.SelectionStart;
                 if (textBox3.Text.Length > 0 && selectionStart > 0)
                 {
                     textBox3.Text = textBox3.Text.Remove(selectionStart - 1, 1);
                     textBox3.SelectionStart = selectionStart - 1;
                 }
-                e.Handled = true; // Prevent the default behavior
+                e.Handled = true; 
             }
         }
 
         private void CheckStatus(object sender, EventArgs e)
         {
-            // Periksa status jaringan
+           
             string newNetworkStatus = NetworkInterface.GetIsNetworkAvailable() ? "Lokal Online" : "Lokal Offline";
             if (newNetworkStatus != currentNetworkStatus)
             {
@@ -649,7 +646,7 @@ namespace TerbaruCahyaFy
                 }
             }
 
-            // Periksa alamat IP
+           
             string newIPAddress = GetLocalIPAddress();
             if (newIPAddress != currentIPAddress)
             {
@@ -702,7 +699,7 @@ namespace TerbaruCahyaFy
 
         private void ResetForm()
         {
-            //reset semua + nota baru/database baru
+          
             textBox16.Text = "";
             textBox15.Text = "1";
             textBox12.Text = "";
@@ -741,11 +738,11 @@ namespace TerbaruCahyaFy
             {
                 int selectionStart = textBox.SelectionStart;
                 int selectionLength = textBox.SelectionLength;
-                textBox.TextChanged -= textBoxNama_TextChanged;
+                textBox.TextChanged -= textBoxNama2_TextChanged;
                 textBox.Text = textBox.Text.ToUpper();
                 textBox.SelectionStart = selectionStart;
                 textBox.SelectionLength = selectionLength;
-                textBox.TextChanged += textBoxNama_TextChanged;
+                textBox.TextChanged += textBoxNama2_TextChanged;
             }
         }
     }

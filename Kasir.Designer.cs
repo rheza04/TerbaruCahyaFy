@@ -167,7 +167,7 @@ namespace TerbaruCahyaFy
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.396306F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.129303F));
             this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.47439F));
-            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 263F));
+            this.tableLayoutPanelSearch.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 267F));
             this.tableLayoutPanelSearch.Controls.Add(this.textBox23, 3, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanelSearch.Controls.Add(this.panel5, 0, 1);
@@ -189,12 +189,12 @@ namespace TerbaruCahyaFy
             // 
             this.textBox23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox23.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(1080, 1);
+            this.textBox23.Location = new System.Drawing.Point(1077, 1);
             this.textBox23.Margin = new System.Windows.Forms.Padding(1);
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
             this.textBox23.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBox23.Size = new System.Drawing.Size(263, 43);
+            this.textBox23.Size = new System.Drawing.Size(266, 43);
             this.textBox23.TabIndex = 5;
             // 
             // panel1
@@ -207,7 +207,7 @@ namespace TerbaruCahyaFy
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panel1.Size = new System.Drawing.Size(1077, 43);
+            this.panel1.Size = new System.Drawing.Size(1074, 43);
             this.panel1.TabIndex = 6;
             // 
             // textBox3
@@ -219,7 +219,7 @@ namespace TerbaruCahyaFy
             this.textBox3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(16, 5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(1056, 28);
+            this.textBox3.Size = new System.Drawing.Size(1053, 28);
             this.textBox3.TabIndex = 0;
             this.textBox3.WordWrap = false;
             // 
@@ -1379,7 +1379,7 @@ namespace TerbaruCahyaFy
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Kasir";
-            this.Text = "Form1";
+            this.Text = "CahyaFy";
             this.tableLayoutPanelSearch.ResumeLayout(false);
             this.tableLayoutPanelSearch.PerformLayout();
             this.panel1.ResumeLayout(false);

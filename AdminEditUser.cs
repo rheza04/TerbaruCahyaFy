@@ -1,7 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Net.Http;
+using System.Net.NetworkInformation;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
-using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using TerbaruCahyaFy;
 
 namespace TerbaruCahyaFy
 {
@@ -14,7 +27,7 @@ namespace TerbaruCahyaFy
         {
             InitializeComponent();
             InitializeCustomComponents();
-            connection = conn ?? InitializeDatabaseConnection();
+            connection = conn;
             originalUsername = username;
             LoadUserDetails();
         }
@@ -25,53 +38,37 @@ namespace TerbaruCahyaFy
             buttonBatal.Click += new EventHandler(buttonBatal_Click);
         }
 
-        private SQLiteConnection InitializeDatabaseConnection()
-        {
-            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data Barang.db");
-            SQLiteConnection conn = new SQLiteConnection($"Data Source={dbPath};Version=3;");
-            try
-            {
-                conn.Open();
-                MessageBox.Show("Connection Successful");
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            return conn;
-        }
-
         private void LoadUserDetails()
         {
-            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
+            if (connection.State != ConnectionState.Open)
             {
-                string query = "SELECT * FROM ListUser WHERE Username = @username";
-                using (SQLiteCommand command = new SQLiteCommand(query, conn))
+                connection.Open();
+            }
+
+            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM User WHERE Username = @username", connection))
+            {
+                command.Parameters.AddWithValue("@username", originalUsername);
+                using (SQLiteDataReader reader = command.ExecuteReader())
                 {
-                    command.Parameters.AddWithValue("@username", originalUsername);
-                    conn.Open();
-                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    if (reader.Read())
                     {
-                        if (reader.Read())
-                        {
-                            textBoxUsername.Text = reader["Username"].ToString();
-                            textBoxPassword.Text = reader["Password"].ToString();
-                            comboBoxRole.Text = reader["Role"].ToString();
-                            textBoxNama.Text = reader["Nama"].ToString();
-                            textBoxHP.Text = reader["No_HP_Telp"].ToString();
-                            textBoxAlamat.Text = reader["Alamat"].ToString();
-                        }
+                        textBoxUsername.Text = reader["Username"].ToString();
+                        textBoxPassword.Text = reader["Password"].ToString();
+                        comboBoxRole.Text = reader["Role"].ToString();
+                        textBoxNama.Text = reader["Nama"].ToString();
+                        textBoxHP.Text = reader["No_HP_Telp"].ToString();
+                        textBoxAlamat.Text = reader["Alamat"].ToString();
                     }
                 }
             }
+            connection.Close();
         }
 
         private bool IsDuplicate(string column, string value, string excludeUsername)
         {
             using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
             {
-                string query = $"SELECT COUNT(*) FROM ListUser WHERE {column} = @value AND Username != @excludeUsername";
+                string query = $"SELECT COUNT(*) FROM User WHERE {column} = @value AND Username != @excludeUsername";
                 using (SQLiteCommand command = new SQLiteCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@value", value);
@@ -85,21 +82,25 @@ namespace TerbaruCahyaFy
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            if (IsDuplicate("Username", textBoxUsername.Text, originalUsername))
+            try
             {
-                MessageBox.Show("Maaf, Username yang Anda mau ubah sudah ada.");
-                return;
-            }
+                if (IsDuplicate("Username", textBoxUsername.Text, originalUsername))
+                {
+                    MessageBox.Show("Maaf, Username yang Anda mau ubah sudah ada.");
+                    return;
+                }
 
-            using (SQLiteConnection conn = new SQLiteConnection(connection.ConnectionString))
-            {
-                conn.Open();
-                using (SQLiteTransaction transaction = conn.BeginTransaction())
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+
+                using (SQLiteTransaction transaction = connection.BeginTransaction())
                 {
                     try
                     {
-                        string query = "UPDATE ListUser SET Username = @username, Password = @password, Role = @role, Nama = @nama, No_HP_Telp = @hp, Alamat = @alamat WHERE Username = @originalUsername";
-                        using (SQLiteCommand command = new SQLiteCommand(query, conn, transaction))
+                        string query = "UPDATE User SET Username = @username, Password = @password, Role = @role, Nama = @nama, No_HP_Telp = @hp, Alamat = @alamat WHERE Username = @originalUsername";
+                        using (SQLiteCommand command = new SQLiteCommand(query, connection, transaction))
                         {
                             command.Parameters.AddWithValue("@originalUsername", originalUsername);
                             command.Parameters.AddWithValue("@username", textBoxUsername.Text);
@@ -118,10 +119,21 @@ namespace TerbaruCahyaFy
                         transaction.Rollback();
                         MessageBox.Show("Error: " + ex.Message);
                     }
+                    finally
+                    {
+                        if (connection.State == ConnectionState.Open)
+                        {
+                            connection.Close();
+                        }
+                    }
                 }
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void buttonBatal_Click(object sender, EventArgs e)
